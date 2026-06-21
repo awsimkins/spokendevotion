@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spoken Devotion • Confessions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@400;500;600&display=swap');
+        body { font-family: 'Poppins', system_ui, sans-serif; }
+        .heading-font { font-family: 'Playfair Display', serif; }
+        .confession-bg { 
+            background: linear-gradient(135deg, #4c1d95 0%, #312e81 45%, #1e3a8a 100%); 
+        }
+        .accent-gold { color: #fbbf24; }
+        .poem-line { 
+            display: block; 
+            margin-bottom: 0.35rem; 
+            line-height: 1.7;
+        }
+        .section-card {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .section-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</head>
+<body class="bg-zinc-950 text-white overflow-x-hidden">
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-zinc-950/90 backdrop-blur-xl border-b border-amber-400/20">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-x-3">
+                <i class="fa-solid fa-cross text-2xl accent-gold"></i>
+                <span class="font-semibold text-3xl tracking-tighter heading-font">Spoken Devotion</span>
+            </div>
+            <div class="flex gap-x-6 text-sm">
+                <a href="../" class="hover:text-amber-400 transition-colors">Home</a>
+                <a href="../worship/" class="hover:text-amber-400 transition-colors">Worship</a>
+                <a href="../prayer/" class="hover:text-amber-400 transition-colors">Prayer</a>
+                <a href="../bible/" class="hover:text-amber-400 transition-colors">Bible</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero / Main Content -->
+    <div class="min-h-screen pt-20 flex items-center confession-bg">
+        <div class="max-w-5xl mx-auto px-6 pb-16">
+            <!-- Title Section -->
+            <div class="text-center mb-12">
+                <div class="inline-flex items-center gap-x-2 mb-4 px-4 py-1.5 bg-white/10 rounded-full border border-amber-400/30">
+                    <i class="fa-solid fa-cross text-amber-400"></i>
+                    <span class="text-sm tracking-[2px] uppercase font-medium text-amber-400">Sacred Reflections</span>
+                </div>
+                <h1 class="text-6xl md:text-7xl font-semibold tracking-tighter heading-font leading-tight mb-6">
+                    Confessions
+                </h1>
+                <p class="text-2xl text-white/80 max-w-3xl mx-auto mb-4">
+                    Poetic reflections from the valley where suffering meets maturity and hope is born.
+                </p>
+                <p class="text-lg text-amber-400/90 max-w-2xl mx-auto italic">
+                    “...suffering produces perseverance; perseverance, character; and character, hope.”<br>
+                    — Romans 5:3-5
+                </p>
+            </div>
+
+            <!-- Intro -->
+            <div class="max-w-3xl mx-auto text-center mb-12">
+                <p class="text-lg text-white/80 leading-relaxed">
+                    These are not polished performances. They are honest pages from the diary of a soul being refined—where the weight of trials, the quiet ache of waiting, and the daily surrender become the very soil in which God grows deeper roots, steadier faith, and a hope that will never put us to shame. 
+                    Here suffering is not wasted. It is the narrow path that leads to the heart of the Father.
+                </p>
+            </div>
+
+            <!-- Poem 1 -->
+            <div class="max-w-4xl mx-auto mb-10">
+                <div class="bg-zinc-900/80 border border-amber-400/20 rounded-3xl p-8 md:p-10 section-card">
+                    <div class="flex items-center gap-x-3 mb-6">
+                        <i class="fa-solid fa-seedling text-2xl accent-gold"></i>
+                        <h3 class="text-2xl font-semibold accent-gold">I. The Valley’s Invitation</h3>
+                    </div>
+                    <div class="prose prose-invert max-w-none text-lg leading-relaxed text-white/90">
+                        <p class="poem-line">In the valley low where the shadows stretch long,</p>
+                        <p class="poem-line">Where the strength I once trusted has faded like song,</p>
+                        <p class="poem-line">I discover a strange and most holy terrain—</p>
+                        <p class="poem-line">Not punishment given, but mercy’s refrain.</p>
+                        <p class="poem-line mt-4">The questions that rise like the dust in the wind,</p>
+                        <p class="poem-line">The ache in the body, the weight deep within,</p>
+                        <p class="poem-line">Become invitations to lay burdens down</p>
+                        <p class="poem-line">And find in the breaking a more excellent crown.</p>
+                        <p class="poem-line mt-4">Here patience takes root in the dark, quiet soil,</p>
+                        <p class="poem-line">Watered by tears and the labor of toil.</p>
+                        <p class="poem-line">I learn not to fight what my Father allows,</p>
+                        <p class="poem-line">But to bow in the valley and worship somehow.</p>
+                    </div>
+                    <p class="text-right mt-8 text-sm text-amber-400">— From the valley floor</p>
+                </div>
+            </div>
+
+            <!-- Poem 2 -->
+            <div class="max-w-4xl mx-auto mb-10">
+                <div class="bg-zinc-900/80 border border-amber-400/20 rounded-3xl p-8 md:p-10 section-card">
+                    <div class="flex items-center gap-x-3 mb-6">
+                        <i class="fa-solid fa-hammer text-2xl accent-gold"></i>
+                        <h3 class="text-2xl font-semibold accent-gold">II. Endurance’s Quiet Forge</h3>
+                    </div>
+                    <div class="prose prose-invert max-w-none text-lg leading-relaxed text-white/90">
+                        <p class="poem-line">It is not the mountain but the slow, hidden climb—</p>
+                        <p class="poem-line">The daily arising to carry what’s mine,</p>
+                        <p class="poem-line">The nights without answers, the mornings that break</p>
+                        <p class="poem-line">With the same heavy load that I cannot forsake.</p>
+                        <p class="poem-line mt-4">Yet here in the ordinary, faithfulness grows,</p>
+                        <p class="poem-line">In the choosing again what the flesh would oppose.</p>
+                        <p class="poem-line">Perseverance is hammered in moments unseen,</p>
+                        <p class="poem-line">In the whisper of prayer when the valley is keen.</p>
+                        <p class="poem-line mt-4">The body may weaken, the spirit may tire,</p>
+                        <p class="poem-line">But the soul learns to lean on a deeper desire—</p>
+                        <p class="poem-line">Not escape from the fire, but to stay in its glow,</p>
+                        <p class="poem-line">Where the Refiner is working more than we know.</p>
+                    </div>
+                    <p class="text-right mt-8 text-sm text-amber-400">— In the daily choosing</p>
+                </div>
+            </div>
+
+            <!-- Poem 3 -->
+            <div class="max-w-4xl mx-auto mb-10">
+                <div class="bg-zinc-900/80 border border-amber-400/20 rounded-3xl p-8 md:p-10 section-card">
+                    <div class="flex items-center gap-x-3 mb-6">
+                        <i class="fa-solid fa-gem text-2xl accent-gold"></i>
+                        <h3 class="text-2xl font-semibold accent-gold">III. Character and the Outpoured Love</h3>
+                    </div>
+                    <div class="prose prose-invert max-w-none text-lg leading-relaxed text-white/90">
+                        <p class="poem-line">The fire reveals what the comfort concealed—</p>
+                        <p class="poem-line">The pride that still lingers, the fears not yet healed.</p>
+                        <p class="poem-line">Yet even the exposure becomes sacred art,</p>
+                        <p class="poem-line">As the Potter reshapes the clay of my heart.</p>
+                        <p class="poem-line mt-4">Maturity rises not swift or complete,</p>
+                        <p class="poem-line">But grain upon grain in the slow, steady beat</p>
+                        <p class="poem-line">Of a life laid down and a will being tamed,</p>
+                        <p class="poem-line">Till compassion flows freer and love is reclaimed.</p>
+                        <p class="poem-line mt-4">And then comes the promise, the love poured abroad—</p>
+                        <p class="poem-line">The Spirit Himself as the seal and the sword.</p>
+                        <p class="poem-line">Hope that will never be put to disgrace,</p>
+                        <p class="poem-line">Anchored in glory, secured by His grace.</p>
+                        <p class="poem-line mt-4">So I walk through the valley still learning to sing,</p>
+                        <p class="poem-line">For the suffering that once felt like winter’s long sting</p>
+                        <p class="poem-line">Has become the strange pathway that leads me to see</p>
+                        <p class="poem-line">The face of my Savior more clearly in me.</p>
+                    </div>
+                    <p class="text-right mt-8 text-sm text-amber-400">— Refined, not destroyed</p>
+                </div>
+            </div>
+
+            <!-- Closing Reflection -->
+            <div class="max-w-3xl mx-auto mt-12 text-center">
+                <div class="border-t border-amber-400/20 pt-8">
+                    <p class="text-white/70 italic text-lg leading-relaxed">
+                        These confessions are offered in the hope that you, too, might find permission to be honest in your valley—<br>
+                        and in that honesty, discover the same faithful Refiner who turns every sorrow into seed for deeper joy.
+                    </p>
+                    <p class="mt-6 text-amber-400 text-sm tracking-widest">ALL GLORY TO GOD THE FATHER • THROUGH CHRIST OUR LORD</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-12 text-center text-sm text-white/60 border-t border-white/10 bg-zinc-950">
+        © 2026 Spoken Devotion Confessions • ruby@spokendevotion.com<br>
+        <span class="text-xs text-white/40">Words that heal, lift, and draw us near to God.</span>
+    </footer>
+</body>
+</html>
