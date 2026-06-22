@@ -197,30 +197,49 @@
         </div>
     </footer>
 
-    <!-- JavaScript for pulling featured content -->
-    <script>
-    async function loadFeatured(pageUrl, targetId) {
-        try {
-            const response = await fetch(pageUrl);
-            const htmlText = await response.text();
-            const parser = new DOMParser();
-            const doc = parser.parseFromString(htmlText, 'text/html');
-            const featured = doc.getElementById('featured-item');
+<!-- JavaScript for pulling featured content (UPDATED) -->
+<script>
+async function loadFeatured(pageUrl, targetId, pageName) {
+    try {
+        const response = await fetch(pageUrl);
+        const htmlText = await response.text();
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(htmlText, 'text/html');
+        const featured = doc.getElementById('featured-item');
+        
+        if (featured) {
+            // Remove all audio players from the pulled content
+            const audioElements = featured.querySelectorAll('audio');
+            audioElements.forEach(audio => audio.remove());
             
-            if (featured) {
-                const container = document.getElementById(targetId);
-                container.innerHTML = featured.outerHTML;
+            const container = document.getElementById(targetId);
+            container.innerHTML = featured.outerHTML;
+            
+            // Optional: Add a "Listen on full page" button at the bottom of the card
+            const card = container.querySelector('.section-card, [id="featured-item"]');
+            if (card) {
+                const listenBtn = document.createElement('div');
+                listenBtn.className = 'mt-6 text-center';
+                listenBtn.innerHTML = `
+                    <a href="${pageUrl}" 
+                       class="inline-flex items-center gap-x-2 px-5 py-2.5 bg-amber-400 hover:bg-amber-300 text-zinc-950 font-semibold rounded-2xl text-sm transition-all">
+                        <i class="fa-solid fa-play"></i> 
+                        Listen to full version on ${pageName}
+                    </a>
+                `;
+                card.appendChild(listenBtn);
             }
-        } catch (error) {
-            console.log('Could not load featured content from ' + pageUrl);
         }
+    } catch (error) {
+        console.log('Could not load featured content from ' + pageUrl);
     }
+}
 
-    document.addEventListener('DOMContentLoaded', function() {
-        loadFeatured('confessions/', 'featured-confessions');
-        loadFeatured('worship/', 'featured-worship');
-        loadFeatured('prayer/', 'featured-prayer');
-    });
-    </script>
+document.addEventListener('DOMContentLoaded', function() {
+    loadFeatured('confessions/', 'featured-confessions', 'Confessions');
+    loadFeatured('worship/', 'featured-worship', 'Worship');
+    loadFeatured('prayer/', 'featured-prayer', 'Prayer');
+});
+</script>
 </body>
 </html>
