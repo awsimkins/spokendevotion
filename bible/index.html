@@ -10,61 +10,234 @@
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@400;500;600&display=swap');
         body { font-family: 'Poppins', system_ui, sans-serif; }
         .heading-font { font-family: 'Playfair Display', serif; }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+        }
+        .modal-content {
+            background: #18181b;
+            width: 100%;
+            max-width: 900px;
+            border-radius: 1.5rem;
+            overflow: hidden;
+            border: 1px solid #fbbf24;
+        }
+        .bible-book {
+            transition: all 0.2s ease;
+        }
+        .bible-book:hover {
+            background-color: #27251f;
+            transform: translateY(-1px);
+        }
+        .coming-soon {
+            opacity: 0.6;
+            cursor: default;
+        }
     </style>
 </head>
 <body class="bg-zinc-950 text-white">
-    <!-- Navbar (same as main site) -->
+    <!-- Navbar -->
     <nav class="fixed top-0 left-0 right-0 z-50 bg-zinc-950/90 backdrop-blur-xl border-b border-amber-400/20">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <div class="flex items-center gap-x-4">
-                <img src="../logo.png" alt="Spoken Devotion" class="h-12 w-auto">
+            <div class="flex items-center gap-x-3">
+                <img src="../logo.png" alt="Spoken Devotion" class="h-10 w-auto">
                 <span class="font-semibold text-3xl tracking-tighter heading-font">Spoken Devotion</span>
             </div>
-            <div class="hidden md:flex items-center gap-x-8 text-sm">
-                <a href="../" class="hover:text-amber-400 transition-colors">Home</a>
-                <a href="../worship/" class="hover:text-amber-400 transition-colors">Worship</a>
-                <a href="../prayer/" class="hover:text-amber-400 transition-colors">Prayer</a>
-                <a href="../confessions/" class="hover:text-amber-400 transition-colors">Confessions</a>
-                <a href="../bible/" class="hover:text-amber-400 transition-colors">Bible</a>
+            <div class="flex gap-x-6 text-sm">
+                <a href="../" class="hover:text-amber-400">Home</a>
+                <a href="../worship/" class="hover:text-amber-400">Worship</a>
+                <a href="../prayer/" class="hover:text-amber-400">Prayer</a>
+                <a href="../confessions/" class="hover:text-amber-400">Confessions</a>
+                <a href="../bible/" class="hover:text-amber-400">Bible</a>
             </div>
         </div>
     </nav>
 
-    <div class="pt-20 max-w-4xl mx-auto px-6 py-12">
-        <h1 class="text-5xl md:text-6xl font-semibold tracking-tighter heading-font mb-6">The Word Made Audible</h1>
-        
-        <p class="text-lg text-white/80 mb-12">
-            Our modern, heartfelt translation of the Bible brought to life in audio format.
-        </p>
+    <div class="pt-20 max-w-6xl mx-auto px-6 py-12">
+        <!-- Header -->
+        <div class="text-center mb-12">
+            <h1 class="text-5xl md:text-6xl font-semibold tracking-tighter heading-font mb-4">The Word Made Audible</h1>
+            <p class="text-xl text-white/80 max-w-3xl mx-auto">
+                Spoken Devotion Version (SDV)<br>
+                Created for simplicity and understanding — for those who just want to know God.
+            </p>
+        </div>
 
-        <!-- Book of James Section - Minimal Addition -->
-        <div class="bg-zinc-900 rounded-3xl p-8 mb-12">
-            <h2 class="text-3xl heading-font mb-4">Book of James</h2>
-            <p class="text-white/70 mb-6">Full audio narration with video accompaniment.</p>
+        <!-- Old Testament -->
+        <div class="mb-16">
+            <div class="flex items-center gap-x-3 mb-6">
+                <h2 class="text-3xl font-semibold heading-font text-amber-300">Old Testament</h2>
+                <div class="flex-1 h-px bg-white/10"></div>
+            </div>
             
-            <!-- Embed Your Video Here -->
-            <div class="aspect-video bg-black rounded-2xl overflow-hidden mb-6">
-                <iframe width="100%" height="100%" 
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 text-sm">
+                <div class="bible-book bg-zinc-900 px-4 py-3 rounded-2xl coming-soon">Genesis (Coming Soon)</div>
+                <div class="bible-book bg-zinc-900 px-4 py-3 rounded-2xl coming-soon">Exodus (Coming Soon)</div>
+                <div class="bible-book bg-zinc-900 px-4 py-3 rounded-2xl coming-soon">Leviticus (Coming Soon)</div>
+                <div class="bible-book bg-zinc-900 px-4 py-3 rounded-2xl coming-soon">Numbers (Coming Soon)</div>
+                <div class="bible-book bg-zinc-900 px-4 py-3 rounded-2xl coming-soon">Deuteronomy (Coming Soon)</div>
+                <div class="bible-book bg-zinc-900 px-4 py-3 rounded-2xl coming-soon">Joshua (Coming Soon)</div>
+                <div class="bible-book bg-zinc-900 px-4 py-3 rounded-2xl coming-soon">Judges (Coming Soon)</div>
+                <div class="bible-book bg-zinc-900 px-4 py-3 rounded-2xl coming-soon">Ruth (Coming Soon)</div>
+                <div class="bible-book bg-zinc-900 px-4 py-3 rounded-2xl coming-soon">1 Samuel (Coming Soon)</div>
+                <div class="bible-book bg-zinc-900 px-4 py-3 rounded-2xl coming-soon">2 Samuel (Coming Soon)</div>
+                <div class="bible-book bg-zinc-900 px-4 py-3 rounded-2xl coming-soon">1 Kings (Coming Soon)</div>
+                <div class="bible-book bg-zinc-900 px-4 py-3 rounded-2xl coming-soon">2 Kings (Coming Soon)</div>
+                <div class="bible-book bg-zinc-900 px-4 py-3 rounded-2xl coming-soon">1 Chronicles (Coming Soon)</div>
+                <div class="bible-book bg-zinc-900 px-4 py-3 rounded-2xl coming-soon">2 Chronicles (Coming Soon)</div>
+                <div class="bible-book bg-zinc-900 px-4 py-3 rounded-2xl coming-soon">Ezra (Coming Soon)</div>
+                <div class="bible-book bg-zinc-900 px-4 py-3 rounded-2xl coming-soon">Nehemiah (Coming Soon)</div>
+                <div class="bible-book bg-zinc-900 px-4 py-3 rounded-2xl coming-soon">Esther (Coming Soon)</div>
+                <div class="bible-book bg-zinc-900 px-4 py-3 rounded-2xl coming-soon">Job (Coming Soon)</div>
+                <div class="bible-book bg-zinc-900 px-4 py-3 rounded-2xl coming-soon">Psalms (Coming Soon)</div>
+                <div class="bible-book bg-zinc-900 px-4 py-3 rounded-2xl coming-soon">Proverbs (Coming Soon)</div>
+                <div class="bible-book bg-zinc-900 px-4 py-3 rounded-2xl coming-soon">Ecclesiastes (Coming Soon)</div>
+                <div class="bible-book bg-zinc-900 px-4 py-3 rounded-2xl coming-soon">Song of Solomon (Coming Soon)</div>
+                <div class="bible-book bg-zinc-900 px-4 py-3 rounded-2xl coming-soon">Isaiah (Coming Soon)</div>
+                <div class="bible-book bg-zinc-900 px-4 py-3 rounded-2xl coming-soon">Jeremiah (Coming Soon)</div>
+                <div class="bible-book bg-zinc-900 px-4 py-3 rounded-2xl coming-soon">Lamentations (Coming Soon)</div>
+                <div class="bible-book bg-zinc-900 px-4 py-3 rounded-2xl coming-soon">Ezekiel (Coming Soon)</div>
+                <div class="bible-book bg-zinc-900 px-4 py-3 rounded-2xl coming-soon">Daniel (Coming Soon)</div>
+                <div class="bible-book bg-zinc-900 px-4 py-3 rounded-2xl coming-soon">Hosea (Coming Soon)</div>
+                <div class="bible-book bg-zinc-900 px-4 py-3 rounded-2xl coming-soon">Joel (Coming Soon)</div>
+                <div class="bible-book bg-zinc-900 px-4 py-3 rounded-2xl coming-soon">Amos (Coming Soon)</div>
+                <div class="bible-book bg-zinc-900 px-4 py-3 rounded-2xl coming-soon">Obadiah (Coming Soon)</div>
+                <div class="bible-book bg-zinc-900 px-4 py-3 rounded-2xl coming-soon">Jonah (Coming Soon)</div>
+                <div class="bible-book bg-zinc-900 px-4 py-3 rounded-2xl coming-soon">Micah (Coming Soon)</div>
+                <div class="bible-book bg-zinc-900 px-4 py-3 rounded-2xl coming-soon">Nahum (Coming Soon)</div>
+                <div class="bible-book bg-zinc-900 px-4 py-3 rounded-2xl coming-soon">Habakkuk (Coming Soon)</div>
+                <div class="bible-book bg-zinc-900 px-4 py-3 rounded-2xl coming-soon">Zephaniah (Coming Soon)</div>
+                <div class="bible-book bg-zinc-900 px-4 py-3 rounded-2xl coming-soon">Haggai (Coming Soon)</div>
+                <div class="bible-book bg-zinc-900 px-4 py-3 rounded-2xl coming-soon">Zechariah (Coming Soon)</div>
+                <div class="bible-book bg-zinc-900 px-4 py-3 rounded-2xl coming-soon">Malachi (Coming Soon)</div>
+            </div>
+        </div>
+
+        <!-- New Testament -->
+        <div>
+            <div class="flex items-center gap-x-3 mb-6">
+                <h2 class="text-3xl font-semibold heading-font text-amber-300">New Testament</h2>
+                <div class="flex-1 h-px bg-white/10"></div>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 text-sm">
+                <div class="bible-book bg-zinc-900 px-4 py-3 rounded-2xl coming-soon">Matthew (Coming Soon)</div>
+                <div class="bible-book bg-zinc-900 px-4 py-3 rounded-2xl coming-soon">Mark (Coming Soon)</div>
+                <div class="bible-book bg-zinc-900 px-4 py-3 rounded-2xl coming-soon">Luke (Coming Soon)</div>
+                <div class="bible-book bg-zinc-900 px-4 py-3 rounded-2xl coming-soon">John (Coming Soon)</div>
+                <div class="bible-book bg-zinc-900 px-4 py-3 rounded-2xl coming-soon">Acts (Coming Soon)</div>
+                <div class="bible-book bg-zinc-900 px-4 py-3 rounded-2xl coming-soon">Romans (Coming Soon)</div>
+                <div class="bible-book bg-zinc-900 px-4 py-3 rounded-2xl coming-soon">1 Corinthians (Coming Soon)</div>
+                <div class="bible-book bg-zinc-900 px-4 py-3 rounded-2xl coming-soon">2 Corinthians (Coming Soon)</div>
+                <div class="bible-book bg-zinc-900 px-4 py-3 rounded-2xl coming-soon">Galatians (Coming Soon)</div>
+                <div class="bible-book bg-zinc-900 px-4 py-3 rounded-2xl coming-soon">Ephesians (Coming Soon)</div>
+                <div class="bible-book bg-zinc-900 px-4 py-3 rounded-2xl coming-soon">Philippians (Coming Soon)</div>
+                <div class="bible-book bg-zinc-900 px-4 py-3 rounded-2xl coming-soon">Colossians (Coming Soon)</div>
+                <div class="bible-book bg-zinc-900 px-4 py-3 rounded-2xl coming-soon">1 Thessalonians (Coming Soon)</div>
+                <div class="bible-book bg-zinc-900 px-4 py-3 rounded-2xl coming-soon">2 Thessalonians (Coming Soon)</div>
+                <div class="bible-book bg-zinc-900 px-4 py-3 rounded-2xl coming-soon">1 Timothy (Coming Soon)</div>
+                <div class="bible-book bg-zinc-900 px-4 py-3 rounded-2xl coming-soon">2 Timothy (Coming Soon)</div>
+                <div class="bible-book bg-zinc-900 px-4 py-3 rounded-2xl coming-soon">Titus (Coming Soon)</div>
+                <div class="bible-book bg-zinc-900 px-4 py-3 rounded-2xl coming-soon">Philemon (Coming Soon)</div>
+                <div class="bible-book bg-zinc-900 px-4 py-3 rounded-2xl coming-soon">Hebrews (Coming Soon)</div>
+                
+                <!-- James - Clickable -->
+                <div onclick="showJamesModal()" 
+                     class="bible-book bg-amber-400/10 border border-amber-400/40 hover:bg-amber-400/20 px-4 py-3 rounded-2xl cursor-pointer flex items-center justify-between group">
+                    <span class="font-medium">James</span>
+                    <span class="text-amber-400 text-xs flex items-center gap-x-1 group-hover:underline">
+                        Listen <i class="fa-solid fa-play ml-1"></i>
+                    </span>
+                </div>
+                
+                <div class="bible-book bg-zinc-900 px-4 py-3 rounded-2xl coming-soon">1 Peter (Coming Soon)</div>
+                <div class="bible-book bg-zinc-900 px-4 py-3 rounded-2xl coming-soon">2 Peter (Coming Soon)</div>
+                <div class="bible-book bg-zinc-900 px-4 py-3 rounded-2xl coming-soon">1 John (Coming Soon)</div>
+                <div class="bible-book bg-zinc-900 px-4 py-3 rounded-2xl coming-soon">2 John (Coming Soon)</div>
+                <div class="bible-book bg-zinc-900 px-4 py-3 rounded-2xl coming-soon">3 John (Coming Soon)</div>
+                <div class="bible-book bg-zinc-900 px-4 py-3 rounded-2xl coming-soon">Jude (Coming Soon)</div>
+                <div class="bible-book bg-zinc-900 px-4 py-3 rounded-2xl coming-soon">Revelation (Coming Soon)</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- James Modal -->
+    <div id="james-modal" class="modal">
+        <div class="modal-content">
+            <div class="p-5 border-b border-amber-400/30 flex justify-between items-center">
+                <div>
+                    <h3 class="text-2xl font-semibold">The Book of James</h3>
+                    <p class="text-amber-400 text-sm">Spoken Devotion Version • Audio Narration with Video</p>
+                </div>
+                <button onclick="closeJamesModal()" class="text-3xl leading-none hover:text-amber-400 px-2">&times;</button>
+            </div>
+            
+            <!-- YouTube Embed -->
+            <div class="aspect-video bg-black">
+                <iframe id="james-video" 
+                        width="100%" 
+                        height="100%" 
                         src="https://www.youtube.com/embed/dG6T-h4-ZSk" 
-                        title="Book of James - Spoken Narration" 
+                        title="Book of James - Spoken Devotion Version"
                         frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                         allowfullscreen>
                 </iframe>
             </div>
             
-            <p class="text-sm text-white/60">
-                More books and chapters coming soon — God willing.
-            </p>
+            <div class="p-5 text-center text-sm text-white/60">
+                More books coming soon — God willing.
+            </div>
         </div>
     </div>
 
     <!-- Footer -->
-    <footer class="bg-black py-12 text-center text-sm text-white/60 border-t border-white/10 mt-12">
-        <div class="max-w-4xl mx-auto px-6">
-            <p>© 2026 Spoken Devotion • All glory to God the Father</p>
-            <p class="mt-2">ruby@spokendevotion.com</p>
-        </div>
+    <footer class="bg-black py-10 text-center text-sm text-white/60 border-t border-white/10 mt-12">
+        © 2026 Spoken Devotion • All glory to God the Father
     </footer>
+
+    <script>
+        function showJamesModal() {
+            const modal = document.getElementById('james-modal');
+            modal.style.display = 'flex';
+            
+            // Optional: Auto-play when modal opens (remove if you don't want autoplay)
+            // const iframe = document.getElementById('james-video');
+            // iframe.src = iframe.src + "?autoplay=1";
+        }
+
+        function closeJamesModal() {
+            const modal = document.getElementById('james-modal');
+            const iframe = document.getElementById('james-video');
+            
+            // Stop video when closing
+            iframe.src = iframe.src; 
+            modal.style.display = 'none';
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('james-modal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeJamesModal();
+            }
+        });
+
+        // Close with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === "Escape") {
+                const modal = document.getElementById('james-modal');
+                if (modal.style.display === 'flex') {
+                    closeJamesModal();
+                }
+            }
+        });
+    </script>
 </body>
 </html>
