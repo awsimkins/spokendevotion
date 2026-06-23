@@ -12,6 +12,27 @@
         .heading-font { font-family: 'Playfair Display', serif; }
         .worship-bg { background: linear-gradient(135deg, #1e2937 0%, #334155 100%); }
         .accent-gold { color: #fbbf24; }
+        
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+        .modal-content {
+            background: #18181b;
+            max-width: 90%;
+            max-height: 85vh;
+            width: 700px;
+            border-radius: 1.5rem;
+            overflow: hidden;
+            border: 1px solid #fbbf24;
+        }
     </style>
 </head>
 <body class="bg-zinc-950 text-white overflow-x-hidden">
@@ -43,126 +64,47 @@
                 </p>
             </div>
 
-            <!-- Featured Song Card (includes lyrics excerpt for homepage) -->
-            <div class="bg-zinc-900 rounded-3xl p-8 md:p-10 mb-10" id="featured-item">
+            <!-- Song 1: Have Mercy on Me (Anna) -->
+            <div class="bg-zinc-900 rounded-3xl p-8 md:p-10 mb-10" id="song-anna">
                 <div class="mb-6">
                     <h3 class="text-3xl font-semibold mb-1">Have Mercy on Me</h3>
-                    <p class="text-amber-400 text-sm">Sung by Anna • Lyrics by Anthony • Preview</p>
+                    <p class="text-amber-400 text-sm">Sung by Anna • Lyrics by Anthony</p>
                 </div>
-
                 <audio controls class="w-full mb-6">
-                    <source src="have_mercy_on_me.mp3" type="audio/mpeg">
+                    <source src="have_mercy_on_me_anna.mp3" type="audio/mpeg">
                     Your browser does not support the audio element.
                 </audio>
-
-                <a href="have_mercy_on_me.mp3" download 
-                   class="inline-flex items-center gap-x-2 text-amber-400 hover:text-amber-300 text-sm mb-8">
-                    <i class="fa-solid fa-download"></i>
-                    <span>Download MP3</span>
-                </a>
+                <div class="flex gap-4">
+                    <a href="have_mercy_on_me_anna.mp3" download
+                       class="inline-flex items-center gap-x-2 text-amber-400 hover:text-amber-300 text-sm">
+                        <i class="fa-solid fa-download"></i> Download MP3
+                    </a>
+                    <button onclick="showLyrics('anna-lyrics')" 
+                            class="inline-flex items-center gap-x-2 px-5 py-2 bg-amber-400 hover:bg-amber-300 text-zinc-950 font-medium rounded-2xl text-sm transition-all">
+                        <i class="fa-solid fa-scroll"></i> Show Lyrics
+                    </button>
+                </div>
             </div>
 
-            <!-- Second Version -->
-            <div class="bg-zinc-900 rounded-3xl p-8 md:p-10 mb-12">
+            <!-- Song 2: Placeholder - Replace with your new song -->
+            <div class="bg-zinc-900 rounded-3xl p-8 md:p-10 mb-12" id="song-2">
                 <div class="mb-6">
-                    <h3 class="text-3xl font-semibold mb-1">Have Mercy on Me</h3>
-                    <p class="text-amber-400 text-sm">Sung by John • Lyrics by Anthony • Preview</p>
+                    <h3 class="text-3xl font-semibold mb-1">Second Song Title</h3>
+                    <p class="text-amber-400 text-sm">Sung by [Name] • Lyrics by Anthony</p>
                 </div>
-
                 <audio controls class="w-full mb-6">
-                    <source src="have_mercy_on_me_2.mp3" type="audio/mpeg">
+                    <source src="your_second_song.mp3" type="audio/mpeg">
                     Your browser does not support the audio element.
                 </audio>
-
-                <a href="have_mercy_on_me_2.mp3" download 
-                   class="inline-flex items-center gap-x-2 text-amber-400 hover:text-amber-300 text-sm">
-                    <i class="fa-solid fa-download"></i>
-                    <span>Download MP3</span>
-                </a>
-            </div>
-
-            <!-- Full Lyrics Section -->
-            <div class="max-w-3xl mx-auto">
-                <div class="flex items-center gap-x-3 mb-6">
-                    <div class="h-px flex-1 bg-white/10"></div>
-                    <h4 class="text-xl font-semibold text-amber-400 tracking-wider">FULL LYRICS</h4>
-                    <div class="h-px flex-1 bg-white/10"></div>
-                </div>
-
-                <div class="bg-zinc-900/60 border border-white/10 rounded-3xl p-10 md:p-12">
-                    <p class="text-xl leading-[1.85] italic text-white/90">
-                        I’m tired of the sleepless nights<br>
-                        Tired of this emptiness inside<br>
-                        Tired of the sorrow sitting heavy on my chest<br>
-                        Tired of feeling so alone<br>
-                        
-                        I try to smile, I try to pretend<br>
-                        But everyone else looks happy in the end<br>
-                        I reach for people but they turn away<br>
-                        And I’m left here with the weight<br>
-                        
-                        I know You were rejected too<br>
-                        I know You carried pain You never deserved<br>
-                        But Lord, I’m so ashamed of who I’ve been<br>
-                        I can’t even lift my head<br>
-                        
-                        Have mercy on me<br>
-                        I’m too weak to lift my head<br>
-                        Have mercy on me<br>
-                        I’ve failed You again and again<br>
-                        I don’t deserve to speak Your name<br>
-                        I don’t deserve to look at You<br>
-                        But I’m breaking, Lord, I’m breaking<br>
-                        Have mercy on me<br>
-                        
-                        I feel the guilt of all my past<br>
-                        The things I did, the lines I crossed<br>
-                        I struggle just to do what’s right<br>
-                        And I’m scared I’m too far gone to fight<br>
-                        
-                        My soul aches and my body’s worn<br>
-                        I worry all day and can’t sleep when it’s dark<br>
-                        I wonder if I’m too old to change<br>
-                        If this heart is just too stained<br>
-                        
-                        I know You were rejected too<br>
-                        You know what it’s like to be cast aside<br>
-                        So Jesus, if You’re listening now<br>
-                        Please don’t turn away tonight<br>
-                        
-                        Have mercy on me<br>
-                        I’m too weak to lift my head<br>
-                        Have mercy on me<br>
-                        I’ve failed You again and again<br>
-                        I don’t deserve to speak Your name<br>
-                        I don’t deserve to look at You<br>
-                        But I’m breaking, Lord, I’m breaking<br>
-                        Have mercy on me<br>
-                        
-                        How did You carry all our trouble?<br>
-                        How did You bear what we deserved?<br>
-                        I come with nothing but my shame<br>
-                        And still I’m hoping You’ll let me in<br>
-                        
-                        I’m tired of pretending I’m okay<br>
-                        I’m tired of hiding in the dark<br>
-                        I don’t have the strength to fix myself<br>
-                        So I’m laying here with my broken heart<br>
-                        
-                        Have mercy on me…<br>
-                        I’m too weak to lift my head<br>
-                        Have mercy on me…<br>
-                        I’ve failed You again and again<br>
-                        
-                        Even if I’m too far gone<br>
-                        Even if I’m too ashamed<br>
-                        Lord, I’m reaching in the darkness<br>
-                        Have mercy on me<br>
-                        
-                        Have mercy… have mercy…<br>
-                        I’m too weak… but I’m here<br>
-                        Have mercy on me
-                    </p>
+                <div class="flex gap-4">
+                    <a href="your_second_song.mp3" download
+                       class="inline-flex items-center gap-x-2 text-amber-400 hover:text-amber-300 text-sm">
+                        <i class="fa-solid fa-download"></i> Download MP3
+                    </a>
+                    <button onclick="showLyrics('song2-lyrics')" 
+                            class="inline-flex items-center gap-x-2 px-5 py-2 bg-amber-400 hover:bg-amber-300 text-zinc-950 font-medium rounded-2xl text-sm transition-all">
+                        <i class="fa-solid fa-scroll"></i> Show Lyrics
+                    </button>
                 </div>
             </div>
 
@@ -172,9 +114,53 @@
         </div>
     </div>
 
+    <!-- Lyrics Modal -->
+    <div id="lyrics-modal" class="modal">
+        <div class="modal-content">
+            <div class="p-6 border-b border-amber-400/30 flex justify-between items-center">
+                <h3 id="modal-title" class="text-2xl font-semibold">Lyrics</h3>
+                <button onclick="closeModal()" class="text-3xl leading-none hover:text-amber-400">&times;</button>
+            </div>
+            <div id="modal-body" class="p-8 md:p-10 max-h-[65vh] overflow-auto text-white/90 leading-relaxed text-lg">
+                <!-- Lyrics injected by JS -->
+            </div>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer class="py-12 text-center text-sm text-white/60 border-t border-white/10">
         © 2026 Spoken Devotion • Worship • ruby@spokendevotion.com
     </footer>
+
+    <script>
+        // Lyrics data - we'll populate this with the full text you send later
+        const lyricsData = {
+            "anna-lyrics": `
+                Paste full lyrics for Have Mercy on Me (Anna) here...
+            `,
+            "song2-lyrics": `
+                Paste full lyrics for the second song here...
+            `
+        };
+
+        function showLyrics(id) {
+            const modal = document.getElementById('lyrics-modal');
+            const body = document.getElementById('modal-body');
+            const title = document.getElementById('modal-title');
+            
+            body.innerHTML = `<p>${lyricsData[id] || 'Lyrics coming soon...'}</p>`;
+            title.textContent = id.includes('anna') ? 'Have Mercy on Me - Lyrics' : 'Song Lyrics';
+            modal.style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('lyrics-modal').style.display = 'none';
+        }
+
+        // Close modal when clicking outside content
+        document.getElementById('lyrics-modal').addEventListener('click', function(e) {
+            if (e.target === this) closeModal();
+        });
+    </script>
 </body>
 </html>
