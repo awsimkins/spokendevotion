@@ -205,29 +205,34 @@ async function loadFeatured(pageUrl, targetId, pageName) {
         const htmlText = await response.text();
         const parser = new DOMParser();
         const doc = parser.parseFromString(htmlText, 'text/html');
-        const featured = doc.getElementById('featured-item');
+        
+        // Try to find #featured-item first, otherwise grab the first card
+        let featured = doc.getElementById('featured-item');
+        if (!featured) {
+            featured = doc.querySelector('.bg-zinc-900, .bg-zinc-900\\/80');
+        }
         
         if (featured) {
-            // Remove all audio players from the pulled content
+            // Remove audio players
             const audioElements = featured.querySelectorAll('audio');
             audioElements.forEach(audio => audio.remove());
             
             const container = document.getElementById(targetId);
             container.innerHTML = featured.outerHTML;
             
-            // Optional: Add a "Listen on full page" button at the bottom of the card
-            const card = container.querySelector('.section-card, [id="featured-item"]');
+            // Add "View full page" button
+            const card = container.querySelector('.bg-zinc-900, .bg-zinc-900\\/80, [id="featured-item"]');
             if (card) {
-                const listenBtn = document.createElement('div');
-                listenBtn.className = 'mt-6 text-center';
-                listenBtn.innerHTML = `
+                const btnDiv = document.createElement('div');
+                btnDiv.className = 'mt-6 text-center';
+                btnDiv.innerHTML = `
                     <a href="${pageUrl}" 
                        class="inline-flex items-center gap-x-2 px-5 py-2.5 bg-amber-400 hover:bg-amber-300 text-zinc-950 font-semibold rounded-2xl text-sm transition-all">
-                        <i class="fa-solid fa-play"></i> 
-                        Listen to full version on ${pageName}
+                        <i class="fa-solid fa-arrow-right"></i> 
+                        View full ${pageName} page
                     </a>
                 `;
-                card.appendChild(listenBtn);
+                card.appendChild(btnDiv);
             }
         }
     } catch (error) {
