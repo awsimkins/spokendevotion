@@ -30,6 +30,21 @@
             overflow: hidden;
             border: 1px solid #fbbf24;
         }
+        .toast {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #27251f;
+            color: #fbbf24;
+            padding: 12px 24px;
+            border-radius: 9999px;
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.3);
+            z-index: 9999;
+            display: none;
+            align-items: center;
+            gap: 8px;
+        }
     </style>
 </head>
 <body class="bg-zinc-950 text-white overflow-x-hidden">
@@ -62,8 +77,8 @@
                 </p>
             </div>
 
-            <!-- Open Hands -->
-            <div class="bg-zinc-900 rounded-3xl p-8 md:p-10 mb-10">
+            <!-- Open Hands (Featured) -->
+            <div class="bg-zinc-900 rounded-3xl p-8 md:p-10 mb-10" id="featured-item">
                 <div class="mb-6">
                     <h3 class="text-3xl font-semibold mb-1">Open Hands</h3>
                     <p class="text-amber-400 text-sm">Written by Ruby • June 4, 2026 • Narrated by Anna</p>
@@ -72,11 +87,18 @@
                     <source src="Open_Hand.mp3" type="audio/mpeg">
                     Your browser does not support the audio element.
                 </audio>
-                <button onclick="showPoetry('open-hands')" 
-                        class="inline-flex items-center gap-x-2 px-6 py-3 bg-amber-400 hover:bg-amber-300 text-zinc-950 font-medium rounded-2xl text-sm transition-all">
-                    <i class="fa-solid fa-book-open"></i> 
-                    <span>Show Poetry</span>
-                </button>
+                <div class="flex flex-wrap gap-3">
+                    <button onclick="showPoetry('open-hands')" 
+                            class="inline-flex items-center gap-x-2 px-6 py-3 bg-amber-400 hover:bg-amber-300 text-zinc-950 font-medium rounded-2xl text-sm transition-all">
+                        <i class="fa-solid fa-book-open"></i> 
+                        <span>Show Poetry</span>
+                    </button>
+                    <button onclick="shareAudio('Open_Hand.mp3', 'Open Hands')" 
+                            class="inline-flex items-center gap-x-2 px-5 py-3 text-sm text-amber-400 hover:text-amber-300 border border-amber-400/40 hover:bg-amber-400/10 rounded-2xl transition-all">
+                        <i class="fa-solid fa-share-alt"></i> 
+                        <span>Share</span>
+                    </button>
+                </div>
             </div>
 
             <!-- Receipts, Not Stages -->
@@ -89,11 +111,18 @@
                     <source src="Receipt_Not_Stages.mp3" type="audio/mpeg">
                     Your browser does not support the audio element.
                 </audio>
-                <button onclick="showPoetry('receipts-not-stages')" 
-                        class="inline-flex items-center gap-x-2 px-6 py-3 bg-amber-400 hover:bg-amber-300 text-zinc-950 font-medium rounded-2xl text-sm transition-all">
-                    <i class="fa-solid fa-book-open"></i> 
-                    <span>Show Poetry</span>
-                </button>
+                <div class="flex flex-wrap gap-3">
+                    <button onclick="showPoetry('receipts-not-stages')" 
+                            class="inline-flex items-center gap-x-2 px-6 py-3 bg-amber-400 hover:bg-amber-300 text-zinc-950 font-medium rounded-2xl text-sm transition-all">
+                        <i class="fa-solid fa-book-open"></i> 
+                        <span>Show Poetry</span>
+                    </button>
+                    <button onclick="shareAudio('Receipt_Not_Stages.mp3', 'Receipts, Not Stages')" 
+                            class="inline-flex items-center gap-x-2 px-5 py-3 text-sm text-amber-400 hover:text-amber-300 border border-amber-400/40 hover:bg-amber-400/10 rounded-2xl transition-all">
+                        <i class="fa-solid fa-share-alt"></i> 
+                        <span>Share</span>
+                    </button>
+                </div>
             </div>
 
             <!-- Wineglass on Concrete -->
@@ -106,11 +135,18 @@
                     <source src="Wineglass_Concrete.mp3" type="audio/mpeg">
                     Your browser does not support the audio element.
                 </audio>
-                <button onclick="showPoetry('wineglass-on-concrete')" 
-                        class="inline-flex items-center gap-x-2 px-6 py-3 bg-amber-400 hover:bg-amber-300 text-zinc-950 font-medium rounded-2xl text-sm transition-all">
-                    <i class="fa-solid fa-book-open"></i> 
-                    <span>Show Poetry</span>
-                </button>
+                <div class="flex flex-wrap gap-3">
+                    <button onclick="showPoetry('wineglass-on-concrete')" 
+                            class="inline-flex items-center gap-x-2 px-6 py-3 bg-amber-400 hover:bg-amber-300 text-zinc-950 font-medium rounded-2xl text-sm transition-all">
+                        <i class="fa-solid fa-book-open"></i> 
+                        <span>Show Poetry</span>
+                    </button>
+                    <button onclick="shareAudio('Wineglass_Concrete.mp3', 'Wineglass on Concrete')" 
+                            class="inline-flex items-center gap-x-2 px-5 py-3 text-sm text-amber-400 hover:text-amber-300 border border-amber-400/40 hover:bg-amber-400/10 rounded-2xl transition-all">
+                        <i class="fa-solid fa-share-alt"></i> 
+                        <span>Share</span>
+                    </button>
+                </div>
             </div>
 
             <p class="text-center text-amber-300 italic text-lg">
@@ -134,6 +170,12 @@
         </div>
     </div>
 
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+        <i class="fa-solid fa-check-circle"></i>
+        <span id="toast-text">Link copied to clipboard!</span>
+    </div>
+
     <!-- Footer -->
     <footer class="py-12 text-center text-sm text-white/60 border-t border-white/10">
         © 2026 Spoken Devotion • All glory to God the Father
@@ -155,13 +197,9 @@
                 }
 
                 const item = confessionsCache[id];
-                if (!item) {
-                    body.innerHTML = `<p class="text-red-400">Poetry not found.</p>`;
-                } else {
-                    titleEl.textContent = item.title;
-                    metaEl.textContent = `${item.written} • ${item.narrated}`;
-                    body.innerHTML = `<p>${item.text}</p>`;
-                }
+                titleEl.textContent = item.title;
+                metaEl.textContent = `${item.written} • ${item.narrated}`;
+                body.innerHTML = `<p>${item.text}</p>`;
                 modal.style.display = 'flex';
             } catch (err) {
                 console.error(err);
@@ -174,7 +212,32 @@
             document.getElementById('poetry-modal').style.display = 'none';
         }
 
-        // Close when clicking outside
+        // Share function - copies direct MP3 link
+        function shareAudio(filename, title) {
+            const baseUrl = window.location.origin + window.location.pathname.replace(/\/$/, '');
+            const fullUrl = `${baseUrl}/${filename}`;
+
+            navigator.clipboard.writeText(fullUrl).then(() => {
+                showToast(`Link for "${title}" copied!`);
+            }).catch(() => {
+                // Fallback for older browsers
+                prompt('Copy this link:', fullUrl);
+            });
+        }
+
+        // Toast notification
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            const text = document.getElementById('toast-text');
+            text.textContent = message;
+            toast.style.display = 'flex';
+
+            setTimeout(() => {
+                toast.style.display = 'none';
+            }, 2500);
+        }
+
+        // Close modal when clicking outside
         document.getElementById('poetry-modal').addEventListener('click', function(e) {
             if (e.target === this) closeModal();
         });
