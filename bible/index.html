@@ -3,50 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spoken Devotion • Bible</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Bible - Spoken Devotion</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@400;500;600&display=swap');
-        body { font-family: 'Poppins', system_ui, sans-serif; }
-        .heading-font { font-family: 'Playfair Display', serif; }
-        .bible-bg { background: linear-gradient(135deg, #1e2937 0%, #334155 100%); }
+        /* Reuse or add simple styling consistent with your site */
+        body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; }
+        .audio-container { margin: 30px 0; }
+        iframe, video { max-width: 100%; height: auto; }
     </style>
 </head>
-<body class="bg-zinc-950 text-white overflow-x-hidden">
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-zinc-950/90 backdrop-blur-xl border-b border-amber-400/20">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <div class="flex items-center gap-x-3">
-                <!-- Logo Icon -->
-                <img src="../logo.png" alt="Spoken Devotion" class="h-10 w-auto">
-                <span class="font-semibold text-3xl tracking-tighter heading-font">Spoken Devotion</span>
-            </div>
-            <div class="flex gap-x-6 text-sm">
-                <a href="../" class="hover:text-amber-400">Home</a>
-                <a href="../worship/" class="hover:text-amber-400">Worship</a>
-                <a href="../prayer/" class="hover:text-amber-400">Prayer</a>
-                <a href="../confessions/" class="hover:text-amber-400">Confessions</a>
-            </div>
-        </div>
-    </nav>
+<body>
+    <header>
+        <h1>Spoken Devotion • Bible</h1>
+        <nav><!-- Add links to Home, Worship, Prayer, etc. --></nav>
+    </header>
 
-    <div class="min-h-screen pt-20 flex items-center bible-bg">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <h1 class="text-6xl md:text-7xl font-semibold tracking-tighter heading-font leading-tight mb-8 text-amber-300">
-                The Word Made Audible
-            </h1>
-            <p class="text-2xl text-white/80 mb-12 max-w-2xl mx-auto">
-                Our modern, heartfelt translation of the Bible brought to life in audio format — making Scripture accessible, emotional, and alive for today’s listener.
-            </p>
-            <div class="text-7xl mb-8">📖</div>
-            <p class="italic text-amber-300">"Your word is a lamp to my feet and a light to my path."</p>
-            <p class="text-sm text-white/60 mt-4">— Psalm 119:105</p>
-            <p class="mt-16 text-sm">Coming to Spotify, Apple Music, and more — God willing.</p>
-        </div>
-    </div>
+    <main>
+        <h2>The Book of James</h2>
+        <p>A heartfelt audio narration with video accompaniment. Listen and watch as the Word comes alive.</p>
 
-    <footer class="py-12 text-center text-sm text-white/60 border-t border-white/10">
-        © 2026 Spoken Devotion Bible • ruby@spokendevotion.com
+        <!-- EMBED HERE -->
+        <div class="audio-container">
+            <h3>Book of James - Full Narration</h3>
+            
+            <!-- Option A: YouTube Embed (Recommended) -->
+            <iframe width="560" height="315" 
+                    src="https://www.youtube.com/embed/v=dG6T-h4-ZSk" 
+                    title="Book of James Audio Narration" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+            </iframe>
+            
+            <!-- Option B: Self-hosted Video/Audio (if uploading files) -->
+            <!--
+            <video controls width="100%">
+                <source src="james-narration.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <p><a href="james-narration.mp4" download>Download Audio/Video</a></p>
+            -->
+        </div>
+
+        <p>More books and chapters coming soon — God willing.</p>
+    </main>
+
+    <footer>
+        <!-- Your existing footer -->
+        © 2026 Spoken Devotion
     </footer>
 </body>
 </html>
