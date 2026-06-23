@@ -11,14 +11,32 @@
         body { font-family: 'Poppins', system_ui, sans-serif; }
         .heading-font { font-family: 'Playfair Display', serif; }
         .prayer-bg { background: linear-gradient(135deg, #1e3a8a 0%, #312e81 100%); }
-        .accent-gold { color: #fbbf24; }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+        }
+        .modal-content {
+            background: #18181b;
+            width: 100%;
+            max-width: 720px;
+            border-radius: 1.5rem;
+            overflow: hidden;
+            border: 1px solid #fbbf24;
+        }
     </style>
 </head>
 <body class="bg-zinc-950 text-white overflow-x-hidden">
+    <!-- Navigation -->
     <nav class="fixed top-0 left-0 right-0 z-50 bg-zinc-950/90 backdrop-blur-xl border-b border-amber-400/20">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             <div class="flex items-center gap-x-3">
-                <!-- Logo Icon -->
                 <img src="../logo.png" alt="Spoken Devotion" class="h-10 w-auto">
                 <span class="font-semibold text-3xl tracking-tighter heading-font">Spoken Devotion</span>
             </div>
@@ -31,6 +49,7 @@
         </div>
     </nav>
 
+    <!-- Hero -->
     <div class="min-h-screen pt-20 flex items-center prayer-bg">
         <div class="max-w-5xl mx-auto px-6">
             <div class="text-center mb-16">
@@ -42,66 +61,99 @@
                 </p>
             </div>
 
-            <!-- Featured Prayer of Repentance -->
-            <div class="mt-12 bg-zinc-900/80 border border-amber-400/20 rounded-3xl p-10 md:p-12" id="featured-item">
-                <div class="flex justify-between items-start mb-6">
-                    <div>
-                        <h3 class="text-2xl font-semibold accent-gold">Prayer of Repentance</h3>
-                        <p class="text-sm text-amber-400 mt-1">Written June 19, 2026 • Recited by Anna</p>
-                    </div>
+            <!-- Prayer 1: Prayer for Family (Featured) -->
+            <div class="bg-zinc-900/80 border border-amber-400/30 rounded-3xl p-8 md:p-10 mb-10">
+                <div class="mb-6">
+                    <h3 class="text-3xl font-semibold mb-1">Prayer for Family</h3>
+                    <p class="text-amber-400 text-sm">Written by Anthony • June 23, 2026 • Sang by Anna</p>
                 </div>
-                
-                <audio controls class="w-full mb-8">
+                <audio controls class="w-full mb-6">
+                    <source src="prayer_for_family.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <button onclick="showPrayer('family-prayer')" 
+                        class="inline-flex items-center gap-x-2 px-6 py-3 bg-amber-400 hover:bg-amber-300 text-zinc-950 font-medium rounded-2xl text-sm transition-all">
+                    <i class="fa-solid fa-book-open"></i> Show Prayer
+                </button>
+            </div>
+
+            <!-- Prayer 2: Prayer of Repentance -->
+            <div class="bg-zinc-900/80 border border-amber-400/20 rounded-3xl p-8 md:p-10">
+                <div class="mb-6">
+                    <h3 class="text-3xl font-semibold mb-1">Prayer of Repentance</h3>
+                    <p class="text-amber-400 text-sm">Written by Anthony • June 19, 2026 • Recited by Anna</p>
+                </div>
+                <audio controls class="w-full mb-6">
                     <source src="prayer_of_repentance.mp3" type="audio/mpeg">
                     Your browser does not support the audio element.
                 </audio>
-                
-                <p class="text-lg leading-relaxed italic mb-8">
-                    Father in heaven,<br><br>
-                    I come before You with empty hands and a shattered heart.<br><br>
-                    I have sinned against You.<br>
-                    I have turned my back on Your goodness and chosen my own dark way.<br>
-                    My sin is ever before me — it tears at my soul and leaves me in agony.<br>
-                    I groan and weep under the unbearable weight I created for myself.<br><br>
-                    Have mercy on me, O God, according to Your unfailing love.<br>
-                    Blot out my transgressions.<br>
-                    Wash me thoroughly from my iniquity<br>
-                    and cleanse me from my sin.<br><br>
-                    I am sorry, Father — I am so deeply sorry.<br>
-                    I am sorry for the doubt that poisoned my mind and made me question Your love.<br>
-                    I am sorry for the sin I kept choosing even when it destroyed me.<br>
-                    I am sorry for the anger that raged inside me and wounded everyone around me.<br>
-                    I am sorry for the running — running from Your presence, running from Your truth, running until I was completely lost and empty.<br>
-                    I am sorry for the pain I caused — the pain in Your heart, the pain I brought into the lives of those I love, and the crushing pain I brought upon my own soul.<br><br>
-                    Jesus, my Lord and Savior,<br>
-                    remember me in this brokenness.<br>
-                    Forgive me.<br>
-                    Wash me clean in Your blood.<br>
-                    Make me whole again.<br><br>
-                    Create in me a clean heart, O God,<br>
-                    and renew a right spirit within me.<br>
-                    Do not cast me away from Your presence.<br>
-                    Restore to me the joy of Your salvation<br>
-                    and uphold me with Your Spirit.<br><br>
-                    I am Yours, Father.<br>
-                    I turn back to You now with tears and trembling.<br>
-                    I have nowhere else to go.<br>
-                    Receive me, hold me, heal me, and make me new.<br><br>
-                    For Yours is the kingdom,<br>
-                    Yours is the power,<br>
-                    and Yours is the glory,<br>
-                    forever and ever.<br><br>
-                    In Jesus’ name I pray,<br>
-                    Amen.
-                </p>
-                <p class="text-right text-sm text-amber-400">— Spoken word prayer inspired by God’s Word</p>
+                <button onclick="showPrayer('repentance-prayer')" 
+                        class="inline-flex items-center gap-x-2 px-6 py-3 bg-amber-400 hover:bg-amber-300 text-zinc-950 font-medium rounded-2xl text-sm transition-all">
+                    <i class="fa-solid fa-book-open"></i> Show Prayer
+                </button>
             </div>
 
+            <p class="text-center text-amber-300 italic mt-16 text-lg">
+                More prayers coming soon — God willing.
+            </p>
         </div>
     </div>
 
+    <!-- Prayer Modal -->
+    <div id="prayer-modal" class="modal">
+        <div class="modal-content">
+            <div class="p-6 border-b border-amber-400/30 flex justify-between items-center">
+                <div>
+                    <h3 id="modal-title" class="text-2xl font-semibold"></h3>
+                    <p id="modal-meta" class="text-amber-400 text-sm mt-1"></p>
+                </div>
+                <button onclick="closeModal()" class="text-3xl leading-none hover:text-amber-400">&times;</button>
+            </div>
+            <div id="modal-body" class="p-8 md:p-10 max-h-[65vh] overflow-auto text-white/90 leading-relaxed text-lg whitespace-pre-wrap">
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
     <footer class="py-12 text-center text-sm text-white/60 border-t border-white/10">
-        © 2026 Spoken Devotion Prayer • ruby@spokendevotion.com
+        © 2026 Spoken Devotion • ruby@spokendevotion.com
     </footer>
+
+    <script>
+        let prayersCache = {};
+
+        async function showPrayer(id) {
+            const modal = document.getElementById('prayer-modal');
+            const body = document.getElementById('modal-body');
+            const titleEl = document.getElementById('modal-title');
+            const metaEl = document.getElementById('modal-meta');
+
+            try {
+                if (Object.keys(prayersCache).length === 0) {
+                    const response = await fetch('prayer.json');
+                    prayersCache = await response.json();
+                }
+
+                const prayer = prayersCache[id];
+                titleEl.textContent = prayer.title;
+                metaEl.textContent = prayer.written + " • " + prayer.narrated;
+                body.innerHTML = `<p>${prayer.text}</p>`;
+                modal.style.display = 'flex';
+            } catch (err) {
+                console.error(err);
+                body.innerHTML = `<p class="text-red-400">Error loading prayer. Please try again.</p>`;
+                modal.style.display = 'flex';
+            }
+        }
+
+        function closeModal() {
+            document.getElementById('prayer-modal').style.display = 'none';
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('prayer-modal').addEventListener('click', function(e) {
+            if (e.target === this) closeModal();
+        });
+    </script>
 </body>
 </html>
