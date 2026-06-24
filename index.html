@@ -16,25 +16,8 @@
 </head>
 <body class="bg-zinc-950 text-white overflow-x-hidden">
 
-    <!-- Navbar -->
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-zinc-950/90 backdrop-blur-xl border-b border-amber-400/20">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <div class="flex items-center gap-x-4">
-                <img src="logo.png" alt="Spoken Devotion" class="h-12 w-auto">
-                <span class="font-semibold text-3xl tracking-tighter heading-font">Spoken Devotion</span>
-            </div>
-            <div class="hidden md:flex items-center gap-x-8 text-sm">
-                <a href="worship/" class="hover:text-amber-400 transition-colors">Worship</a>
-                <a href="prayer/" class="hover:text-amber-400 transition-colors">Prayer</a>
-                <a href="confessions/" class="hover:text-amber-400 transition-colors">Confessions</a>
-                <a href="bible/" class="hover:text-amber-400 transition-colors">Bible</a>
-                <a href="instrumental/" class="hover:text-amber-400 transition-colors">Instrumental</a>
-            </div>
-            <a href="mailto:ruby@spokendevotion.com" class="px-6 py-2 border border-amber-400/50 rounded-full hover:bg-amber-400 hover:text-zinc-950 transition-all text-sm font-medium">
-                Contact
-            </a>
-        </div>
-    </nav>
+    <!-- Navbar will be loaded here from partials/nav.html -->
+    <div id="nav-placeholder"></div>
 
     <!-- Hero -->
     <div class="min-h-screen pt-20 flex items-center devotion-bg relative">
@@ -97,7 +80,7 @@
             </a>
         </div>
         <div id="featured-confessions" class="max-w-4xl">
-            <!-- Your original dynamic content or placeholder goes here -->
+            <!-- Your original dynamic content goes here -->
         </div>
     </div>
 
@@ -113,7 +96,7 @@
             </a>
         </div>
         <div id="featured-worship" class="max-w-4xl">
-            <!-- Your original dynamic content or placeholder goes here -->
+            <!-- Your original dynamic content goes here -->
         </div>
     </div>
 
@@ -129,12 +112,28 @@
             </a>
         </div>
         <div id="featured-prayer" class="max-w-4xl">
-            <!-- Your original dynamic content or placeholder goes here -->
+            <!-- Your original dynamic content goes here -->
+        </div>
+    </div>
+
+    <!-- Featured Instrumental (minimal addition) -->
+    <div class="max-w-5xl mx-auto px-6 py-16 border-t border-white/10 bg-zinc-900/50">
+        <div class="flex justify-between items-end mb-8">
+            <div>
+                <h2 class="text-4xl md:text-5xl font-semibold tracking-tight heading-font">Featured Instrumental</h2>
+                <p class="text-white/70 mt-2">Music for quiet prayer and reflection</p>
+            </div>
+            <a href="instrumental/" class="hidden md:inline-flex items-center gap-x-2 text-amber-400 hover:text-amber-300 transition-colors">
+                View all Instrumentals <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+        <div id="featured-instrumental" class="max-w-4xl">
+            <!-- Add your actual instrumental content here later -->
         </div>
     </div>
 
     <!-- Scripture for the Soul -->
-    <div class="max-w-5xl mx-auto px-6 py-16 border-t border-white/10 bg-zinc-900/50 text-center">
+    <div class="max-w-5xl mx-auto px-6 py-16 border-t border-white/10 text-center">
         <div class="max-w-3xl mx-auto">
             <i class="fa-solid fa-book-open text-4xl accent-gold mb-6"></i>
             <blockquote class="text-2xl md:text-3xl font-light italic tracking-tight mb-4">
@@ -147,28 +146,24 @@
         </div>
     </div>
 
-    <!-- Footer with Disclaimer -->
-    <footer class="bg-zinc-950 border-t border-white/10 py-12">
-        <div class="max-w-5xl mx-auto px-6">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-y-6 text-sm">
-                <div class="text-white/60">
-                    © 2026 Spoken Devotion. All glory to God the Father.
-                </div>
-                
-                <div class="text-center md:text-right text-white/50 text-xs max-w-md">
-                    Audio tracks and voices are generated with Suno. 
-                    Our Scripture readings come from a fresh translation developed with assistance from Grok, 
-                    based on original language sources, and then carefully edited for devotional use.
-                </div>
-                
-                <div>
-                    <a href="mailto:ruby@spokendevotion.com" class="text-amber-400 hover:text-amber-300 transition-colors">
-                        Contact Us
-                    </a>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <!-- Footer will be loaded here from partials/footer.html -->
+    <div id="footer-placeholder"></div>
+
+    <script>
+        // Load Navbar
+        fetch('partials/nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('nav-placeholder').innerHTML = data;
+            });
+
+        // Load Footer
+        fetch('partials/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
 
 </body>
 </html>
