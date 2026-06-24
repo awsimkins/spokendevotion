@@ -8,11 +8,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@400;500;600&display=swap');
-        body { font-family: 'Poppins', system_ui, sans-serif; }
-        .heading-font { font-family: 'Playfair Display', serif; }
-        .devotion-bg { background: linear-gradient(135deg, #0f172a 0%, #1e2937 50%, #334155 100%); }
-        .accent-gold { color: #fbbf24; }
-        .section-divider { border-top: 1px solid rgba(251, 191, 36, 0.2); }
+        
+        body { 
+            font-family: 'Poppins', system_ui, sans-serif; 
+        }
+        .heading-font { 
+            font-family: 'Playfair Display', serif; 
+        }
+        .devotion-bg { 
+            background: linear-gradient(135deg, #0f172a 0%, #1e2937 50%, #334155 100%); 
+        }
+        .accent-gold { 
+            color: #fbbf24; 
+        }
+        .section-divider { 
+            border-top: 1px solid rgba(251, 191, 36, 0.2); 
+        }
     </style>
 </head>
 <body class="bg-zinc-950 text-white overflow-x-hidden">
@@ -23,13 +34,18 @@
                 <img src="logo.png" alt="Spoken Devotion" class="h-12 w-auto">
                 <span class="font-semibold text-3xl tracking-tighter heading-font">Spoken Devotion</span>
             </div>
+            
+            <!-- Desktop Navigation -->
             <div class="hidden md:flex items-center gap-x-8 text-sm">
                 <a href="worship/" class="hover:text-amber-400 transition-colors">Worship</a>
                 <a href="prayer/" class="hover:text-amber-400 transition-colors">Prayer</a>
                 <a href="confessions/" class="hover:text-amber-400 transition-colors">Confessions</a>
                 <a href="bible/" class="hover:text-amber-400 transition-colors">Bible</a>
+                <a href="instrumental/" class="hover:text-amber-400 transition-colors">Instrumental</a>
             </div>
-            <a href="mailto:ruby@spokendevotion.com" class="px-6 py-2 border border-amber-400/50 rounded-full hover:bg-amber-400 hover:text-zinc-950 transition-all text-sm font-medium">
+            
+            <a href="mailto:ruby@spokendevotion.com" 
+               class="px-6 py-2 border border-amber-400/50 rounded-full hover:bg-amber-400 hover:text-zinc-950 transition-all text-sm font-medium">
                 Contact
             </a>
         </div>
@@ -49,8 +65,14 @@
                 Honoring Christ and God the Father in every word.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#featured" class="px-10 py-4 bg-amber-400 text-zinc-950 font-semibold rounded-3xl text-lg hover:bg-amber-300 transition-all">Listen Now</a>
-                <a href="worship/" class="px-10 py-4 border border-white/40 hover:bg-white/10 rounded-3xl text-lg">Enter Worship</a>
+                <a href="#featured" 
+                   class="px-10 py-4 bg-amber-400 text-zinc-950 font-semibold rounded-3xl text-lg hover:bg-amber-300 transition-all">
+                    Listen Now
+                </a>
+                <a href="worship/" 
+                   class="px-10 py-4 border border-white/40 hover:bg-white/10 rounded-3xl text-lg">
+                    Enter Worship
+                </a>
             </div>
         </div>
     </div>
@@ -96,7 +118,7 @@
             </a>
         </div>
         <div id="featured-confessions" class="max-w-4xl">
-            <!-- Dynamically loaded -->
+            <!-- Dynamically loaded or content will go here -->
         </div>
         <a href="confessions/" class="md:hidden inline-flex items-center gap-x-2 text-amber-400 hover:text-amber-300 mt-4">
             View all Confessions <i class="fa-solid fa-arrow-right"></i>
@@ -115,7 +137,7 @@
             </a>
         </div>
         <div id="featured-worship" class="max-w-4xl">
-            <!-- Dynamically loaded -->
+            <!-- Dynamically loaded or content will go here -->
         </div>
         <a href="worship/" class="md:hidden inline-flex items-center gap-x-2 text-amber-400 hover:text-amber-300 mt-4">
             View all Worship <i class="fa-solid fa-arrow-right"></i>
@@ -134,128 +156,54 @@
             </a>
         </div>
         <div id="featured-prayer" class="max-w-4xl">
-            <!-- Dynamically loaded -->
+            <!-- Content will go here -->
         </div>
         <a href="prayer/" class="md:hidden inline-flex items-center gap-x-2 text-amber-400 hover:text-amber-300 mt-4">
             View all Prayers <i class="fa-solid fa-arrow-right"></i>
         </a>
     </div>
 
-    <!-- Scripture Highlight -->
-    <div class="bg-zinc-900 py-20 section-divider">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <h2 class="text-4xl md:text-5xl font-semibold tracking-tight heading-font mb-8">Scripture for the Soul</h2>
-            <div class="max-w-3xl mx-auto">
-                <blockquote class="text-2xl md:text-3xl font-light leading-snug mb-6">
-                    “Be still, and know that I am God.”<br>
-                    <span class="text-lg text-amber-400">— Psalm 46:10</span>
-                </blockquote>
-                <p class="text-white/70">In the stillness, we find strength. In His presence, we find peace.</p>
+    <!-- Scripture for the Soul -->
+    <div class="max-w-5xl mx-auto px-6 py-16 border-t border-white/10 bg-zinc-900/50 text-center">
+        <div class="max-w-3xl mx-auto">
+            <i class="fa-solid fa-book-open text-4xl accent-gold mb-6"></i>
+            <blockquote class="text-2xl md:text-3xl font-light italic tracking-tight mb-4">
+                “Be still, and know that I am God.”
+            </blockquote>
+            <p class="text-white/70">— Psalm 46:10</p>
+            <p class="mt-6 text-white/60 max-w-md mx-auto">
+                Find strength and peace in the stillness of His presence.
+            </p>
+        </div>
+    </div>
+
+    <!-- Footer with Disclaimer -->
+    <footer class="bg-zinc-950 border-t border-white/10 py-12">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-y-6 text-sm">
+                <div class="text-white/60">
+                    © 2026 Spoken Devotion. All glory to God the Father.
+                </div>
+                
+                <div class="text-center md:text-right text-white/50 text-xs max-w-md">
+                    Audio tracks and voices are generated with Suno. 
+                    Our Scripture readings come from a fresh translation developed with assistance from Grok, 
+                    based on original language sources, and then carefully edited for devotional use.
+                </div>
+                
+                <div>
+                    <a href="mailto:ruby@spokendevotion.com" class="text-amber-400 hover:text-amber-300 transition-colors">
+                        Contact Us
+                    </a>
+                </div>
             </div>
-        </div>
-    </div>
-
-    <!-- Social & Connect -->
-    <div id="social" class="max-w-6xl mx-auto px-6 py-20">
-        <h2 class="text-4xl md:text-5xl font-semibold tracking-tight text-center mb-4">Connect With Us</h2>
-        <p class="text-center text-white/70 mb-12 max-w-md mx-auto">Follow along for daily encouragement, spoken pieces, and worship moments.</p>
-        
-        <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
-            <a href="#" class="flex flex-col items-center p-6 bg-zinc-900 rounded-3xl hover:bg-amber-400/10 transition-all">
-                <i class="fa-brands fa-tiktok text-4xl mb-3 accent-gold"></i>
-                <span class="font-medium">TikTok</span>
-            </a>
-            <a href="#" class="flex flex-col items-center p-6 bg-zinc-900 rounded-3xl hover:bg-amber-400/10 transition-all">
-                <i class="fa-brands fa-facebook text-4xl mb-3 accent-gold"></i>
-                <span class="font-medium">Facebook</span>
-            </a>
-            <a href="#" class="flex flex-col items-center p-6 bg-zinc-900 rounded-3xl hover:bg-amber-400/10 transition-all">
-                <i class="fa-brands fa-instagram text-4xl mb-3 accent-gold"></i>
-                <span class="font-medium">Instagram</span>
-            </a>
-            <a href="#" class="flex flex-col items-center p-6 bg-zinc-900 rounded-3xl hover:bg-amber-400/10 transition-all">
-                <i class="fa-brands fa-x-twitter text-4xl mb-3 accent-gold"></i>
-                <span class="font-medium">X (Twitter)</span>
-            </a>
-            <a href="#" class="flex flex-col items-center p-6 bg-zinc-900 rounded-3xl hover:bg-amber-400/10 transition-all col-span-2 md:col-span-1">
-                <i class="fa-brands fa-youtube text-4xl mb-3 accent-gold"></i>
-                <span class="font-medium">YouTube</span>
-            </a>
-        </div>
-        
-        <p class="text-center text-sm text-white/60 mt-8">Spotify & Apple Music coming soon, Lord willing.</p>
-    </div>
-
-    <!-- Footer -->
-    <footer class="bg-black py-12 text-center text-sm text-white/60 border-t border-white/10">
-        <div class="max-w-4xl mx-auto px-6">
-            <p class="mb-2">© 2026 Spoken Devotion • All glory to God the Father</p>
-            <p class="mb-4">ruby@spokendevotion.com</p>
-            <p class="text-xs">Part of the Simkins family ministries • Emotional strength in Christ</p>
         </div>
     </footer>
 
-    <!-- JavaScript for Featured Content -->
+    <!-- Future: JavaScript for dynamic featured content can go here -->
     <script>
-        async function loadFeatured(pageUrl, targetId, pageName, folderPrefix) {
-            try {
-                const response = await fetch(pageUrl);
-                const htmlText = await response.text();
-                const parser = new DOMParser();
-                const doc = parser.parseFromString(htmlText, 'text/html');
-                
-                let featured = doc.getElementById('featured-item');
-                if (!featured) {
-                    featured = doc.querySelector('.bg-zinc-900, .bg-zinc-900\\/80');
-                }
-                
-                if (featured) {
-                    // Fix audio source paths
-                    const sources = featured.querySelectorAll('audio source');
-                    sources.forEach(source => {
-                        const currentSrc = source.getAttribute('src');
-                        if (currentSrc && !currentSrc.includes('/')) {
-                            source.setAttribute('src', folderPrefix + currentSrc);
-                        }
-                    });
-
-                    // Remove "Show" buttons (they only work on full pages)
-                    const buttons = featured.querySelectorAll('button');
-                    buttons.forEach(btn => {
-                        const text = btn.textContent.toLowerCase();
-                        if (text.includes('show') || text.includes('lyrics') || text.includes('poetry') || text.includes('prayer')) {
-                            btn.remove();
-                        }
-                    });
-
-                    const container = document.getElementById(targetId);
-                    container.innerHTML = featured.outerHTML;
-
-                    // Add "View full page" button
-                    const card = container.querySelector('.bg-zinc-900, .bg-zinc-900\\/80, [id="featured-item"]');
-                    if (card) {
-                        const btnDiv = document.createElement('div');
-                        btnDiv.className = 'mt-6 text-center';
-                        btnDiv.innerHTML = `
-                            <a href="${pageUrl}" 
-                               class="inline-flex items-center gap-x-2 px-5 py-2.5 bg-amber-400 hover:bg-amber-300 text-zinc-950 font-semibold rounded-2xl text-sm transition-all">
-                                <i class="fa-solid fa-arrow-right"></i> 
-                                View full ${pageName} page
-                            </a>
-                        `;
-                        card.appendChild(btnDiv);
-                    }
-                }
-            } catch (error) {
-                console.log('Could not load featured content from ' + pageUrl);
-            }
-        }
-
-        document.addEventListener('DOMContentLoaded', function() {
-            loadFeatured('confessions/', 'featured-confessions', 'Confessions', 'confessions/');
-            loadFeatured('worship/', 'featured-worship', 'Worship', 'worship/');
-            loadFeatured('prayer/', 'featured-prayer', 'Prayer', 'prayer/');
-        });
+        // Placeholder for future dynamic loading of featured sections
+        // Example: fetch content from JSON or separate files
     </script>
 </body>
 </html>
