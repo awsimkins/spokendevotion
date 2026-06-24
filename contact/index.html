@@ -68,7 +68,7 @@
                 Fill out the form below and our team will get back to you. Your message goes directly to us — no public email address needed.
             </p>
 
-            <form id="contact-form" method="POST" novalidate>
+            <form id="contact-form" method="POST" novalidate data-access-key="5f1260d3-574d-406c-9908-1ec87f0a1ee6">
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
                     <div>
                         <label for="first-name" class="block text-sm text-white/80 mb-2">First Name <span class="text-amber-400">*</span></label>
@@ -155,8 +155,10 @@
 
     <div id="footer-root"></div>
 
-    <script src="/partials/contact-config.js"></script>
-    <script src="/partials/site.js"></script>
-    <script src="/partials/contact-form.js"></script>
+    <script>
+        window.SD_CONTACT = { accessKey: '5f1260d3-574d-406c-9908-1ec87f0a1ee6' };
+    </script>
+    <script src="/partials/site.js?v=20260624"></script>
+    <script src="/partials/contact-form.js?v=20260624"></script>
 </body>
 </html>

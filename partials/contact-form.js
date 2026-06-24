@@ -5,6 +5,10 @@
 
     function getAccessKey() {
         var key = window.SD_CONTACT && window.SD_CONTACT.accessKey;
+        if (!key || key === 'YOUR_WEB3FORMS_ACCESS_KEY') {
+            var form = document.getElementById('contact-form');
+            key = form && form.getAttribute('data-access-key');
+        }
         if (!key || key === 'YOUR_WEB3FORMS_ACCESS_KEY') return null;
         return key;
     }
