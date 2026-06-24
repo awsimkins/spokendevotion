@@ -3,252 +3,229 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prayer • Spoken Devotion</title>
+    <title>Spoken Devotion • Prayer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@400;500;600&display=swap');
-        
-        body { 
-            font-family: 'Poppins', system_ui, sans-serif; 
+        body { font-family: 'Poppins', system_ui, sans-serif; }
+        .heading-font { font-family: 'Playfair Display', serif; }
+        .prayer-bg { background: linear-gradient(135deg, #1e3a8a 0%, #312e81 100%); }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
         }
-        .heading-font { 
-            font-family: 'Playfair Display', serif; 
+        .modal-content {
+            background: #18181b;
+            width: 100%;
+            max-width: 720px;
+            border-radius: 1.5rem;
+            overflow: hidden;
+            border: 1px solid #fbbf24;
         }
-        .devotion-bg { 
-            background: linear-gradient(135deg, #0f172a 0%, #1e2937 50%, #334155 100%); 
-        }
-        .accent-gold { 
-            color: #fbbf24; 
+        .toast {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #27251f;
+            color: #fbbf24;
+            padding: 12px 24px;
+            border-radius: 9999px;
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.3);
+            z-index: 9999;
+            display: none;
+            align-items: center;
+            gap: 8px;
         }
     </style>
 </head>
 <body class="bg-zinc-950 text-white overflow-x-hidden">
-    <!-- Navbar -->
+    <!-- Navigation -->
     <nav class="fixed top-0 left-0 right-0 z-50 bg-zinc-950/90 backdrop-blur-xl border-b border-amber-400/20">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <div class="flex items-center gap-x-4">
-                <img src="../logo.png" alt="Spoken Devotion" class="h-12 w-auto">
+            <div class="flex items-center gap-x-3">
+                <img src="../logo.png" alt="Spoken Devotion" class="h-10 w-auto">
                 <span class="font-semibold text-3xl tracking-tighter heading-font">Spoken Devotion</span>
             </div>
-            
-            <!-- Desktop Navigation -->
-            <div class="hidden md:flex items-center gap-x-8 text-sm">
-                <a href="../worship/" class="hover:text-amber-400 transition-colors">Worship</a>
-                <a href="../prayer/" class="text-amber-400 font-medium">Prayer</a>
-                <a href="../confessions/" class="hover:text-amber-400 transition-colors">Confessions</a>
-                <a href="../bible/" class="hover:text-amber-400 transition-colors">Bible</a>
-                <a href="../instrumental/" class="hover:text-amber-400 transition-colors">Instrumental</a>
+            <div class="flex gap-x-6 text-sm">
+                <a href="../" class="hover:text-amber-400">Home</a>
+                <a href="../worship/" class="hover:text-amber-400">Worship</a>
+                <a href="../confessions/" class="hover:text-amber-400">Confessions</a>
+                <a href="../bible/" class="hover:text-amber-400">Bible</a>
             </div>
-            
-            <a href="mailto:ruby@spokendevotion.com" 
-               class="px-6 py-2 border border-amber-400/50 rounded-full hover:bg-amber-400 hover:text-zinc-950 transition-all text-sm font-medium">
-                Contact
-            </a>
         </div>
     </nav>
 
     <!-- Hero -->
-    <div class="pt-20 pb-16 devotion-bg">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <div class="flex justify-center mb-6">
-                <i class="fa-solid fa-pray text-5xl accent-gold"></i>
+    <div class="min-h-screen pt-20 flex items-center prayer-bg">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h1 class="text-6xl md:text-7xl font-semibold tracking-tighter heading-font leading-tight mb-8">
+                    Prayers that Reach the Heart of God
+                </h1>
+                <p class="text-2xl text-white/80 max-w-3xl mx-auto">
+                    Written prayers, spoken audio prayers, and intercession that build emotional strength and draw us closer to the Father through Christ.
+                </p>
             </div>
-            <h1 class="text-5xl md:text-6xl font-semibold tracking-tighter heading-font mb-4">
-                Prayer
-            </h1>
-            <p class="text-xl text-white/80 max-w-2xl mx-auto">
-                Spoken and written prayers to help you approach the throne of grace<br>
-                with confidence, honesty, and faith.
+
+            <!-- Prayer 1: Prayer for Family (Featured) -->
+            <div class="bg-zinc-900/80 border border-amber-400/30 rounded-3xl p-8 md:p-10 mb-10" id="featured-item">
+                <div class="mb-6">
+                    <h3 class="text-3xl font-semibold mb-1">Prayer for Family</h3>
+                    <p class="text-amber-400 text-sm">Written by Anthony • June 23, 2026 • Sang by Anna</p>
+                </div>
+                <audio controls class="w-full mb-6">
+                    <source src="prayer_for_family.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <div class="flex flex-wrap gap-3">
+                    <a href="prayer_for_family.mp3" download
+                       class="inline-flex items-center gap-x-2 px-5 py-3 text-sm text-amber-400 hover:text-amber-300 border border-amber-400/40 hover:bg-amber-400/10 rounded-2xl transition-all">
+                        <i class="fa-solid fa-download"></i> Download MP3
+                    </a>
+                    <button onclick="showPrayer('family-prayer')" 
+                            class="inline-flex items-center gap-x-2 px-6 py-3 bg-amber-400 hover:bg-amber-300 text-zinc-950 font-medium rounded-2xl text-sm transition-all">
+                        <i class="fa-solid fa-book-open"></i> Show Prayer
+                    </button>
+                    <button onclick="shareAudio('prayer_for_family.mp3', 'Prayer for Family')" 
+                            class="inline-flex items-center gap-x-2 px-5 py-3 text-sm text-amber-400 hover:text-amber-300 border border-amber-400/40 hover:bg-amber-400/10 rounded-2xl transition-all">
+                        <i class="fa-solid fa-share-alt"></i> Share
+                    </button>
+                </div>
+            </div>
+
+            <!-- Prayer 2: Prayer of Repentance -->
+            <div class="bg-zinc-900/80 border border-amber-400/20 rounded-3xl p-8 md:p-10">
+                <div class="mb-6">
+                    <h3 class="text-3xl font-semibold mb-1">Prayer of Repentance</h3>
+                    <p class="text-amber-400 text-sm">Written by Anthony • June 19, 2026 • Recited by Anna</p>
+                </div>
+                <audio controls class="w-full mb-6">
+                    <source src="prayer_of_repentance.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <div class="flex flex-wrap gap-3">
+                    <a href="prayer_of_repentance.mp3" download
+                       class="inline-flex items-center gap-x-2 px-5 py-3 text-sm text-amber-400 hover:text-amber-300 border border-amber-400/40 hover:bg-amber-400/10 rounded-2xl transition-all">
+                        <i class="fa-solid fa-download"></i> Download MP3
+                    </a>
+                    <button onclick="showPrayer('repentance-prayer')" 
+                            class="inline-flex items-center gap-x-2 px-6 py-3 bg-amber-400 hover:bg-amber-300 text-zinc-950 font-medium rounded-2xl text-sm transition-all">
+                        <i class="fa-solid fa-book-open"></i> Show Prayer
+                    </button>
+                    <button onclick="shareAudio('prayer_of_repentance.mp3', 'Prayer of Repentance')" 
+                            class="inline-flex items-center gap-x-2 px-5 py-3 text-sm text-amber-400 hover:text-amber-300 border border-amber-400/40 hover:bg-amber-400/10 rounded-2xl transition-all">
+                        <i class="fa-solid fa-share-alt"></i> Share
+                    </button>
+                </div>
+            </div>
+
+            <p class="text-center text-amber-300 italic mt-16 text-lg">
+                More prayers coming soon — God willing.
             </p>
         </div>
     </div>
 
-    <!-- Intro -->
-    <div class="max-w-4xl mx-auto px-6 py-10 text-center">
-        <p class="text-lg text-white/70">
-            Prayer is the heartbeat of our relationship with God. These prayers were created to give voice to what is often hard to express — 
-            whether in seasons of joy, struggle, gratitude, or quiet seeking.
-        </p>
-    </div>
-
-    <!-- Prayer Collection -->
-    <div class="max-w-5xl mx-auto px-6 pb-20">
-        <div class="flex items-end justify-between mb-8">
-            <div>
-                <h2 class="text-3xl font-semibold tracking-tight heading-font">Prayers for the Heart</h2>
-                <p class="text-white/60 mt-1">Spoken prayers you can pray along with or meditate on.</p>
-            </div>
-        </div>
-
-        <div class="grid md:grid-cols-2 gap-6">
-            
-            <!-- Prayer 1 -->
-            <div class="bg-zinc-900 rounded-3xl p-6 flex flex-col">
-                <div class="flex-1">
-                    <div class="flex items-start justify-between mb-3">
-                        <div>
-                            <h3 class="font-semibold text-xl">A Prayer for Peace</h3>
-                            <p class="text-white/60 text-sm">Spoken Prayer • 3:28</p>
-                        </div>
-                        <i class="fa-solid fa-play text-2xl accent-gold mt-1"></i>
-                    </div>
-                    <p class="text-white/70 text-sm mb-4">
-                        For those carrying anxiety, worry, or a restless heart. 
-                        A prayer inviting the peace of Christ to rule.
-                    </p>
-                </div>
-                
-                <audio controls controlsList="nodownload" class="w-full mb-4">
-                    <source src="prayer-for-peace.mp3" type="audio/mpeg">
-                    Your browser does not support the audio element.
-                </audio>
-                
-                <div class="flex justify-end">
-                    <button onclick="shareTrack('A Prayer for Peace', 'prayer')" 
-                            class="flex items-center gap-x-2 text-sm text-amber-400 hover:text-amber-300 transition-colors">
-                        <i class="fa-solid fa-share-alt"></i>
-                        <span>Share</span>
-                    </button>
-                </div>
-            </div>
-
-            <!-- Prayer 2 -->
-            <div class="bg-zinc-900 rounded-3xl p-6 flex flex-col">
-                <div class="flex-1">
-                    <div class="flex items-start justify-between mb-3">
-                        <div>
-                            <h3 class="font-semibold text-xl">Prayer of Surrender</h3>
-                            <p class="text-white/60 text-sm">Spoken Prayer • 4:05</p>
-                        </div>
-                        <i class="fa-solid fa-play text-2xl accent-gold mt-1"></i>
-                    </div>
-                    <p class="text-white/70 text-sm mb-4">
-                        A prayer of releasing control and trusting God with the unknown.
-                    </p>
-                </div>
-                
-                <audio controls controlsList="nodownload" class="w-full mb-4">
-                    <source src="prayer-of-surrender.mp3" type="audio/mpeg">
-                    Your browser does not support the audio element.
-                </audio>
-                
-                <div class="flex justify-end">
-                    <button onclick="shareTrack('Prayer of Surrender', 'prayer')" 
-                            class="flex items-center gap-x-2 text-sm text-amber-400 hover:text-amber-300 transition-colors">
-                        <i class="fa-solid fa-share-alt"></i>
-                        <span>Share</span>
-                    </button>
-                </div>
-            </div>
-
-            <!-- Prayer 3 -->
-            <div class="bg-zinc-900 rounded-3xl p-6 flex flex-col">
-                <div class="flex-1">
-                    <div class="flex items-start justify-between mb-3">
-                        <div>
-                            <h3 class="font-semibold text-xl">Morning Prayer of Gratitude</h3>
-                            <p class="text-white/60 text-sm">Spoken Prayer • 2:51</p>
-                        </div>
-                        <i class="fa-solid fa-play text-2xl accent-gold mt-1"></i>
-                    </div>
-                    <p class="text-white/70 text-sm mb-4">
-                        A short, beautiful way to begin the day with thanksgiving and focus on God.
-                    </p>
-                </div>
-                
-                <audio controls controlsList="nodownload" class="w-full mb-4">
-                    <source src="morning-prayer-gratitude.mp3" type="audio/mpeg">
-                    Your browser does not support the audio element.
-                </audio>
-                
-                <div class="flex justify-end">
-                    <button onclick="shareTrack('Morning Prayer of Gratitude', 'prayer')" 
-                            class="flex items-center gap-x-2 text-sm text-amber-400 hover:text-amber-300 transition-colors">
-                        <i class="fa-solid fa-share-alt"></i>
-                        <span>Share</span>
-                    </button>
-                </div>
-            </div>
-
-            <!-- Prayer 4 -->
-            <div class="bg-zinc-900 rounded-3xl p-6 flex flex-col">
-                <div class="flex-1">
-                    <div class="flex items-start justify-between mb-3">
-                        <div>
-                            <h3 class="font-semibold text-xl">Prayer in Times of Waiting</h3>
-                            <p class="text-white/60 text-sm">Spoken Prayer • 4:42</p>
-                        </div>
-                        <i class="fa-solid fa-play text-2xl accent-gold mt-1"></i>
-                    </div>
-                    <p class="text-white/70 text-sm mb-4">
-                        For seasons of waiting, delay, or unanswered prayer. 
-                        A prayer that brings comfort and renewed hope.
-                    </p>
-                </div>
-                
-                <audio controls controlsList="nodownload" class="w-full mb-4">
-                    <source src="prayer-in-waiting.mp3" type="audio/mpeg">
-                    Your browser does not support the audio element.
-                </audio>
-                
-                <div class="flex justify-end">
-                    <button onclick="shareTrack('Prayer in Times of Waiting', 'prayer')" 
-                            class="flex items-center gap-x-2 text-sm text-amber-400 hover:text-amber-300 transition-colors">
-                        <i class="fa-solid fa-share-alt"></i>
-                        <span>Share</span>
-                    </button>
-                </div>
-            </div>
-
-        </div>
-
-        <p class="text-center text-white/50 text-sm mt-10">
-            More prayers will be added regularly. Written versions of many prayers are also available in the Confessions section.
-        </p>
-    </div>
-
-    <!-- Footer with Disclaimer -->
-    <footer class="bg-zinc-950 border-t border-white/10 py-12">
-        <div class="max-w-5xl mx-auto px-6">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-y-6 text-sm">
-                <div class="text-white/60">
-                    © 2026 Spoken Devotion. All glory to God the Father.
-                </div>
-                
-                <div class="text-center md:text-right text-white/50 text-xs max-w-md">
-                    Audio tracks and voices are generated with Suno. 
-                    Our Scripture readings come from a fresh translation developed with assistance from Grok, 
-                    based on original language sources, and then carefully edited for devotional use.
-                </div>
-                
+    <!-- Prayer Modal -->
+    <div id="prayer-modal" class="modal">
+        <div class="modal-content">
+            <div class="p-6 border-b border-amber-400/30 flex justify-between items-center">
                 <div>
-                    <a href="mailto:ruby@spokendevotion.com" class="text-amber-400 hover:text-amber-300 transition-colors">
-                        Contact Us
-                    </a>
+                    <h3 id="modal-title" class="text-2xl font-semibold"></h3>
+                    <p id="modal-meta" class="text-amber-400 text-sm mt-1"></p>
                 </div>
+                <button onclick="closeModal()" class="text-3xl leading-none hover:text-amber-400">&times;</button>
+            </div>
+            <div id="modal-body" class="p-8 md:p-10 max-h-[65vh] overflow-auto text-white/90 leading-relaxed text-lg whitespace-pre-wrap">
             </div>
         </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+        <i class="fa-solid fa-check-circle"></i>
+        <span id="toast-text">Link copied to clipboard!</span>
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-12 text-center text-sm text-white/60 border-t border-white/10">
+        © 2026 Spoken Devotion • ruby@spokendevotion.com
     </footer>
 
     <script>
-        function shareTrack(trackName, section) {
-            const url = window.location.href;
-            
-            if (navigator.share) {
-                navigator.share({
-                    title: trackName + ' - Spoken Devotion',
-                    text: 'Listen to this prayer: ' + trackName,
-                    url: url
-                }).catch(console.error);
-            } else {
-                navigator.clipboard.writeText(url).then(() => {
-                    alert('Link copied to clipboard! You can share it anywhere.');
-                }).catch(() => {
-                    alert('Sharing not supported on this browser. You can copy the page URL manually.');
-                });
+        let prayersCache = {};
+
+        async function showPrayer(id) {
+            const modal = document.getElementById('prayer-modal');
+            const body = document.getElementById('modal-body');
+            const titleEl = document.getElementById('modal-title');
+            const metaEl = document.getElementById('modal-meta');
+
+            try {
+                if (Object.keys(prayersCache).length === 0) {
+                    const response = await fetch('prayer.json');
+                    prayersCache = await response.json();
+                }
+
+                const prayer = prayersCache[id];
+                titleEl.textContent = prayer.title;
+                metaEl.textContent = prayer.written + " • " + prayer.narrated;
+                body.innerHTML = `<p>${prayer.text}</p>`;
+                modal.style.display = 'flex';
+            } catch (err) {
+                console.error(err);
+                body.innerHTML = `<p class="text-red-400">Error loading prayer. Please try again.</p>`;
+                modal.style.display = 'flex';
             }
         }
+
+        function closeModal() {
+            document.getElementById('prayer-modal').style.display = 'none';
+        }
+
+        // Share function
+        function shareAudio(filename, title) {
+            const baseUrl = window.location.origin + window.location.pathname.replace(/\/$/, '');
+            const fullUrl = `${baseUrl}/${filename}`;
+
+            navigator.clipboard.writeText(fullUrl).then(() => {
+                showToast(`Link for "${title}" copied!`);
+            }).catch(() => {
+                prompt('Copy this link:', fullUrl);
+            });
+        }
+
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            const text = document.getElementById('toast-text');
+            text.textContent = message;
+            toast.style.display = 'flex';
+
+            setTimeout(() => {
+                toast.style.display = 'none';
+            }, 2500);
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('prayer-modal').addEventListener('click', function(e) {
+            if (e.target === this) closeModal();
+        });
+
+        // Close with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === "Escape") {
+                const modal = document.getElementById('prayer-modal');
+                if (modal.style.display === 'flex') closeModal();
+            }
+        });
     </script>
 </body>
 </html>
