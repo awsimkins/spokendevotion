@@ -13,11 +13,11 @@
     <meta property="og:title" content="Spoken Devotion • Worship">
     <meta property="og:description" content="Original worship songs from Spoken Devotion — listen, read lyrics, and share.">
     <meta property="og:url" content="https://spokendevotion.com/worship/">
-    <meta property="og:image" content="https://spokendevotion.com/images/logo.png">
+    <meta property="og:image" content="https://spokendevotion.com/images/worship.png">
     <meta name="twitter:card" content="summary_large_image">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="/partials/site.css?v=10">
+    <link rel="stylesheet" href="/partials/site.css?v=11">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@400;500;600&display=swap');
         body { font-family: 'Poppins', system_ui, sans-serif; }
@@ -62,18 +62,17 @@
 <body class="bg-zinc-950 text-white overflow-x-hidden">
     <div id="nav-root"></div>
 
-    <section class="page-banner--worship">
-        <div class="page-banner__worship-frame">
-            <img src="/images/worship.png" alt="" class="page-banner__photo" width="1280" height="599" decoding="async">
-            <div class="page-banner__overlay"></div>
-            <div class="page-banner__content max-w-5xl mx-auto">
-                <h1 class="font-semibold tracking-tighter heading-font leading-tight text-amber-300">
-                    Worship in Spirit and Truth
-                </h1>
-                <p class="text-white/80 max-w-3xl mx-auto">
-                    Original worship songs, spontaneous praise, and immersive experiences that exalt Christ and glorify God the Father.
-                </p>
-            </div>
+    <section class="page-banner page-banner--standard" data-banner="/images/worship.png" data-fallback="worship-bg">
+        <div class="page-banner__fallback"></div>
+        <div class="page-banner__image"></div>
+        <div class="page-banner__overlay"></div>
+        <div class="page-banner__content max-w-5xl mx-auto">
+            <h1 class="font-semibold tracking-tighter heading-font leading-tight text-amber-300">
+                Worship in Spirit and Truth
+            </h1>
+            <p class="text-white/80 max-w-3xl mx-auto">
+                Original worship songs, spontaneous praise, and immersive experiences that exalt Christ and glorify God the Father.
+            </p>
         </div>
     </section>
 
