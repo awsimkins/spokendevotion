@@ -24,7 +24,7 @@ To create content that strengthens the heart, comforts the soul, and glorifies o
 | **Confessions** | Poetic reflections and honest spoken-word pieces | [Confessions](https://spokendevotion.com/confessions/) |
 | **Bible**     | Spoken Devotion Version (SDV) — full book list with James via YouTube embed | [Bible](https://spokendevotion.com/bible/) |
 | **Instrumental** | Quiet instrumental tracks for prayer and reflection | [Instrumental](https://spokendevotion.com/instrumental/) |
-| **Contact**     | Contact form (webform integration pending)         | [Contact](https://spokendevotion.com/contact/) |
+| **Contact**     | Contact form via Formspree (add form ID in config)  | [Contact](https://spokendevotion.com/contact/) |
 
 ## Key Features
 
@@ -52,13 +52,13 @@ Coming soon (God willing):
 
 ## Contact
 
-Use the [Contact Us](https://spokendevotion.com/contact/) page — the form is ready for visitors; backend delivery is not wired up yet.
+Use the [Contact Us](https://spokendevotion.com/contact/) page. Form submissions go through [Formspree](https://formspree.io/) — set your form ID in `partials/contact-config.js` (`formspreeId: 'your-id-here'`).
 
 ## Still To Do
 
 See also [`DEFERRED.md`](DEFERRED.md) for the full backlog. Priority items for the next session:
 
-- [ ] **Contact form backend** — connect `/contact/` form `action` to a webform service (Formspree, Netlify Forms, etc.) so submissions reach `ruby@spokendevotion.com` without exposing the address on the site
+- [ ] **Formspree form ID** — replace `YOUR_FORMSPREE_ID` in `partials/contact-config.js` with your Formspree form ID (create form at formspree.io, set notification email to `ruby@spokendevotion.com`)
 - [ ] **Social media links** — homepage Connect section icons still point to `#`; add real TikTok, Facebook, Instagram, X, and YouTube profile URLs in `index.html`
 - [ ] **Instrumental tracks** — add audio files and cards on `/instrumental/` when ready
 - [ ] **YouTube migration** — move hosted MP3s to YouTube embeds instead of serving files from the repo

@@ -2,8 +2,8 @@
 
 Items intentionally held for later — not forgotten.
 
-## Contact Form Backend
-`/contact/` page is live with first name, last name, email, subject, message, and optional phone fields. Form currently shows a thank-you message on submit. Wire the form `action` to a webform service (Formspree, Netlify Forms, etc.) so messages reach the team without exposing the email on the site.
+## Formspree Form ID
+Contact form is wired to Formspree via `partials/contact-form.js`. Replace `YOUR_FORMSPREE_ID` in `partials/contact-config.js` with your Formspree form ID. In Formspree dashboard, set the notification email to `ruby@spokendevotion.com`.
 
 ## Social Media Links (item 8)
 Homepage social icons still point to `#`. Update with real profile URLs when ready.
