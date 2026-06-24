@@ -38,20 +38,33 @@
     align-items: center;
 }
 .page-banner--home {
-    min-height: 50vh;
+    min-height: 58vh;
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    padding-top: 7.5rem;
+    padding-top: 6rem;
 }
 @media (min-width: 768px) {
     .page-banner--home {
-        min-height: 50vh;
-        padding-top: 8rem;
+        min-height: 58vh;
+        padding-top: 6rem;
     }
 }
+.page-banner--home .page-banner__fallback,
+.page-banner--home .page-banner__image,
+.page-banner--home .page-banner__overlay {
+    top: 6rem;
+}
+.page-banner--home .page-banner__image {
+    background-position: center 30%;
+}
 .page-banner--home .page-banner__content {
-    padding-top: 2rem;
+    padding-top: 4rem;
+}
+@media (min-width: 768px) {
+    .page-banner--home .page-banner__content {
+        padding-top: 5rem;
+    }
 }
 .page-banner__fallback,
 .page-banner__image,
