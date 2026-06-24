@@ -8,25 +8,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@400;500;600&display=swap');
-        
-        body { 
-            font-family: 'Poppins', system_ui, sans-serif; 
-        }
-        .heading-font { 
-            font-family: 'Playfair Display', serif; 
-        }
-        .devotion-bg { 
-            background: linear-gradient(135deg, #0f172a 0%, #1e2937 50%, #334155 100%); 
-        }
-        .accent-gold { 
-            color: #fbbf24; 
-        }
-        .section-divider { 
-            border-top: 1px solid rgba(251, 191, 36, 0.2); 
-        }
+        body { font-family: 'Poppins', system_ui, sans-serif; }
+        .heading-font { font-family: 'Playfair Display', serif; }
+        .devotion-bg { background: linear-gradient(135deg, #0f172a 0%, #1e2937 50%, #334155 100%); }
+        .accent-gold { color: #fbbf24; }
     </style>
 </head>
 <body class="bg-zinc-950 text-white overflow-x-hidden">
+
     <!-- Navbar -->
     <nav class="fixed top-0 left-0 right-0 z-50 bg-zinc-950/90 backdrop-blur-xl border-b border-amber-400/20">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
@@ -34,8 +23,6 @@
                 <img src="logo.png" alt="Spoken Devotion" class="h-12 w-auto">
                 <span class="font-semibold text-3xl tracking-tighter heading-font">Spoken Devotion</span>
             </div>
-            
-            <!-- Desktop Navigation -->
             <div class="hidden md:flex items-center gap-x-8 text-sm">
                 <a href="worship/" class="hover:text-amber-400 transition-colors">Worship</a>
                 <a href="prayer/" class="hover:text-amber-400 transition-colors">Prayer</a>
@@ -43,9 +30,7 @@
                 <a href="bible/" class="hover:text-amber-400 transition-colors">Bible</a>
                 <a href="instrumental/" class="hover:text-amber-400 transition-colors">Instrumental</a>
             </div>
-            
-            <a href="mailto:ruby@spokendevotion.com" 
-               class="px-6 py-2 border border-amber-400/50 rounded-full hover:bg-amber-400 hover:text-zinc-950 transition-all text-sm font-medium">
+            <a href="mailto:ruby@spokendevotion.com" class="px-6 py-2 border border-amber-400/50 rounded-full hover:bg-amber-400 hover:text-zinc-950 transition-all text-sm font-medium">
                 Contact
             </a>
         </div>
@@ -65,14 +50,8 @@
                 Honoring Christ and God the Father in every word.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#featured" 
-                   class="px-10 py-4 bg-amber-400 text-zinc-950 font-semibold rounded-3xl text-lg hover:bg-amber-300 transition-all">
-                    Listen Now
-                </a>
-                <a href="worship/" 
-                   class="px-10 py-4 border border-white/40 hover:bg-white/10 rounded-3xl text-lg">
-                    Enter Worship
-                </a>
+                <a href="#featured" class="px-10 py-4 bg-amber-400 text-zinc-950 font-semibold rounded-3xl text-lg hover:bg-amber-300 transition-all">Listen Now</a>
+                <a href="worship/" class="px-10 py-4 border border-white/40 hover:bg-white/10 rounded-3xl text-lg">Enter Worship</a>
             </div>
         </div>
     </div>
@@ -118,11 +97,8 @@
             </a>
         </div>
         <div id="featured-confessions" class="max-w-4xl">
-            <!-- Dynamically loaded or content will go here -->
+            <!-- Your original dynamic content or placeholder goes here -->
         </div>
-        <a href="confessions/" class="md:hidden inline-flex items-center gap-x-2 text-amber-400 hover:text-amber-300 mt-4">
-            View all Confessions <i class="fa-solid fa-arrow-right"></i>
-        </a>
     </div>
 
     <!-- Featured Worship -->
@@ -137,11 +113,8 @@
             </a>
         </div>
         <div id="featured-worship" class="max-w-4xl">
-            <!-- Dynamically loaded or content will go here -->
+            <!-- Your original dynamic content or placeholder goes here -->
         </div>
-        <a href="worship/" class="md:hidden inline-flex items-center gap-x-2 text-amber-400 hover:text-amber-300 mt-4">
-            View all Worship <i class="fa-solid fa-arrow-right"></i>
-        </a>
     </div>
 
     <!-- Featured Prayer -->
@@ -156,11 +129,8 @@
             </a>
         </div>
         <div id="featured-prayer" class="max-w-4xl">
-            <!-- Content will go here -->
+            <!-- Your original dynamic content or placeholder goes here -->
         </div>
-        <a href="prayer/" class="md:hidden inline-flex items-center gap-x-2 text-amber-400 hover:text-amber-300 mt-4">
-            View all Prayers <i class="fa-solid fa-arrow-right"></i>
-        </a>
     </div>
 
     <!-- Scripture for the Soul -->
@@ -200,10 +170,5 @@
         </div>
     </footer>
 
-    <!-- Future: JavaScript for dynamic featured content can go here -->
-    <script>
-        // Placeholder for future dynamic loading of featured sections
-        // Example: fetch content from JSON or separate files
-    </script>
 </body>
 </html>
