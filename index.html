@@ -24,21 +24,6 @@
         .heading-font { font-family: 'Playfair Display', serif; }
         .accent-gold { color: #fbbf24; }
         .section-divider { border-top: 1px solid rgba(251, 191, 36, 0.2); }
-        .toast {
-            position: fixed;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: #27251f;
-            color: #fbbf24;
-            padding: 12px 24px;
-            border-radius: 9999px;
-            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.3);
-            z-index: 9999;
-            display: none;
-            align-items: center;
-            gap: 8px;
-        }
     </style>
 </head>
 <body class="bg-zinc-950 text-white overflow-x-hidden">
@@ -87,57 +72,6 @@
                 <p class="text-white/70">Audio Scripture that nourishes the soul and equips us to walk in faith each day.</p>
             </div>
         </div>
-    </div>
-
-    <!-- Featured from Confessions -->
-    <div id="featured" class="max-w-5xl mx-auto px-6 py-16 border-t border-white/10">
-        <div class="flex justify-between items-end mb-8">
-            <div>
-                <h2 class="text-4xl md:text-5xl font-semibold tracking-tight heading-font">Featured from Confessions</h2>
-                <p class="text-white/70 mt-2">A taste of the latest poetic reflection</p>
-            </div>
-            <a href="confessions/" class="hidden md:inline-flex items-center gap-x-2 text-amber-400 hover:text-amber-300 transition-colors">
-                View all Confessions <i class="fa-solid fa-arrow-right"></i>
-            </a>
-        </div>
-        <div id="featured-confessions" class="max-w-4xl"></div>
-        <a href="confessions/" class="md:hidden inline-flex items-center gap-x-2 text-amber-400 hover:text-amber-300 mt-4">
-            View all Confessions <i class="fa-solid fa-arrow-right"></i>
-        </a>
-    </div>
-
-    <!-- Featured Worship -->
-    <div class="max-w-5xl mx-auto px-6 py-16 border-t border-white/10 bg-zinc-900/50">
-        <div class="flex justify-between items-end mb-8">
-            <div>
-                <h2 class="text-4xl md:text-5xl font-semibold tracking-tight heading-font">Featured Worship</h2>
-                <p class="text-white/70 mt-2">Listen to a song from the collection</p>
-            </div>
-            <a href="worship/" class="hidden md:inline-flex items-center gap-x-2 text-amber-400 hover:text-amber-300 transition-colors">
-                View all Worship <i class="fa-solid fa-arrow-right"></i>
-            </a>
-        </div>
-        <div id="featured-worship" class="max-w-4xl"></div>
-        <a href="worship/" class="md:hidden inline-flex items-center gap-x-2 text-amber-400 hover:text-amber-300 mt-4">
-            View all Worship <i class="fa-solid fa-arrow-right"></i>
-        </a>
-    </div>
-
-    <!-- Featured Prayer -->
-    <div class="max-w-5xl mx-auto px-6 py-16 border-t border-white/10">
-        <div class="flex justify-between items-end mb-8">
-            <div>
-                <h2 class="text-4xl md:text-5xl font-semibold tracking-tight heading-font">Featured Prayer</h2>
-                <p class="text-white/70 mt-2">A spoken prayer for the heart</p>
-            </div>
-            <a href="prayer/" class="hidden md:inline-flex items-center gap-x-2 text-amber-400 hover:text-amber-300 transition-colors">
-                View all Prayers <i class="fa-solid fa-arrow-right"></i>
-            </a>
-        </div>
-        <div id="featured-prayer" class="max-w-4xl"></div>
-        <a href="prayer/" class="md:hidden inline-flex items-center gap-x-2 text-amber-400 hover:text-amber-300 mt-4">
-            View all Prayers <i class="fa-solid fa-arrow-right"></i>
-        </a>
     </div>
 
     <!-- Scripture Highlight -->
@@ -191,11 +125,6 @@
     </div>
 
     <div id="footer-root"></div>
-
-    <div id="toast" class="toast">
-        <i class="fa-solid fa-check-circle"></i>
-        <span id="toast-text">Link copied to clipboard!</span>
-    </div>
 
     <script src="/partials/site.js"></script>
 </body>
