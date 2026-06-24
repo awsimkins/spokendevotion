@@ -37,6 +37,16 @@
     display: flex;
     align-items: center;
 }
+.page-banner--home {
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+}
+@media (min-width: 768px) {
+    .page-banner--home {
+        min-height: 50vh;
+    }
+}
 .page-banner__fallback,
 .page-banner__image,
 .page-banner__overlay {
