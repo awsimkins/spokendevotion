@@ -73,6 +73,43 @@
         rgba(9, 9, 11, 0.82) 100%
     );
 }
+/*
+ * Worship banner (worship.png ≈ 1280×599) — taller than main.png.
+ * cover in a short strip zooms/crops badly on phones; use contain there.
+ */
+.page-banner--worship.page-banner--standard {
+    min-height: 12rem;
+}
+@media (min-width: 768px) {
+    .page-banner--worship.page-banner--standard {
+        min-height: 20rem;
+    }
+}
+@media (min-width: 1024px) {
+    .page-banner--worship.page-banner--standard {
+        min-height: 24rem;
+    }
+}
+@media (max-width: 1023px) {
+    .page-banner--worship .page-banner__image {
+        background-size: contain;
+        background-position: center center;
+    }
+}
+@media (min-width: 1024px) {
+    .page-banner--worship .page-banner__image {
+        background-size: cover;
+        background-position: center 32%;
+    }
+}
+.page-banner--worship .page-banner__overlay {
+    background: linear-gradient(
+        to bottom,
+        rgba(9, 9, 11, 0.58) 0%,
+        rgba(9, 9, 11, 0.48) 40%,
+        rgba(9, 9, 11, 0.74) 100%
+    );
+}
 .page-banner__content {
     position: relative;
     z-index: 10;
