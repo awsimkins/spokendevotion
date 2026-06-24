@@ -148,8 +148,33 @@
         }
     };
 
+    function initPageBanners() {
+        document.querySelectorAll('[data-banner]').forEach(function (section) {
+            var url = section.getAttribute('data-banner');
+            var fallbackClass = section.getAttribute('data-fallback') || 'devotion-bg';
+            var fallback = section.querySelector('.page-banner__fallback');
+            var imageLayer = section.querySelector('.page-banner__image');
+
+            if (fallback) {
+                fallback.classList.add(fallbackClass);
+            }
+            if (!url || !imageLayer) return;
+
+            var img = new Image();
+            img.onload = function () {
+                imageLayer.style.backgroundImage = "url('" + url + "')";
+                imageLayer.classList.add('is-loaded');
+            };
+            img.onerror = function () {
+                imageLayer.classList.add('hidden');
+            };
+            img.src = url;
+        });
+    }
+
     document.addEventListener('DOMContentLoaded', function () {
         loadPartials();
+        initPageBanners();
 
         if (document.getElementById('featured-confessions')) {
             loadFeatured('confessions/', 'featured-confessions', 'Confessions', 'confessions/');

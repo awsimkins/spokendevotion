@@ -6,33 +6,33 @@
     <title>Instrumental • Spoken Devotion</title>
     <meta name="description" content="Quiet instrumental tracks for personal prayer and reflection from Spoken Devotion.">
     <meta name="theme-color" content="#0f172a">
-    <link rel="icon" href="/logo.png" type="image/png">
-    <link rel="apple-touch-icon" href="/logo.png">
+    <link rel="icon" href="/images/logo.png" type="image/png">
+    <link rel="apple-touch-icon" href="/images/logo.png">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Spoken Devotion">
     <meta property="og:title" content="Instrumental • Spoken Devotion">
     <meta property="og:description" content="Quiet instrumental tracks for personal prayer and reflection from Spoken Devotion.">
     <meta property="og:url" content="https://spokendevotion.com/instrumental/">
-    <meta property="og:image" content="https://spokendevotion.com/logo.png">
+    <meta property="og:image" content="https://spokendevotion.com/images/logo.png">
     <meta name="twitter:card" content="summary_large_image">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/partials/site.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@400;500;600&display=swap');
         body { font-family: 'Poppins', system_ui, sans-serif; }
         .heading-font { font-family: 'Playfair Display', serif; }
-        .devotion-bg { background: linear-gradient(135deg, #0f172a 0%, #1e2937 50%, #334155 100%); }
         .accent-gold { color: #fbbf24; }
     </style>
 </head>
 <body class="bg-zinc-950 text-white overflow-x-hidden">
     <div id="nav-root"></div>
 
-    <div class="pt-24 pb-16 devotion-bg">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <div class="flex justify-center mb-6">
-                <i class="fa-solid fa-music text-5xl accent-gold"></i>
-            </div>
+    <section class="page-banner page-banner--standard" data-banner="/images/instrumental.png" data-fallback="instrumental-bg">
+        <div class="page-banner__fallback"></div>
+        <div class="page-banner__image"></div>
+        <div class="page-banner__overlay"></div>
+        <div class="page-banner__content max-w-4xl mx-auto">
             <h1 class="text-4xl md:text-5xl font-semibold tracking-tighter heading-font mb-4">
                 Instrumental
             </h1>
@@ -41,7 +41,7 @@
                 Let the music create space for you to meet with God.
             </p>
         </div>
-    </div>
+    </section>
 
     <div class="max-w-4xl mx-auto px-6 py-12 text-center">
         <p class="text-lg text-white/70 max-w-2xl mx-auto">

@@ -1,0 +1,71 @@
+/* Fallback banner gradients (used when /images/*.png is missing) */
+.devotion-bg {
+    background: linear-gradient(135deg, #0f172a 0%, #1e2937 50%, #334155 100%);
+}
+.worship-bg {
+    background: linear-gradient(135deg, #1e2937 0%, #334155 100%);
+}
+.prayer-bg {
+    background: linear-gradient(135deg, #1e3a8a 0%, #312e81 100%);
+}
+.confession-bg {
+    background: linear-gradient(135deg, #1e2937 0%, #334155 100%);
+}
+.bible-bg {
+    background: linear-gradient(135deg, #0f172a 0%, #1e2937 40%, #1e3a8a 100%);
+}
+.instrumental-bg {
+    background: linear-gradient(135deg, #0f172a 0%, #1e2937 50%, #334155 100%);
+}
+
+/* Page banner */
+.page-banner {
+    position: relative;
+    overflow: hidden;
+    padding-top: 6rem;
+}
+.page-banner--standard {
+    min-height: 18rem;
+}
+@media (min-width: 768px) {
+    .page-banner--standard {
+        min-height: 22rem;
+    }
+}
+.page-banner--tall {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.page-banner__fallback,
+.page-banner__image,
+.page-banner__overlay {
+    position: absolute;
+    inset: 0;
+}
+.page-banner__image {
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+.page-banner__image.is-loaded {
+    opacity: 1;
+}
+.page-banner__overlay {
+    background: linear-gradient(
+        to bottom,
+        rgba(9, 9, 11, 0.45) 0%,
+        rgba(9, 9, 11, 0.65) 100%
+    );
+}
+.page-banner__content {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    padding: 3rem 1.5rem 4rem;
+    text-align: center;
+}
+.page-banner--tall .page-banner__content {
+    padding: 2rem 1.5rem 4rem;
+}

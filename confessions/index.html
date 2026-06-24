@@ -6,22 +6,22 @@
     <title>Spoken Devotion • Confessions</title>
     <meta name="description" content="Honest spoken-word confessions and poetic reflections from Spoken Devotion.">
     <meta name="theme-color" content="#0f172a">
-    <link rel="icon" href="/logo.png" type="image/png">
-    <link rel="apple-touch-icon" href="/logo.png">
+    <link rel="icon" href="/images/logo.png" type="image/png">
+    <link rel="apple-touch-icon" href="/images/logo.png">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Spoken Devotion">
     <meta property="og:title" content="Spoken Devotion • Confessions">
     <meta property="og:description" content="Honest spoken-word confessions and poetic reflections from Spoken Devotion.">
     <meta property="og:url" content="https://spokendevotion.com/confessions/">
-    <meta property="og:image" content="https://spokendevotion.com/logo.png">
+    <meta property="og:image" content="https://spokendevotion.com/images/logo.png">
     <meta name="twitter:card" content="summary_large_image">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/partials/site.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@400;500;600&display=swap');
         body { font-family: 'Poppins', system_ui, sans-serif; }
         .heading-font { font-family: 'Playfair Display', serif; }
-        .confession-bg { background: linear-gradient(135deg, #1e2937 0%, #334155 100%); }
         .modal {
             display: none;
             position: fixed;
@@ -61,18 +61,22 @@
 <body class="bg-zinc-950 text-white overflow-x-hidden">
     <div id="nav-root"></div>
 
-    <div class="min-h-screen pt-24 flex items-center confession-bg">
-        <div class="max-w-5xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <h1 class="text-5xl md:text-6xl font-semibold tracking-tighter heading-font leading-tight mb-6 text-amber-300">
-                    Sacred Reflections
-                </h1>
-                <p class="text-2xl text-white/80 max-w-3xl mx-auto">
-                    Honest, unpolished confessions written in the middle of real life.<br>
-                    Trials that refine us. Pain that produces hope.
-                </p>
-            </div>
+    <section class="page-banner page-banner--standard" data-banner="/images/confessions.png" data-fallback="confession-bg">
+        <div class="page-banner__fallback"></div>
+        <div class="page-banner__image"></div>
+        <div class="page-banner__overlay"></div>
+        <div class="page-banner__content max-w-5xl mx-auto">
+            <h1 class="text-5xl md:text-6xl font-semibold tracking-tighter heading-font leading-tight mb-6 text-amber-300">
+                Sacred Reflections
+            </h1>
+            <p class="text-2xl text-white/80 max-w-3xl mx-auto">
+                Honest, unpolished confessions written in the middle of real life.<br>
+                Trials that refine us. Pain that produces hope.
+            </p>
+        </div>
+    </section>
 
+    <div class="max-w-5xl mx-auto px-6 py-12">
             <div class="bg-zinc-900 rounded-3xl p-8 md:p-10 mb-10" id="featured-item">
                 <div class="mb-6">
                     <h3 class="text-3xl font-semibold mb-1">Open Hands</h3>
