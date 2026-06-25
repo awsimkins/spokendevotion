@@ -6,7 +6,7 @@
         if (!formId || formId === 'YOUR_FORMSPARK_FORM_ID') {
             return null;
         }
-        return 'https://submit.formspark.io/' + encodeURIComponent(formId);
+        return 'https://api.formspark.io/' + encodeURIComponent(formId);
     }
 
     function getTurnstileToken() {
@@ -184,7 +184,14 @@
                     console.error('Contact form error:', err);
                     resetTurnstile();
                     if (errorEl) {
-                        errorEl.textContent = 'Something went wrong. Please try again in a moment.';
+                        var msg = (err && err.message) ? String(err.message) : '';
+                        if (msg.indexOf('does not exist') !== -1) {
+                            errorEl.textContent = 'The contact form is not configured correctly yet. Please try again later.';
+                        } else if (msg.indexOf('Turnstile') !== -1 || msg.indexOf('captcha') !== -1) {
+                            errorEl.textContent = 'Security check failed. Please complete the check and try again.';
+                        } else {
+                            errorEl.textContent = 'Something went wrong. Please try again in a moment.';
+                        }
                         errorEl.classList.remove('hidden');
                     }
                 })
