@@ -121,6 +121,8 @@
                 <!-- Formspark spam honeypot — hidden from users -->
                 <input type="text" name="_gotcha" class="hidden" style="display: none;" tabindex="-1" autocomplete="off" aria-hidden="true">
 
+                <div id="turnstile-widget" class="mb-4 flex justify-center sm:justify-start"></div>
+
                 <p id="form-error" class="hidden text-red-400 text-sm mb-4" role="alert"></p>
 
                 <button type="submit"
@@ -153,8 +155,9 @@
 
     <div id="footer-root"></div>
 
-    <script src="/partials/contact-config.js?v=13"></script>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" async defer></script>
+    <script src="/partials/contact-config.js?v=14"></script>
     <script src="/partials/site.js?v=12"></script>
-    <script src="/partials/contact-form.js?v=13"></script>
+    <script src="/partials/contact-form.js?v=14"></script>
 </body>
 </html>

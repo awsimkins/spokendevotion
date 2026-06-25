@@ -1,5 +1,6 @@
-// Formspark form ID — create a form at https://dashboard.formspark.io
-// Set notification email to contact@spokendevotion.com in the Formspark dashboard.
+// Formspark + Cloudflare Turnstile (public site key only — secret stays in Formspark dashboard)
+// Notification email: contact@spokendevotion.com
 window.SD_CONTACT = {
-    formId: 'YOUR_FORMSPARK_FORM_ID'
+    formId: 'form_v1_qxZx09fGTQqCksK2BIAvGH4F',
+    turnstileSiteKey: '0x4AAAAAADqkWYqdYOQq78_v'
 };

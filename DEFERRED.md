@@ -3,7 +3,7 @@
 Items intentionally held for later — not forgotten.
 
 ## Formspark Contact Form
-Contact form is wired via `partials/contact-config.js` and `partials/contact-form.js`. Add your Formspark form ID to `contact-config.js` (from [dashboard.formspark.io](https://dashboard.formspark.io)). In the Formspark dashboard, set the notification email to `contact@spokendevotion.com` and allow `spokendevotion.com` if domain restrictions are enabled.
+Contact form uses Formspark + Cloudflare Turnstile. Form ID and Turnstile site key are in `partials/contact-config.js`. Turnstile **secret key** lives only in the Formspark dashboard. Notification email: `contact@spokendevotion.com`.
 
 ## Social Media — X (Twitter)
 YouTube, TikTok, Instagram, and Facebook are live on the homepage. X shows a "Coming Soon" badge until the account is ready.

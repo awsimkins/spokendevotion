@@ -9,6 +9,40 @@
         return 'https://submit.formspark.io/' + encodeURIComponent(formId);
     }
 
+    function getTurnstileToken() {
+        if (!window.turnstile || window.SD_CONTACT.turnstileWidgetId == null) {
+            return '';
+        }
+        return window.turnstile.getResponse(window.SD_CONTACT.turnstileWidgetId) || '';
+    }
+
+    function resetTurnstile() {
+        if (window.turnstile && window.SD_CONTACT.turnstileWidgetId != null) {
+            window.turnstile.reset(window.SD_CONTACT.turnstileWidgetId);
+        }
+    }
+
+    function initTurnstile() {
+        var siteKey = window.SD_CONTACT && window.SD_CONTACT.turnstileSiteKey;
+        if (!siteKey) return;
+
+        var container = document.getElementById('turnstile-widget');
+        if (!container) return;
+
+        function renderWidget() {
+            if (!window.turnstile) {
+                window.setTimeout(renderWidget, 100);
+                return;
+            }
+            window.SD_CONTACT.turnstileWidgetId = window.turnstile.render('#turnstile-widget', {
+                sitekey: siteKey,
+                theme: 'dark'
+            });
+        }
+
+        renderWidget();
+    }
+
     function setSubmitting(button, isSubmitting) {
         if (!button) return;
         button.disabled = isSubmitting;
@@ -75,6 +109,15 @@
                 return;
             }
 
+            var turnstileToken = getTurnstileToken();
+            if (window.SD_CONTACT.turnstileSiteKey && !turnstileToken) {
+                if (errorEl) {
+                    errorEl.textContent = 'Please complete the security check below, then try again.';
+                    errorEl.classList.remove('hidden');
+                }
+                return;
+            }
+
             if (errorEl) errorEl.classList.add('hidden');
             setSubmitting(submitBtn, true);
 
@@ -112,6 +155,10 @@
                 _gotcha: ''
             };
 
+            if (turnstileToken) {
+                payload['cf-turnstile-response'] = turnstileToken;
+            }
+
             fetch(endpoint, {
                 method: 'POST',
                 headers: {
@@ -130,10 +177,12 @@
                 })
                 .then(function () {
                     form.reset();
+                    resetTurnstile();
                     showThankYouModal();
                 })
                 .catch(function (err) {
                     console.error('Contact form error:', err);
+                    resetTurnstile();
                     if (errorEl) {
                         errorEl.textContent = 'Something went wrong. Please try again in a moment.';
                         errorEl.classList.remove('hidden');
@@ -147,6 +196,7 @@
 
     function init() {
         initThankYouModal();
+        initTurnstile();
         initContactForm();
     }
 
