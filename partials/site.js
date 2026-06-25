@@ -74,7 +74,7 @@
     };
 
     window.shareAudio = function (filename, title, section) {
-        const url = getAudioUrl(filename, section);
+        const url = /^https?:\/\//i.test(filename) ? filename : getAudioUrl(filename, section);
         navigator.clipboard.writeText(url).then(function () {
             showToast('Link for "' + title + '" copied!');
         }).catch(function () {
