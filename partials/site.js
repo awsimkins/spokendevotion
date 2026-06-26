@@ -3,8 +3,8 @@
 
     async function loadPartials() {
         await Promise.all([
-            loadPartial('nav-root', '/partials/nav.html'),
-            loadPartial('footer-root', '/partials/footer.html')
+            loadPartial('nav-root', '/partials/nav.html?v=13'),
+            loadPartial('footer-root', '/partials/footer.html?v=13')
         ]);
         initMobileNav();
         highlightCurrentNav();
