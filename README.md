@@ -82,6 +82,6 @@ To create content that strengthens the heart, comforts the soul, and glorifies o
 
 ---
 
-© 2026 Spoken Devotion • All glory to God the Father
+© 2026 Spoken Devotion LLC • All glory to God the Father
 
 *Spoken Devotion is part of the Simkins family ministries, alongside KanoJoes — wholesome family content for all ages.*
