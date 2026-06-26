@@ -31,11 +31,14 @@ Since most changes are made directly on GitHub:
 
 - Navigation section links are in **alphabetical order**: Bible, Confessions, Instrumental, Prayer, Reflections, Worship.
 - Nav contact button label is **Contact** (links to `/contact/`).
-- **Reflections** — contemporary faith-centered songs (not worship); page and banner live, tracks coming soon.
+- **Prayer** — *Prayers to the Father* album on DistroKid; pre-save live; releases July 3, 2026; YouTube embeds for three video prayers; full text in `prayer/prayer.json`.
+- **Reflections** — *Alone in an Empty Grave* and *Lost* on DistroKid pre-save; streaming players after July 3, 2026; lyrics in `reflections/reflections.json`.
+- **Worship** — *Have Mercy on Me* and *Here I Am, Lord* on DistroKid pre-save; streaming players after July 3, 2026; metadata in `worship/worship.json`, lyrics in `worship/lyrics.json`.
+- **Confessions** — three tracks with hosted MP3 previews until DistroKid upload; text in `confessions/confessions.json`.
 - **Instrumental** — quiet tracks for prayer; coming soon.
+- Release URLs, dates, and credits: `partials/streaming-config.js`.
 - Homepage includes social handles, Who We Are, and no-donation guidance; footer repeats the same message.
 - Shared UI lives in `partials/` (`nav.html`, `footer.html`, `site.css`, `site.js`).
-- Section content is often driven by JSON (`lyrics.json`, `confessions.json`, `prayer.json`).
 - Hero banners are in `/images/` at 1760×370; one PNG per section.
 
 ## Questions?
