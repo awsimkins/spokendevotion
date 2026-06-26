@@ -140,15 +140,16 @@
             }
             if (!url || !imageLayer) return;
 
+            var loadedUrl = url.indexOf('?') >= 0 ? url : url + '?v=2';
             var img = new Image();
             img.onload = function () {
-                imageLayer.style.backgroundImage = "url('" + url + "')";
+                imageLayer.style.backgroundImage = "url('" + loadedUrl + "')";
                 imageLayer.classList.add('is-loaded');
             };
             img.onerror = function () {
                 imageLayer.classList.add('hidden');
             };
-            img.src = url;
+            img.src = loadedUrl;
         });
     }
 
