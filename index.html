@@ -17,7 +17,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="/partials/site.css?v=12">
+    <link rel="stylesheet" href="/partials/site.css?v=15">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@400;500;600&display=swap');
         .accent-gold { color: #fbbf24; }
@@ -43,52 +43,77 @@
     </section>
 
     <!-- Social -->
-    <div id="social" class="max-w-4xl mx-auto px-6 py-16 md:py-20">
+    <div id="social" class="max-w-6xl mx-auto px-6 py-16 md:py-20">
         <h2 class="text-3xl md:text-4xl font-semibold tracking-tight text-center mb-3 heading-font">Follow Us</h2>
         <p class="text-center text-white/70 mb-10 max-w-md mx-auto">Daily encouragement, worship, and spoken pieces — find us on your favorite platform.</p>
 
-        <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-5">
+        <div class="social-row flex flex-nowrap items-stretch justify-center gap-3 md:gap-4">
             <a href="https://www.youtube.com/@Spoken_Devotion" target="_blank" rel="noopener noreferrer"
-               class="social-card flex flex-col items-center p-8 bg-zinc-900 rounded-3xl hover:bg-amber-400/10 transition-all col-span-2 md:col-span-3">
-                <i class="fa-brands fa-youtube text-5xl mb-3 accent-gold"></i>
-                <span class="font-semibold text-lg">YouTube</span>
-                <span class="text-sm text-white/50 mt-1">@Spoken_Devotion</span>
+               class="social-card flex flex-col items-center justify-center p-4 md:p-5 text-center">
+                <i class="fa-brands fa-youtube text-3xl md:text-4xl mb-2 accent-gold"></i>
+                <span class="font-semibold text-sm md:text-base">YouTube</span>
+                <span class="social-card__handle">@Spoken_Devotion</span>
             </a>
             <a href="https://www.tiktok.com/@spoken.devotion" target="_blank" rel="noopener noreferrer"
-               class="social-card flex flex-col items-center p-8 bg-zinc-900 rounded-3xl hover:bg-amber-400/10 transition-all">
-                <i class="fa-brands fa-tiktok text-5xl mb-3 accent-gold"></i>
-                <span class="font-semibold">TikTok</span>
+               class="social-card flex flex-col items-center justify-center p-4 md:p-5 text-center">
+                <i class="fa-brands fa-tiktok text-3xl md:text-4xl mb-2 accent-gold"></i>
+                <span class="font-semibold text-sm md:text-base">TikTok</span>
+                <span class="social-card__handle">@spoken.devotion</span>
             </a>
             <a href="https://www.instagram.com/spoken_devotion/" target="_blank" rel="noopener noreferrer"
-               class="social-card flex flex-col items-center p-8 bg-zinc-900 rounded-3xl hover:bg-amber-400/10 transition-all">
-                <i class="fa-brands fa-instagram text-5xl mb-3 accent-gold"></i>
-                <span class="font-semibold">Instagram</span>
+               class="social-card flex flex-col items-center justify-center p-4 md:p-5 text-center">
+                <i class="fa-brands fa-instagram text-3xl md:text-4xl mb-2 accent-gold"></i>
+                <span class="font-semibold text-sm md:text-base">Instagram</span>
+                <span class="social-card__handle">@spoken_devotion</span>
             </a>
             <a href="https://www.facebook.com/profile.php?id=61591326358064" target="_blank" rel="noopener noreferrer"
-               class="social-card flex flex-col items-center p-8 bg-zinc-900 rounded-3xl hover:bg-amber-400/10 transition-all">
-                <i class="fa-brands fa-facebook text-5xl mb-3 accent-gold"></i>
-                <span class="font-semibold">Facebook</span>
+               class="social-card flex flex-col items-center justify-center p-4 md:p-5 text-center">
+                <i class="fa-brands fa-facebook text-3xl md:text-4xl mb-2 accent-gold"></i>
+                <span class="font-semibold text-sm md:text-base">Facebook</span>
+                <span class="social-card__handle">Spoken Devotion</span>
             </a>
-            <div class="social-card social-card--soon flex flex-col items-center p-8 bg-zinc-900 rounded-3xl col-span-2 md:col-span-3">
+            <div class="social-card social-card--soon flex flex-col items-center justify-center p-4 md:p-5 text-center">
                 <span class="social-card__badge">Coming Soon</span>
-                <i class="fa-brands fa-x-twitter text-5xl mb-3 accent-gold"></i>
-                <span class="font-semibold">X (Twitter)</span>
+                <i class="fa-brands fa-x-twitter text-3xl md:text-4xl mb-2 accent-gold"></i>
+                <span class="font-semibold text-sm md:text-base">X</span>
+                <span class="social-card__handle">@spoken.devotion</span>
             </div>
         </div>
 
         <p class="text-center text-sm text-white/60 mt-8">Spotify & Apple Music coming soon, Lord willing.</p>
+
+        <blockquote class="home-verse text-lg md:text-xl font-light text-white/70 leading-relaxed text-center mt-12 max-w-2xl mx-auto">
+            “Freely you have received; freely give.”
+            <span class="text-amber-400/80 block mt-2 text-base md:text-lg">— Matthew 10:8</span>
+        </blockquote>
     </div>
 
-    <!-- Scripture -->
-    <div class="max-w-3xl mx-auto px-6 pb-16 text-center">
-        <blockquote class="text-lg md:text-xl font-light text-white/70 leading-relaxed">
-            “Be still, and know that I am God.”
-            <span class="text-amber-400/80"> — Psalm 46:10</span>
-        </blockquote>
+    <!-- Who we are -->
+    <div class="max-w-3xl mx-auto px-6 pb-20">
+        <div class="audio-card p-8 md:p-10 text-center md:text-left space-y-5 text-white/75 leading-relaxed">
+            <h2 class="text-2xl md:text-3xl font-semibold tracking-tight heading-font text-white text-center">Who We Are</h2>
+            <p>
+                Spoken Devotion is not a church, charity, or official ministry. We are a family of ordinary working people who love God —
+                creating worship, prayer, poetry, and Scripture in the hours around our daily lives, and sharing it freely with anyone who might be encouraged.
+            </p>
+            <p>
+                We are not here to ask anything of you. We do not solicit donations, and we are not seeking support, recognition, or reward.
+                We simply want to put God’s love into the world through what He has given us — the same way a neighbor might share a meal or a word of hope.
+            </p>
+            <p>
+                If something here touches your heart and you feel moved to give, we would lovingly invite you to turn that generosity toward someone near you:
+                a neighbor in need, a friend carrying a heavy burden, a stranger who could use a practical act of kindness.
+                Let your gift become God’s love made visible right where you live — for that is devotion lived out, not only spoken.
+            </p>
+            <p class="text-sm text-white/50 text-center pt-2">
+                “Let us not love with words or speech alone, but with actions and in truth.”
+                <span class="text-amber-400/70"> — 1 John 3:18</span>
+            </p>
+        </div>
     </div>
 
     <div id="footer-root"></div>
 
-    <script src="/partials/site.js?v=15"></script>
+    <script src="/partials/site.js?v=17"></script>
 </body>
 </html>

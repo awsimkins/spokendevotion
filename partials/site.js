@@ -3,8 +3,8 @@
 
     async function loadPartials() {
         await Promise.all([
-            loadPartial('nav-root', '/partials/nav.html?v=13'),
-            loadPartial('footer-root', '/partials/footer.html?v=13')
+            loadPartial('nav-root', '/partials/nav.html?v=15'),
+            loadPartial('footer-root', '/partials/footer.html?v=14')
         ]);
         initMobileNav();
         highlightCurrentNav();
@@ -60,7 +60,7 @@
 
     function getCurrentSection() {
         const path = window.location.pathname.replace(/\/index\.html$/, '').replace(/^\//, '').replace(/\/$/, '');
-        const sections = ['worship', 'prayer', 'confessions', 'bible', 'instrumental'];
+        const sections = ['worship', 'reflections', 'prayer', 'confessions', 'bible', 'instrumental'];
         return sections.find(function (s) { return path === s; }) || null;
     }
 
