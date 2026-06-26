@@ -2,11 +2,15 @@
 
 **Words that heal, lift, and draw us closer to God.**
 
-A ministry of spoken poetry, worship, prayer, and Scripture — focused on emotional strength and honoring Christ and God the Father.
+A family creative project sharing spoken poetry, worship, prayer, and Scripture — focused on emotional strength and honoring Christ and God the Father.
 
-## Our Mission
+## Who We Are
 
-To create content that strengthens the heart, comforts the soul, and glorifies our Lord Jesus Christ. Through spoken words, we seek to provide emotional healing, spiritual encouragement, and a deeper connection with God the Father and His Son.
+Spoken Devotion is **not** a church, charity, or official ministry. We are ordinary working people who love God, creating and sharing personal devotion in our spare time. We do **not** ask for donations and are not seeking support, recognition, or reward — we simply want to share God's love freely.
+
+If something here moves you and you feel stirred to give, we gently invite you to turn that generosity toward someone near you: a neighbor in need, a friend carrying a burden, or a stranger who could use practical kindness. Let your gift become God's love made visible right where you live.
+
+*Spoken Devotion LLC* holds copyright on our original content. The LLC is our legal entity for publishing; it does not change that this is a personal, freely shared creative work.
 
 ## Live Site
 
@@ -16,48 +20,53 @@ To create content that strengthens the heart, comforts the soul, and glorifies o
 
 ## Current Site Sections
 
-| Section       | Description                                      | Link |
-|---------------|--------------------------------------------------|------|
-| **Home**      | Mission, Scripture highlight, and social links   | [Home](https://spokendevotion.com/) |
-| **Worship**   | Original worship songs with lyrics in modal      | [Worship](https://spokendevotion.com/worship/) |
-| **Prayer**    | Written & spoken prayers via YouTube embed with full text modals | [Prayer](https://spokendevotion.com/prayer/) |
+Navigation links are listed in **alphabetical order**. *Soon* badges mark sections still being built out.
+
+| Section | Description | Link |
+|---------|-------------|------|
+| **Home** | Social links (with handles), Matthew 10:8, and Who We Are | [Home](https://spokendevotion.com/) |
+| **Bible** | Spoken Devotion Version (SDV) — book list with James via YouTube embed | [Bible](https://spokendevotion.com/bible/) |
 | **Confessions** | Poetic reflections and honest spoken-word pieces | [Confessions](https://spokendevotion.com/confessions/) |
-| **Bible**     | Spoken Devotion Version (SDV) — full book list with James via YouTube embed | [Bible](https://spokendevotion.com/bible/) |
-| **Instrumental** | Quiet instrumental tracks for prayer and reflection | [Instrumental](https://spokendevotion.com/instrumental/) |
-| **Contact**     | Contact form via Formspark                       | [Contact](https://spokendevotion.com/contact/) |
+| **Contact** | Contact form via Formspark + Cloudflare Turnstile | [Contact](https://spokendevotion.com/contact/) |
+| **Instrumental** *(Soon)* | Quiet instrumental tracks for prayer and reflection | [Instrumental](https://spokendevotion.com/instrumental/) |
+| **Prayer** | Written & spoken prayers via YouTube embed with full text modals | [Prayer](https://spokendevotion.com/prayer/) |
+| **Reflections** *(Soon)* | Contemporary faith-centered songs that reflect God and life — not worship, but God-related | [Reflections](https://spokendevotion.com/reflections/) |
+| **Worship** | Original worship songs with lyrics in modal | [Worship](https://spokendevotion.com/worship/) |
 
 ## Key Features
 
-- **Share buttons** — one-click copy of direct audio links
+- **Homepage social row** — all platforms in one horizontal row with handles and amber-bordered cards
+- **Share buttons** — one-click copy of direct audio or YouTube links
 - **Modals** for full lyrics, poetry, and prayer text (keeps pages clean)
 - **Book of James** available via YouTube video embed in the Bible section
+- **Nav Soon badges** on Instrumental and Reflections
 - Clean, responsive design built with Tailwind CSS
 - Shared navigation and footer loaded from `partials/`
 - Content managed via JSON files for easy updates (`lyrics.json`, `confessions.json`, `prayer.json`)
 
-## Banner images
+## Banner Images
 
 Section hero banners live in `/images/` at **1760×370** (or same ~4.5:1 aspect). Naming matches the section folder where possible:
 
 | File | Page |
 |------|------|
 | `main.png` | Home, Contact |
-| `worship.png` | Worship |
-| `prayer.png` | Prayer |
-| `confession.png` | Confessions |
 | `bible.png` | Bible |
+| `confession.png` | Confessions |
 | `instrumental.png` | Instrumental |
+| `prayer.png` | Prayer |
+| `worship.png` | Worship, Reflections (placeholder until `reflections.png` is added) |
 
 ## Platforms
 
 Active on:
-- [YouTube](https://www.youtube.com/@Spoken_Devotion)
-- [TikTok](https://www.tiktok.com/@spoken.devotion)
-- [Instagram](https://www.instagram.com/spoken_devotion/)
-- [Facebook](https://www.facebook.com/profile.php?id=61591326358064)
+- [YouTube](https://www.youtube.com/@Spoken_Devotion) — `@Spoken_Devotion`
+- [TikTok](https://www.tiktok.com/@spoken.devotion) — `@spoken.devotion`
+- [Instagram](https://www.instagram.com/spoken_devotion/) — `@spoken_devotion`
+- [Facebook](https://www.facebook.com/profile.php?id=61591326358064) — Spoken Devotion
 
 Coming soon (God willing):
-- X (Twitter)
+- X (Twitter) — `@spoken.devotion`
 - Spotify
 - Apple Music
 - Other streaming platforms
@@ -70,15 +79,17 @@ Use the [Contact Us](https://spokendevotion.com/contact/) page. Form submissions
 
 See also [`DEFERRED.md`](DEFERRED.md) for the full backlog. Priority items:
 
-- [ ] **X link** — add profile URL when account is ready (homepage shows Coming Soon badge for now)
+- [ ] **X link** — add profile URL when account is ready (homepage shows Coming Soon badge)
+- [ ] **Reflections tracks** — publish two ready songs and expand the section
 - [ ] **Instrumental tracks** — add audio cards on `/instrumental/` when ready
-- [x] **YouTube migration (Prayer)** — Prayer for Family, Prayer of Repentance, and Prayer of Need now use YouTube embeds
-- [ ] **YouTube migration (remaining)** — move any other hosted MP3s to YouTube embeds
-- [ ] **Normalize banner dimensions** — resize any banners not yet at 1760×370
+- [ ] **Reflections banner** — add `reflections.png` at 1760×370
+- [x] **YouTube migration (Prayer)** — Prayer for Family, Prayer of Repentance, and Prayer of Need use YouTube embeds
+- [ ] **YouTube migration (remaining)** — move worship/confessions MP3s to YouTube embeds when ready
+- [ ] **Normalize banner dimensions** — resize/compress any banners not yet at 1760×370
 
 ## Vision
 
-To create content that strengthens the heart, comforts the soul, and glorifies our Lord Jesus Christ through the power of spoken words.
+To create content that strengthens the heart, comforts the soul, and glorifies our Lord Jesus Christ through the power of spoken words — shared freely, with no ask in return.
 
 ---
 

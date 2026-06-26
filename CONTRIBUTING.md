@@ -1,14 +1,18 @@
 # Contributing to Spoken Devotion
 
-Thank you for your interest in Spoken Devotion! This is a personal ministry project focused on creating spoken-word content that points people to Jesus.
+Thank you for your interest in Spoken Devotion!
+
+## What This Project Is
+
+Spoken Devotion is a **personal creative project** — not a church, charity, or official ministry. We are a family of ordinary working people sharing worship, prayer, poetry, Scripture, and music freely. We do **not** accept donations or solicit support through this site.
+
+If you have feedback, bug reports, or content suggestions, we welcome them.
 
 ## How You Can Help
 
-Contributions and feedback are welcome, especially in these areas:
-
-- Suggesting new content (prayers, worship songs, confessions, or Bible narrations)
+- Suggesting new content (prayers, worship songs, reflections, confessions, or Bible narrations)
 - Reporting bugs or issues with the website
-- Suggesting improvements to design or user experience
+- Suggesting improvements to design, copy, or user experience
 - Technical feedback (performance, mobile experience, accessibility, etc.)
 
 ## How to Contribute (Website Editing)
@@ -22,6 +26,14 @@ Since most changes are made directly on GitHub:
 5. Select **Create a new branch for this commit and start a pull request**.
 6. Click **Propose changes**.
 7. On the next screen, click **Create pull request**.
+
+## Site Structure Notes
+
+- Navigation section links are in **alphabetical order**: Bible, Confessions, Instrumental, Prayer, Reflections, Worship.
+- **Reflections** — contemporary faith-centered songs (not worship); coming soon.
+- **Instrumental** — quiet tracks for prayer; coming soon.
+- Shared UI lives in `partials/` (`nav.html`, `footer.html`, `site.css`, `site.js`).
+- Section content is often driven by JSON (`lyrics.json`, `confessions.json`, `prayer.json`).
 
 ## Questions?
 
