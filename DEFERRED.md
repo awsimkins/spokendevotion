@@ -18,4 +18,4 @@ Instrumental page is live in navigation (Soon badge) with a coming-soon message.
 Prayer section complete — Prayer for Family, Prayer of Repentance, and Prayer of Need use YouTube embeds. Remaining sections (worship, confessions) still use hosted MP3s where applicable.
 
 ## Banner Image Optimization
-Most section banners are in place. Optionally resize remaining images to **1760×370** and compress large files (e.g. `instrumental.png`, `worship.png`) for faster loads.
+All section banners are in place (`main`, `bible`, `confession`, `instrumental`, `prayer`, `reflections`, `worship`). Optional: compress large PNGs (e.g. `instrumental.png`, `worship.png`) for faster loads.

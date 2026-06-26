@@ -30,10 +30,13 @@ Since most changes are made directly on GitHub:
 ## Site Structure Notes
 
 - Navigation section links are in **alphabetical order**: Bible, Confessions, Instrumental, Prayer, Reflections, Worship.
-- **Reflections** — contemporary faith-centered songs (not worship); coming soon.
+- Nav contact button label is **Contact** (links to `/contact/`).
+- **Reflections** — contemporary faith-centered songs (not worship); page and banner live, tracks coming soon.
 - **Instrumental** — quiet tracks for prayer; coming soon.
+- Homepage includes social handles, Who We Are, and no-donation guidance; footer repeats the same message.
 - Shared UI lives in `partials/` (`nav.html`, `footer.html`, `site.css`, `site.js`).
 - Section content is often driven by JSON (`lyrics.json`, `confessions.json`, `prayer.json`).
+- Hero banners are in `/images/` at 1760×370; one PNG per section.
 
 ## Questions?
 

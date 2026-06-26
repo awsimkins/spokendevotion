@@ -20,22 +20,24 @@ If something here moves you and you feel stirred to give, we gently invite you t
 
 ## Current Site Sections
 
-Navigation links are listed in **alphabetical order**. *Soon* badges mark sections still being built out.
+Navigation section links are in **alphabetical order**. The nav button reads **Contact** (the page title remains Contact Us). *Soon* badges mark sections still being built out.
 
 | Section | Description | Link |
 |---------|-------------|------|
-| **Home** | Social links (with handles), Matthew 10:8, and Who We Are | [Home](https://spokendevotion.com/) |
+| **Home** | Social row with handles, Matthew 10:8, Who We Are (1 John 3:18) | [Home](https://spokendevotion.com/) |
 | **Bible** | Spoken Devotion Version (SDV) — book list with James via YouTube embed | [Bible](https://spokendevotion.com/bible/) |
 | **Confessions** | Poetic reflections and honest spoken-word pieces | [Confessions](https://spokendevotion.com/confessions/) |
 | **Contact** | Contact form via Formspark + Cloudflare Turnstile | [Contact](https://spokendevotion.com/contact/) |
 | **Instrumental** *(Soon)* | Quiet instrumental tracks for prayer and reflection | [Instrumental](https://spokendevotion.com/instrumental/) |
 | **Prayer** | Written & spoken prayers via YouTube embed with full text modals | [Prayer](https://spokendevotion.com/prayer/) |
-| **Reflections** *(Soon)* | Contemporary faith-centered songs that reflect God and life — not worship, but God-related | [Reflections](https://spokendevotion.com/reflections/) |
+| **Reflections** *(Soon)* | Contemporary faith-centered songs that reflect God and life — not worship | [Reflections](https://spokendevotion.com/reflections/) |
 | **Worship** | Original worship songs with lyrics in modal | [Worship](https://spokendevotion.com/worship/) |
 
 ## Key Features
 
 - **Homepage social row** — all platforms in one horizontal row with handles and amber-bordered cards
+- **Who We Are** — clear statement that we are not an official ministry and do not accept donations
+- **Footer** — reinforces free sharing, no donations, and personal creative ministry
 - **Share buttons** — one-click copy of direct audio or YouTube links
 - **Modals** for full lyrics, poetry, and prayer text (keeps pages clean)
 - **Book of James** available via YouTube video embed in the Bible section
@@ -46,7 +48,7 @@ Navigation links are listed in **alphabetical order**. *Soon* badges mark sectio
 
 ## Banner Images
 
-Section hero banners live in `/images/` at **1760×370** (or same ~4.5:1 aspect). Naming matches the section folder where possible:
+Section hero banners live in `/images/` at **1760×370** (or same ~4.5:1 aspect). All section banners are in place:
 
 | File | Page |
 |------|------|
@@ -74,7 +76,7 @@ Coming soon (God willing):
 
 ## Contact
 
-Use the [Contact Us](https://spokendevotion.com/contact/) page. Form submissions go through [Formspark](https://formspark.io/) — form ID in `partials/contact-config.js`; set `contact@spokendevotion.com` as the notification email in the Formspark dashboard.
+Use the [Contact](https://spokendevotion.com/contact/) page. Form submissions go through [Formspark](https://formspark.io/) — form ID in `partials/contact-config.js`; set `contact@spokendevotion.com` as the notification email in the Formspark dashboard.
 
 ## Still To Do
 
@@ -83,10 +85,10 @@ See also [`DEFERRED.md`](DEFERRED.md) for the full backlog. Priority items:
 - [ ] **X link** — add profile URL when account is ready (homepage shows Coming Soon badge)
 - [ ] **Reflections tracks** — publish two ready songs and expand the section
 - [ ] **Instrumental tracks** — add audio cards on `/instrumental/` when ready
-- [x] **Reflections banner** — `reflections.png` added at 1760×370
+- [x] **Reflections banner** — `reflections.png` added
 - [x] **YouTube migration (Prayer)** — Prayer for Family, Prayer of Repentance, and Prayer of Need use YouTube embeds
 - [ ] **YouTube migration (remaining)** — move worship/confessions MP3s to YouTube embeds when ready
-- [ ] **Normalize banner dimensions** — resize/compress any banners not yet at 1760×370
+- [ ] **Banner compression** — optionally compress large PNGs for faster page loads
 
 ## Vision
 
