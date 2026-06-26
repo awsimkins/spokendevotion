@@ -122,6 +122,14 @@ body {
 .audio-card--secondary {
     border-color: rgba(251, 191, 36, 0.22);
 }
+.prayer-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.prayer-card .flex.flex-wrap {
+    margin-top: auto;
+}
 .bible-book {
     border: 1px solid rgba(251, 191, 36, 0.35);
 }
