@@ -1,16 +1,27 @@
 {
   "have-mercy-on-me": {
     "title": "Have Mercy on Me",
+    "artist": "Spoken Devotion",
+    "recordLabel": "Spoken Devotion Music",
     "credit": "Lyrics by Anthony, produced and sang by Suno",
     "presaveUrl": "https://distrokid.com/hyperfollow/spokendevotion/have-mercy-on-me",
     "status": "presave",
-    "releaseLabel": "July 3, 2026"
+    "uploadDate": "2026-06-26",
+    "releaseDate": "2026-07-03",
+    "releaseLabel": "July 3, 2026",
+    "distroKidUpc": "882614534603"
   },
   "here-i-am-lord": {
     "title": "Here I Am, Lord",
+    "artist": "Spoken Devotion",
+    "recordLabel": "Spoken Devotion Music",
     "credit": "Lyrics by Anthony, produced and sang by Suno",
     "presaveUrl": "https://distrokid.com/hyperfollow/spokendevotion/here-i-am-lord",
     "status": "presave",
-    "releaseLabel": "July 3, 2026"
+    "uploadDate": "2026-06-26",
+    "preorderDate": "2026-06-26",
+    "releaseDate": "2026-07-03",
+    "releaseLabel": "July 3, 2026",
+    "distroKidUpc": "882614532029"
   }
 }

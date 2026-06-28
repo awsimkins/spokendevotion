@@ -1,26 +1,34 @@
 window.SD_STREAMING = {
     artist: 'Spoken Devotion',
+    recordLabel: 'Spoken Devotion Music',
     releaseDate: '2026-07-03',
     releaseDateLabel: 'July 3, 2026',
     releaseStatus: 'presave',
+    uploadDate: '2026-06-26',
+    preorderDate: '2026-06-26',
 
     albumTitle: 'Prayers to the Father',
     albumSubtitle: 'Ten spoken prayers to the Father',
     albumCredit: 'Written by Ruby Rose and recited and produced by Suno',
     prayerCredit: 'Written by Ruby Rose and recited and produced by Suno',
     presaveUrl: 'https://distrokid.com/hyperfollow/spokendevotion/prayers-to-the-father',
+    prayerAlbumUpc: '882614576580',
 
     reflectionsCredit: 'Written by Anthony and sang by Suno',
     singleTitle: 'Alone in an Empty Grave',
     secondSingleTitle: 'Lost',
     singlePresaveUrl: 'https://distrokid.com/hyperfollow/spokendevotion/alone-in-an-empty-grave',
+    aloneUpc: '882614548242',
     lostPresaveUrl: 'https://distrokid.com/hyperfollow/spokendevotion/lost',
+    lostUpc: '882614540697',
 
     worshipCredit: 'Lyrics by Anthony, produced and sang by Suno',
     mercyTitle: 'Have Mercy on Me',
     hereTitle: 'Here I Am, Lord',
     mercyPresaveUrl: 'https://distrokid.com/hyperfollow/spokendevotion/have-mercy-on-me',
+    mercyUpc: '882614534603',
     herePresaveUrl: 'https://distrokid.com/hyperfollow/spokendevotion/here-i-am-lord',
+    hereUpc: '882614532029',
 
     confessionsCredit: 'Written by Ruby Rose and recited and produced by Suno',
 

@@ -44,7 +44,7 @@ Navigation section links are in **alphabetical order**. The nav button reads **C
 - **Nav Soon badge** on Instrumental
 - Clean, responsive design built with Tailwind CSS
 - Shared navigation and footer loaded from `partials/`
-- Content managed via JSON files for easy updates (`prayer.json`, `reflections.json`, `worship.json`, `lyrics.json`, `confessions.json`, `instrumental.json`)
+- Content managed via JSON files for easy updates (`prayer.json`, `prayer/album.json`, `reflections.json`, `worship.json`, `lyrics.json`, `confessions.json`, `instrumental.json`)
 - Release metadata centralized in `partials/streaming-config.js`
 
 ## Banner Images
@@ -70,12 +70,18 @@ Active on:
 - [Facebook](https://www.facebook.com/profile.php?id=61591326358064) — Spoken Devotion
 - [X](https://x.com/Spoken_Devotion) — `@Spoken_Devotion`
 
-Streaming — pre-sales open now:
-- [Resting in the Father I](https://distrokid.com/hyperfollow/spokendevotion/resting-in-the-father) (Instrumental album) — releases **June 28, 2026** at midnight Central Time
-- [Prayers to the Father](https://distrokid.com/hyperfollow/spokendevotion/prayers-to-the-father) (album) — releases **July 3, 2026**
-- [Alone in an Empty Grave](https://distrokid.com/hyperfollow/spokendevotion/alone-in-an-empty-grave), [Lost](https://distrokid.com/hyperfollow/spokendevotion/lost) (Reflections)
-- [Have Mercy on Me](https://distrokid.com/hyperfollow/spokendevotion/have-mercy-on-me), [Here I Am, Lord](https://distrokid.com/hyperfollow/spokendevotion/here-i-am-lord) (Worship)
-- Spotify, Apple Music, and other major platforms at release
+Streaming — **Spoken Devotion Music** on DistroKid; pre-sales open now:
+
+| Release | UPC | Date |
+|---------|-----|------|
+| [Resting in the Father I](https://distrokid.com/hyperfollow/spokendevotion/resting-in-the-father) (Instrumental, 20 tracks) | *(pending)* | June 28, 2026, midnight Central |
+| [Prayers to the Father](https://distrokid.com/hyperfollow/spokendevotion/prayers-to-the-father) (album, 10 tracks) | 882614576580 | July 3, 2026 |
+| [Alone in an Empty Grave](https://distrokid.com/hyperfollow/spokendevotion/alone-in-an-empty-grave) | 882614548242 | July 3, 2026 |
+| [Lost](https://distrokid.com/hyperfollow/spokendevotion/lost) | 882614540697 | July 3, 2026 |
+| [Have Mercy on Me](https://distrokid.com/hyperfollow/spokendevotion/have-mercy-on-me) | 882614534603 | July 3, 2026 |
+| [Here I Am, Lord](https://distrokid.com/hyperfollow/spokendevotion/here-i-am-lord) | 882614532029 | July 3, 2026 |
+
+All July 3 releases uploaded June 26, 2026. Spotify, Apple Music, and other major platforms at release.
 
 ## Contact
 

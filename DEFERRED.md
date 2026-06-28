@@ -20,17 +20,17 @@ Central config: `partials/streaming-config.js`. After release, add a streaming p
 
 ## July 3, 2026 Release Wave (DistroKid)
 
-Pre-sales are **open now**; full release **July 3, 2026** on Spotify, Apple Music, and other platforms.
+Pre-sales are **open now**; full release **July 3, 2026** on Spotify, Apple Music, and other platforms. Record label: **Spoken Devotion Music**. Upload date: **June 26, 2026**.
 
-| Release | Type | Pre-save |
-|---------|------|----------|
-| **Prayers to the Father** | Album (10 tracks) | [prayers-to-the-father](https://distrokid.com/hyperfollow/spokendevotion/prayers-to-the-father) |
-| **Alone in an Empty Grave** | Reflections single | [alone-in-an-empty-grave](https://distrokid.com/hyperfollow/spokendevotion/alone-in-an-empty-grave) |
-| **Lost** | Reflections single | [lost](https://distrokid.com/hyperfollow/spokendevotion/lost) |
-| **Have Mercy on Me** | Worship single | [have-mercy-on-me](https://distrokid.com/hyperfollow/spokendevotion/have-mercy-on-me) |
-| **Here I Am, Lord** | Worship single | [here-i-am-lord](https://distrokid.com/hyperfollow/spokendevotion/here-i-am-lord) |
+| Release | Type | UPC | Pre-save |
+|---------|------|-----|----------|
+| **Prayers to the Father** | Album (10 tracks) | 882614576580 | [prayers-to-the-father](https://distrokid.com/hyperfollow/spokendevotion/prayers-to-the-father) |
+| **Alone in an Empty Grave** | Reflections single | 882614548242 | [alone-in-an-empty-grave](https://distrokid.com/hyperfollow/spokendevotion/alone-in-an-empty-grave) |
+| **Lost** | Reflections single | 882614540697 | [lost](https://distrokid.com/hyperfollow/spokendevotion/lost) |
+| **Have Mercy on Me** | Worship single | 882614534603 | [have-mercy-on-me](https://distrokid.com/hyperfollow/spokendevotion/have-mercy-on-me) |
+| **Here I Am, Lord** | Worship single | 882614532029 | [here-i-am-lord](https://distrokid.com/hyperfollow/spokendevotion/here-i-am-lord) |
 
-Central config: `partials/streaming-config.js`. After release, replace homepage Spotify / Apple Music / YouTube Music “Coming soon” cards with live profile links and add streaming players to `/reflections/` and `/worship/`.
+Metadata: `partials/streaming-config.js`, `prayer/album.json`, `worship/worship.json`, `reflections/reflections.json`. After release, replace homepage Spotify / Apple Music / YouTube Music “Coming soon” cards with live profile links and add streaming players to `/reflections/` and `/worship/`.
 
 ### Credits (site-wide)
 
