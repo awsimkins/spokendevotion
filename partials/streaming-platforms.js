@@ -12,7 +12,7 @@ window.SD_STREAMING_PLATFORMS = {
         { id: 'youtube',      name: 'YouTube Music',  icon: 'fa-brands fa-youtube',      url: 'https://music.youtube.com/channel/UCp-tiQ4aBXVYgM50SbwOhsQ' },
         { id: 'pandora',      name: 'Pandora',        icon: 'fa-solid fa-compact-disc',  url: null },
         { id: 'iheart',       name: 'iHeartRadio',    icon: 'fa-solid fa-heart',         url: null },
-        { id: 'deezer',       name: 'Deezer',         icon: 'fa-solid fa-wave-square',   url: null },
+        { id: 'deezer',       name: 'Deezer',         icon: 'fa-solid fa-wave-square',   url: 'https://www.deezer.com/us/artist/399844621' },
         { id: 'tidal',        name: 'Tidal',          icon: 'fa-solid fa-water',         url: 'https://tidal.com/artist/81752714' },
         { id: 'soundcloud',   name: 'SoundCloud',     icon: 'fa-brands fa-soundcloud',   url: null },
         { id: 'audiomack',    name: 'Audiomack',      icon: 'fa-solid fa-headphones',    url: null },
