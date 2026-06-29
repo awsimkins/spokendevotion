@@ -38,8 +38,14 @@ window.SD_STREAMING = {
     instrumentalReleaseDate: '2026-06-28',
     instrumentalReleaseDateLabel: 'June 28, 2026',
     instrumentalReleaseTimeLabel: 'midnight Central Time',
-    instrumentalReleaseStatus: 'presave',
+    instrumentalReleaseStatus: 'released',
     instrumentalPresaveUrl: 'https://distrokid.com/hyperfollow/spokendevotion/resting-in-the-father',
+    instrumentalListenUrl: 'https://album.link/us/i/6785483267',
+    instrumentalAppleAlbumUrl: 'https://music.apple.com/us/album/resting-in-the-father/6785483267',
+    instrumentalAppleArtistUrl: 'https://music.apple.com/us/artist/spoken-devotion/6784853329',
+    instrumentalTidalAlbumUrl: 'https://listen.tidal.com/album/538209519',
+    instrumentalTidalArtistUrl: 'https://tidal.com/artist/81752714',
+    instrumentalAppleAlbumId: '6785483267',
 
     featuredArtist: 'Ruby Rose',
 
