@@ -10,7 +10,8 @@
     "uploadDate": "2026-06-26",
     "releaseDate": "2026-07-03",
     "releaseLabel": "July 3, 2026",
-    "distroKidUpc": "882614534603"
+    "distroKidUpc": "882614534603",
+    "appleSongId": "6785202697"
   },
   "here-i-am-lord": {
     "title": "Here I Am, Lord",
@@ -24,6 +25,7 @@
     "preorderDate": "2026-06-26",
     "releaseDate": "2026-07-03",
     "releaseLabel": "July 3, 2026",
-    "distroKidUpc": "882614532029"
+    "distroKidUpc": "882614532029",
+    "appleSongId": "6784945094"
   }
 }

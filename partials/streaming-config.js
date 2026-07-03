@@ -52,6 +52,8 @@ window.SD_STREAMING = {
     instrumentalTidalArtistUrl: 'https://tidal.com/artist/81752714',
     instrumentalAppleAlbumId: '6785483267',
 
+    spotifyArtistUrl: 'https://open.spotify.com/artist/7kY2FAPgpXG7HQwP5Bdxj1',
+
     featuredArtist: 'Ruby Rose',
 
     // Back-compat aliases used on the homepage script

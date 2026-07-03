@@ -26,7 +26,7 @@ Navigation section links are in **alphabetical order**. The nav button reads **C
 |---------|-------------|------|
 | **Home** | Social row with handles, Matthew 10:8, Who We Are (1 John 3:18) | [Home](https://spokendevotion.com/) |
 | **Bible** | Spoken Devotion Version (SDV) — book list with James via YouTube embed | [Bible](https://spokendevotion.com/bible/) |
-| **Confessions** | Three spoken-word pieces — hosted MP3 previews until DistroKid upload | [Confessions](https://spokendevotion.com/confessions/) |
+| **Confessions** | Three spoken-word pieces — coming soon to streaming; poetry readable on site | [Confessions](https://spokendevotion.com/confessions/) |
 | **Contact** | Contact form via Formspark + Cloudflare Turnstile | [Contact](https://spokendevotion.com/contact/) |
 | **Instrumental** | *Resting in the Father I* album — out now on major platforms | [Instrumental](https://spokendevotion.com/instrumental/) |
 | **Prayer** | *Prayers to the Father* album — out now; YouTube videos + full text modals | [Prayer](https://spokendevotion.com/prayer/) |
@@ -97,7 +97,7 @@ See also [`DEFERRED.md`](DEFERRED.md) for the full backlog. Priority items:
 - [x] **July 3 singles** — Reflections and Worship singles released; listen links on section pages
 - [x] **YouTube migration (Prayer)** — Prayer for Family, Prayer of Repentance, and Prayer of Need use YouTube embeds
 - [x] **Homepage release digest** — data-driven via `partials/releases.js`
-- [ ] **Confessions on DistroKid** — upload three tracks; replace hosted MP3s with streaming cards
+- [ ] **Confessions on DistroKid** — upload three tracks; add Apple Music embeds on `/confessions/`
 - [ ] **Streaming embeds** — add Apple Music embeds on `/reflections/` and `/worship/` when single IDs are available
 - [ ] **Spotify artist link** — add to `streaming-platforms.js` when profile is live
 - [x] **Nav Soon badge** — Instrumental badge removed

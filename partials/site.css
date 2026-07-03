@@ -561,6 +561,51 @@ a.platform-card:hover {
     padding: 0 0.1rem;
 }
 
+.apple-music-embed {
+    width: 100%;
+    max-width: 660px;
+    margin: 0 auto;
+}
+.apple-music-embed iframe {
+    display: block;
+    width: 100%;
+    border: 0;
+    border-radius: 10px;
+}
+.album-track {
+    flex-wrap: wrap;
+}
+.album-track__embed {
+    display: none;
+    flex: 1 1 100%;
+    width: 100%;
+    padding: 0.5rem 0 0.25rem;
+}
+.album-track__embed.is-open {
+    display: block;
+}
+.album-track__action--listen.is-active {
+    background: rgba(251, 191, 36, 0.12);
+    color: #fcd34d;
+}
+.coming-soon-card {
+    opacity: 0.85;
+}
+.coming-soon-card__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #18181b;
+    background: #fbbf24;
+    padding: 0.3rem 0.65rem;
+    border-radius: 9999px;
+    margin-bottom: 0.75rem;
+}
+
 .toast {
     position: fixed;
     bottom: 20px;

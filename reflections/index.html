@@ -71,12 +71,7 @@
                 <p class="text-white/65 text-sm mb-4 leading-relaxed">
                     Out now on <span class="text-amber-400/90">Spotify, Apple Music, YouTube Music</span>, and more.
                 </p>
-                <div class="aspect-video rounded-xl overflow-hidden mb-4 bg-zinc-900/80 border border-amber-400/20 flex flex-col items-center justify-center px-6 text-center gap-3">
-                    <p class="text-white/60 text-sm">Streaming now on major platforms</p>
-                    <a id="listen-panel-alone" href="https://distrokid.com/hyperfollow/spokendevotion/alone-in-an-empty-grave" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-x-2 px-4 py-2 bg-amber-400 hover:bg-amber-300 text-zinc-950 font-medium rounded-xl text-sm transition-all">
-                        <i class="fa-solid fa-play"></i> Listen Now
-                    </a>
-                </div>
+                <div class="mb-4 rounded-xl overflow-hidden bg-zinc-900/80 border border-amber-400/20 p-2" data-apple-embed="6785202486" data-apple-title="Alone in an Empty Grave"></div>
                 <div class="flex flex-wrap gap-2">
                     <a id="listen-cta-alone-reflections"
                        href="https://distrokid.com/hyperfollow/spokendevotion/alone-in-an-empty-grave"
@@ -100,12 +95,7 @@
                 <p class="text-white/65 text-sm mb-4 leading-relaxed">
                     Out now on <span class="text-amber-400/90">Spotify, Apple Music, YouTube Music</span>, and more.
                 </p>
-                <div class="aspect-video rounded-xl overflow-hidden mb-4 bg-zinc-900/80 border border-amber-400/20 flex flex-col items-center justify-center px-6 text-center gap-3">
-                    <p class="text-white/60 text-sm">Streaming now on major platforms</p>
-                    <a id="listen-panel-lost" href="https://distrokid.com/hyperfollow/spokendevotion/lost" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-x-2 px-4 py-2 bg-amber-400 hover:bg-amber-300 text-zinc-950 font-medium rounded-xl text-sm transition-all">
-                        <i class="fa-solid fa-play"></i> Listen Now
-                    </a>
-                </div>
+                <div class="mb-4 rounded-xl overflow-hidden bg-zinc-900/80 border border-amber-400/20 p-2" data-apple-embed="6785175089" data-apple-title="Lost"></div>
                 <div class="flex flex-wrap gap-2">
                     <a id="listen-cta-lost-reflections"
                        href="https://distrokid.com/hyperfollow/spokendevotion/lost"
@@ -146,9 +136,10 @@
 
     <div id="footer-root"></div>
 
-    <script src="/partials/streaming-config.js?v=11"></script>
-    <script src="/partials/streaming-platforms.js?v=6"></script>
-    <script src="/partials/site.js?v=27"></script>
+    <script src="/partials/apple-music-embeds.js?v=1"></script>
+    <script src="/partials/streaming-config.js?v=12"></script>
+    <script src="/partials/streaming-platforms.js?v=7"></script>
+    <script src="/partials/site.js?v=28"></script>
     <script>
         let reflectionsCache = {};
 
@@ -158,16 +149,12 @@
             var aloneUrl = cfg.aloneListenUrl || cfg.singlePresaveUrl;
             var lostUrl = cfg.lostListenUrl || cfg.lostPresaveUrl;
             if (aloneUrl) {
-                ['listen-cta-alone-reflections', 'listen-panel-alone'].forEach(function (id) {
-                    var el = document.getElementById(id);
-                    if (el) el.href = aloneUrl;
-                });
+                var alone = document.getElementById('listen-cta-alone-reflections');
+                if (alone) alone.href = aloneUrl;
             }
             if (lostUrl) {
-                ['listen-cta-lost-reflections', 'listen-panel-lost'].forEach(function (id) {
-                    var el = document.getElementById(id);
-                    if (el) el.href = lostUrl;
-                });
+                var lost = document.getElementById('listen-cta-lost-reflections');
+                if (lost) lost.href = lostUrl;
             }
         })();
 

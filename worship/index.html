@@ -67,12 +67,7 @@
                 <p class="text-white/65 text-sm mb-4 leading-relaxed">
                     Out now on <span class="text-amber-400/90">Spotify, Apple Music, YouTube Music</span>, and more.
                 </p>
-                <div class="aspect-video rounded-xl overflow-hidden mb-4 bg-zinc-900/80 border border-amber-400/20 flex flex-col items-center justify-center px-6 text-center gap-3">
-                    <p class="text-white/60 text-sm">Streaming now on major platforms</p>
-                    <a id="listen-panel-mercy" href="https://distrokid.com/hyperfollow/spokendevotion/have-mercy-on-me" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-x-2 px-4 py-2 bg-amber-400 hover:bg-amber-300 text-zinc-950 font-medium rounded-xl text-sm transition-all">
-                        <i class="fa-solid fa-play"></i> Listen Now
-                    </a>
-                </div>
+                <div class="mb-4 rounded-xl overflow-hidden bg-zinc-900/80 border border-amber-400/20 p-2" data-apple-embed="6785202697" data-apple-title="Have Mercy on Me"></div>
                 <div class="flex flex-wrap gap-2">
                     <a id="listen-cta-mercy-worship"
                        href="https://distrokid.com/hyperfollow/spokendevotion/have-mercy-on-me"
@@ -96,12 +91,7 @@
                 <p class="text-white/65 text-sm mb-4 leading-relaxed">
                     Out now on <span class="text-amber-400/90">Spotify, Apple Music, YouTube Music</span>, and more.
                 </p>
-                <div class="aspect-video rounded-xl overflow-hidden mb-4 bg-zinc-900/80 border border-amber-400/20 flex flex-col items-center justify-center px-6 text-center gap-3">
-                    <p class="text-white/60 text-sm">Streaming now on major platforms</p>
-                    <a id="listen-panel-here" href="https://distrokid.com/hyperfollow/spokendevotion/here-i-am-lord" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-x-2 px-4 py-2 bg-amber-400 hover:bg-amber-300 text-zinc-950 font-medium rounded-xl text-sm transition-all">
-                        <i class="fa-solid fa-play"></i> Listen Now
-                    </a>
-                </div>
+                <div class="mb-4 rounded-xl overflow-hidden bg-zinc-900/80 border border-amber-400/20 p-2" data-apple-embed="6784945094" data-apple-title="Here I Am, Lord"></div>
                 <div class="flex flex-wrap gap-2">
                     <a id="listen-cta-here-worship"
                        href="https://distrokid.com/hyperfollow/spokendevotion/here-i-am-lord"
@@ -146,9 +136,10 @@
 
     <div id="footer-root"></div>
 
-    <script src="/partials/streaming-config.js?v=11"></script>
-    <script src="/partials/streaming-platforms.js?v=6"></script>
-    <script src="/partials/site.js?v=27"></script>
+    <script src="/partials/apple-music-embeds.js?v=1"></script>
+    <script src="/partials/streaming-config.js?v=12"></script>
+    <script src="/partials/streaming-platforms.js?v=7"></script>
+    <script src="/partials/site.js?v=28"></script>
     <script>
         let lyricsCache = {};
 
@@ -158,16 +149,12 @@
             var mercyUrl = cfg.mercyListenUrl || cfg.mercyPresaveUrl;
             var hereUrl = cfg.hereListenUrl || cfg.herePresaveUrl;
             if (mercyUrl) {
-                ['listen-cta-mercy-worship', 'listen-panel-mercy'].forEach(function (id) {
-                    var el = document.getElementById(id);
-                    if (el) el.href = mercyUrl;
-                });
+                var mercy = document.getElementById('listen-cta-mercy-worship');
+                if (mercy) mercy.href = mercyUrl;
             }
             if (hereUrl) {
-                ['listen-cta-here-worship', 'listen-panel-here'].forEach(function (id) {
-                    var el = document.getElementById(id);
-                    if (el) el.href = hereUrl;
-                });
+                var here = document.getElementById('listen-cta-here-worship');
+                if (here) here.href = hereUrl;
             }
         })();
 

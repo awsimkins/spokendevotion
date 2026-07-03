@@ -113,6 +113,61 @@
         document.body.style.overflow = '';
     };
 
+    window.createAppleMusicIframe = function (songId, title) {
+        if (!songId) return null;
+        var iframe = document.createElement('iframe');
+        iframe.allow = 'autoplay *; encrypted-media *; fullscreen *; clipboard-write';
+        iframe.frameBorder = '0';
+        iframe.height = '175';
+        iframe.style.cssText = 'width:100%;max-width:660px;overflow:hidden;border-radius:10px;';
+        iframe.sandbox = 'allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation';
+        iframe.src = 'https://embed.music.apple.com/us/song/' + songId;
+        if (title) iframe.title = title + ' on Apple Music';
+        return iframe;
+    };
+
+    window.renderAppleMusicEmbed = function (target, songId, title) {
+        if (!target || !songId) return;
+        target.innerHTML = '';
+        target.classList.add('apple-music-embed');
+        var iframe = createAppleMusicIframe(songId, title);
+        if (iframe) target.appendChild(iframe);
+    };
+
+    window.toggleAppleEmbed = function (button, songId, title) {
+        if (!button || !songId) return;
+        var row = button.closest('.album-track');
+        if (!row) return;
+        var panel = row.querySelector('.album-track__embed');
+        if (!panel) {
+            panel = document.createElement('div');
+            panel.className = 'album-track__embed';
+            row.appendChild(panel);
+        }
+        var isOpen = panel.classList.contains('is-open');
+        document.querySelectorAll('.album-track__embed.is-open').forEach(function (openPanel) {
+            openPanel.classList.remove('is-open');
+            openPanel.innerHTML = '';
+        });
+        document.querySelectorAll('.album-track__action--listen.is-active').forEach(function (btn) {
+            btn.classList.remove('is-active');
+            btn.textContent = 'Listen';
+        });
+        if (isOpen) return;
+        panel.classList.add('is-open');
+        renderAppleMusicEmbed(panel, songId, title);
+        button.classList.add('is-active');
+        button.textContent = 'Close';
+    };
+
+    function initAppleMusicEmbeds() {
+        document.querySelectorAll('[data-apple-embed]').forEach(function (container) {
+            var songId = container.getAttribute('data-apple-embed');
+            var title = container.getAttribute('data-apple-title') || '';
+            if (songId) renderAppleMusicEmbed(container, songId, title);
+        });
+    }
+
     window.fetchJsonData = async function (url, cache) {
         if (cache && Object.keys(cache).length > 0) {
             return cache;
@@ -330,5 +385,6 @@
         initPageBanners();
         renderReleaseDigest();
         renderStreamingPlatforms();
+        initAppleMusicEmbeds();
     });
 })();

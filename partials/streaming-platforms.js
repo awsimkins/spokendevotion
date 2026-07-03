@@ -10,7 +10,7 @@ window.SD_STREAMING_PLATFORMS = {
         { id: 'deezer',       name: 'Deezer',         icon: 'fa-solid fa-wave-square',   url: 'https://www.deezer.com/us/artist/399844621' },
         { id: 'tidal',        name: 'Tidal',          icon: 'fa-solid fa-water',         url: 'https://tidal.com/artist/81752714' },
         { id: 'youtube',      name: 'YouTube Music',  icon: 'fa-brands fa-youtube',      url: 'https://music.youtube.com/channel/UCp-tiQ4aBXVYgM50SbwOhsQ' },
-        { id: 'spotify',      name: 'Spotify',        icon: 'fa-brands fa-spotify',      url: null },
+        { id: 'spotify',      name: 'Spotify',        icon: 'fa-brands fa-spotify',      url: 'https://open.spotify.com/artist/7kY2FAPgpXG7HQwP5Bdxj1' },
         { id: 'amazon',       name: 'Amazon Music',   icon: 'fa-brands fa-amazon',       url: null },
         { id: 'pandora',      name: 'Pandora',        icon: 'fa-solid fa-compact-disc',  url: null },
         { id: 'iheart',       name: 'iHeartRadio',    icon: 'fa-solid fa-heart',         url: null },

@@ -87,88 +87,7 @@
                         title="Resting in the Father on Apple Music"></iframe>
             </div>
 
-            <div class="album-tracklist" id="album-tracklist">
-                <div class="album-track">
-                    <span class="album-track__num">1</span>
-                    <span class="album-track__title">A Quiet Prayer</span>
-                </div>
-                <div class="album-track">
-                    <span class="album-track__num">2</span>
-                    <span class="album-track__title">Be Still</span>
-                </div>
-                <div class="album-track">
-                    <span class="album-track__num">3</span>
-                    <span class="album-track__title">Forgive Me Lord</span>
-                </div>
-                <div class="album-track">
-                    <span class="album-track__num">4</span>
-                    <span class="album-track__title">Everlasting Light</span>
-                </div>
-                <div class="album-track">
-                    <span class="album-track__num">5</span>
-                    <span class="album-track__title">My Solid Rock</span>
-                </div>
-                <div class="album-track">
-                    <span class="album-track__num">6</span>
-                    <span class="album-track__title">Divine Comfort</span>
-                </div>
-                <div class="album-track">
-                    <span class="album-track__num">7</span>
-                    <span class="album-track__title">Sacred Silence</span>
-                </div>
-                <div class="album-track">
-                    <span class="album-track__num">8</span>
-                    <span class="album-track__title">The Blessing</span>
-                </div>
-                <div class="album-track">
-                    <span class="album-track__num">9</span>
-                    <span class="album-track__title">Great Are You Lord</span>
-                </div>
-                <div class="album-track">
-                    <span class="album-track__num">10</span>
-                    <span class="album-track__title">Forever Reign</span>
-                </div>
-                <div class="album-track">
-                    <span class="album-track__num">11</span>
-                    <span class="album-track__title">My Anchor</span>
-                </div>
-                <div class="album-track">
-                    <span class="album-track__num">12</span>
-                    <span class="album-track__title">Your Love Is Holy</span>
-                </div>
-                <div class="album-track">
-                    <span class="album-track__num">13</span>
-                    <span class="album-track__title">Forever Faithful</span>
-                </div>
-                <div class="album-track">
-                    <span class="album-track__num">14</span>
-                    <span class="album-track__title">You Are Holy</span>
-                </div>
-                <div class="album-track">
-                    <span class="album-track__num">15</span>
-                    <span class="album-track__title">I'm Yours</span>
-                </div>
-                <div class="album-track">
-                    <span class="album-track__num">16</span>
-                    <span class="album-track__title">Living Water</span>
-                </div>
-                <div class="album-track">
-                    <span class="album-track__num">17</span>
-                    <span class="album-track__title">Stillness Within</span>
-                </div>
-                <div class="album-track">
-                    <span class="album-track__num">18</span>
-                    <span class="album-track__title">Purify Me</span>
-                </div>
-                <div class="album-track">
-                    <span class="album-track__num">19</span>
-                    <span class="album-track__title">Spirit Lead Me</span>
-                </div>
-                <div class="album-track">
-                    <span class="album-track__num">20</span>
-                    <span class="album-track__title">Gentle Touch</span>
-                </div>
-            </div>
+            <div class="album-tracklist" id="album-tracklist"></div>
         </section>
 
         <p class="text-center text-amber-300 italic text-base md:text-lg max-w-3xl mx-auto">
@@ -189,9 +108,10 @@
 
     <div id="footer-root"></div>
 
-    <script src="/partials/streaming-config.js?v=11"></script>
-    <script src="/partials/streaming-platforms.js?v=6"></script>
-    <script src="/partials/site.js?v=27"></script>
+    <script src="/partials/apple-music-embeds.js?v=1"></script>
+    <script src="/partials/streaming-config.js?v=12"></script>
+    <script src="/partials/streaming-platforms.js?v=7"></script>
+    <script src="/partials/site.js?v=28"></script>
     <script>
         (function () {
             var cfg = window.SD_STREAMING;
@@ -220,6 +140,46 @@
             if (cfg.instrumentalReleaseDateLabel) {
                 var date = document.getElementById('album-release-date');
                 if (date) date.textContent = cfg.instrumentalReleaseDateLabel;
+            }
+        })();
+
+        (async function () {
+            var list = document.getElementById('album-tracklist');
+            if (!list) return;
+            try {
+                var data = await fetchJsonData('instrumental.json', {});
+                var album = data['resting-in-the-father-i'];
+                if (!album || !album.tracks) return;
+                list.innerHTML = '';
+                album.tracks.forEach(function (track) {
+                    var row = document.createElement('div');
+                    row.className = 'album-track';
+
+                    var num = document.createElement('span');
+                    num.className = 'album-track__num';
+                    num.textContent = track.num;
+                    row.appendChild(num);
+
+                    var title = document.createElement('span');
+                    title.className = 'album-track__title';
+                    title.textContent = track.title;
+                    row.appendChild(title);
+
+                    if (track.appleSongId) {
+                        var listen = document.createElement('button');
+                        listen.type = 'button';
+                        listen.className = 'album-track__action album-track__action--listen';
+                        listen.textContent = 'Listen';
+                        listen.addEventListener('click', function () {
+                            toggleAppleEmbed(listen, track.appleSongId, track.title);
+                        });
+                        row.appendChild(listen);
+                    }
+
+                    list.appendChild(row);
+                });
+            } catch (err) {
+                console.error(err);
             }
         })();
     </script>

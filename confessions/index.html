@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spoken Devotion • Confessions</title>
-    <meta name="description" content="Honest spoken-word confessions and poetic reflections from Spoken Devotion.">
+    <meta name="description" content="Honest spoken-word confessions and poetic reflections from Spoken Devotion. Coming soon to streaming platforms.">
     <meta name="theme-color" content="#0f172a">
     <link rel="icon" href="/images/logo.png" type="image/png">
     <link rel="apple-touch-icon" href="/images/logo.png">
@@ -17,7 +17,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="/partials/site.css?v=17">
+    <link rel="stylesheet" href="/partials/site.css?v=22">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@400;500;600&display=swap');
     </style>
@@ -41,79 +41,59 @@
     </section>
 
     <div class="max-w-3xl mx-auto px-6 py-12 text-center">
-        <p class="text-lg text-white/70 leading-relaxed mb-10">
-            Listen here while we prepare these confessions for streaming release.
-            Hosted previews stay on the site until the Confessions tracks go through DistroKid.
+        <p class="text-lg text-white/70 leading-relaxed mb-4">
+            Three spoken-word confessions written by Ruby Rose are being prepared for release on streaming platforms.
+            Read the poetry below now — audio players will return here when the tracks are live on DistroKid.
         </p>
+        <p class="text-sm text-amber-400/80 font-medium">Coming soon to Spotify, Apple Music, and more.</p>
     </div>
 
     <div class="max-w-5xl mx-auto px-6 pb-12">
-            <div class="audio-card p-8 md:p-10 mb-10" id="featured-item">
-                <div class="mb-6">
-                    <h3 class="text-3xl font-semibold mb-1">Open Hands</h3>
-                    <p class="text-amber-400 text-sm">Written by Ruby Rose and recited and produced by Suno</p>
-                </div>
-                <audio controls controlsList="nodownload" class="w-full mb-6">
-                    <source src="Open_Hands.mp3" type="audio/mpeg">
-                    Your browser does not support the audio element.
-                </audio>
-                <div class="flex flex-wrap gap-3">
-                    <button onclick="showPoetry('open-hands')"
-                            class="inline-flex items-center gap-x-2 px-6 py-3 bg-amber-400 hover:bg-amber-300 text-zinc-950 font-medium rounded-2xl text-sm transition-all">
-                        <i class="fa-solid fa-book-open"></i> Show Poetry
-                    </button>
-                    <button onclick="shareAudio('Open_Hands.mp3', 'Open Hands')"
-                            class="inline-flex items-center gap-x-2 px-5 py-3 text-sm text-amber-400 hover:text-amber-300 border border-amber-400/40 hover:bg-amber-400/10 rounded-2xl transition-all">
-                        <i class="fa-solid fa-share-alt"></i> Share
-                    </button>
-                </div>
+        <div class="audio-card coming-soon-card p-8 md:p-10 mb-10">
+            <span class="coming-soon-card__badge"><i class="fa-solid fa-clock" aria-hidden="true"></i> Coming Soon</span>
+            <div class="mb-4">
+                <h3 class="text-3xl font-semibold mb-1">Open Hands</h3>
+                <p class="text-amber-400 text-sm">Written by Ruby Rose and recited and produced by Suno</p>
             </div>
-
-            <div class="audio-card audio-card--secondary p-8 md:p-10 mb-10">
-                <div class="mb-6">
-                    <h3 class="text-3xl font-semibold mb-1">Receipts, Not Stages</h3>
-                    <p class="text-amber-400 text-sm">Written by Ruby Rose and recited and produced by Suno</p>
-                </div>
-                <audio controls controlsList="nodownload" class="w-full mb-6">
-                    <source src="Receipt_Not_Stages.mp3" type="audio/mpeg">
-                    Your browser does not support the audio element.
-                </audio>
-                <div class="flex flex-wrap gap-3">
-                    <button onclick="showPoetry('receipts-not-stages')"
-                            class="inline-flex items-center gap-x-2 px-6 py-3 bg-amber-400 hover:bg-amber-300 text-zinc-950 font-medium rounded-2xl text-sm transition-all">
-                        <i class="fa-solid fa-book-open"></i> Show Poetry
-                    </button>
-                    <button onclick="shareAudio('Receipt_Not_Stages.mp3', 'Receipts, Not Stages')"
-                            class="inline-flex items-center gap-x-2 px-5 py-3 text-sm text-amber-400 hover:text-amber-300 border border-amber-400/40 hover:bg-amber-400/10 rounded-2xl transition-all">
-                        <i class="fa-solid fa-share-alt"></i> Share
-                    </button>
-                </div>
+            <div class="flex flex-wrap gap-3">
+                <button type="button" onclick="showPoetry('open-hands')"
+                        class="inline-flex items-center gap-x-2 px-6 py-3 bg-amber-400 hover:bg-amber-300 text-zinc-950 font-medium rounded-2xl text-sm transition-all">
+                    <i class="fa-solid fa-book-open"></i> Read Poetry
+                </button>
             </div>
+        </div>
 
-            <div class="audio-card audio-card--secondary p-8 md:p-10 mb-12">
-                <div class="mb-6">
-                    <h3 class="text-3xl font-semibold mb-1">Wineglass on Concrete</h3>
-                    <p class="text-amber-400 text-sm">Written by Ruby Rose and recited and produced by Suno</p>
-                </div>
-                <audio controls controlsList="nodownload" class="w-full mb-6">
-                    <source src="Wineglass_Concrete.mp3" type="audio/mpeg">
-                    Your browser does not support the audio element.
-                </audio>
-                <div class="flex flex-wrap gap-3">
-                    <button onclick="showPoetry('wineglass-on-concrete')"
-                            class="inline-flex items-center gap-x-2 px-6 py-3 bg-amber-400 hover:bg-amber-300 text-zinc-950 font-medium rounded-2xl text-sm transition-all">
-                        <i class="fa-solid fa-book-open"></i> Show Poetry
-                    </button>
-                    <button onclick="shareAudio('Wineglass_Concrete.mp3', 'Wineglass on Concrete')"
-                            class="inline-flex items-center gap-x-2 px-5 py-3 text-sm text-amber-400 hover:text-amber-300 border border-amber-400/40 hover:bg-amber-400/10 rounded-2xl transition-all">
-                        <i class="fa-solid fa-share-alt"></i> Share
-                    </button>
-                </div>
+        <div class="audio-card audio-card--secondary coming-soon-card p-8 md:p-10 mb-10">
+            <span class="coming-soon-card__badge"><i class="fa-solid fa-clock" aria-hidden="true"></i> Coming Soon</span>
+            <div class="mb-4">
+                <h3 class="text-3xl font-semibold mb-1">Receipts, Not Stages</h3>
+                <p class="text-amber-400 text-sm">Written by Ruby Rose and recited and produced by Suno</p>
             </div>
+            <div class="flex flex-wrap gap-3">
+                <button type="button" onclick="showPoetry('receipts-not-stages')"
+                        class="inline-flex items-center gap-x-2 px-6 py-3 bg-amber-400 hover:bg-amber-300 text-zinc-950 font-medium rounded-2xl text-sm transition-all">
+                    <i class="fa-solid fa-book-open"></i> Read Poetry
+                </button>
+            </div>
+        </div>
 
-            <p class="text-center text-amber-300 italic text-lg">
-                More confessions coming soon — God willing.
-            </p>
+        <div class="audio-card audio-card--secondary coming-soon-card p-8 md:p-10 mb-12">
+            <span class="coming-soon-card__badge"><i class="fa-solid fa-clock" aria-hidden="true"></i> Coming Soon</span>
+            <div class="mb-4">
+                <h3 class="text-3xl font-semibold mb-1">Wineglass on Concrete</h3>
+                <p class="text-amber-400 text-sm">Written by Ruby Rose and recited and produced by Suno</p>
+            </div>
+            <div class="flex flex-wrap gap-3">
+                <button type="button" onclick="showPoetry('wineglass-on-concrete')"
+                        class="inline-flex items-center gap-x-2 px-6 py-3 bg-amber-400 hover:bg-amber-300 text-zinc-950 font-medium rounded-2xl text-sm transition-all">
+                    <i class="fa-solid fa-book-open"></i> Read Poetry
+                </button>
+            </div>
+        </div>
+
+        <p class="text-center text-amber-300 italic text-lg">
+            More confessions coming soon — God willing.
+        </p>
     </div>
 
     <div id="poetry-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
@@ -129,14 +109,9 @@
         </div>
     </div>
 
-    <div id="toast" class="toast">
-        <i class="fa-solid fa-check-circle"></i>
-        <span id="toast-text">Link copied to clipboard!</span>
-    </div>
-
     <div id="footer-root"></div>
 
-    <script src="/partials/site.js?v=23"></script>
+    <script src="/partials/site.js?v=28"></script>
     <script>
         let confessionsCache = {};
 

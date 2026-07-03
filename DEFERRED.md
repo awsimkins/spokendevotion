@@ -44,9 +44,10 @@ Metadata: `partials/streaming-config.js`, `partials/releases.js`, section JSON f
 
 ### Still pending after release
 
-- Add **Spotify** artist URL to `streaming-platforms.js` when profile is live
-- Add **Apple Music embeds** on `/worship/` and `/reflections/` when single album IDs are available
-- Add **album.link** smart links if DistroKid provides post-release URLs
+- [x] **Spotify** artist URL in `streaming-platforms.js`
+- [x] **Apple Music embeds** on `/worship/`, `/reflections/`, `/prayer/` (per-track Listen), `/instrumental/` (per-track Listen)
+- [ ] **Spotify embeds** — optional; Spotify does not offer per-track embeds like Apple. Use artist link + HyperFollow for Spotify listeners.
+- [ ] **album.link** smart links if DistroKid provides post-release URLs for singles
 
 ### Credits (site-wide)
 
@@ -59,7 +60,15 @@ Metadata: `partials/streaming-config.js`, `partials/releases.js`, section JSON f
 
 ## Confessions — DistroKid (pending)
 
-**Open Hands**, **Receipts, Not Stages**, and **Wineglass on Concrete** still use hosted MP3 previews on `/confessions/` until uploaded to DistroKid. Remove MP3s and add streaming cards when HyperFollow links are ready. `.gitignore` now blocks future `*.mp3` commits.
+**Open Hands**, **Receipts, Not Stages**, and **Wineglass on Concrete** show as **Coming Soon** on `/confessions/`. Poetry text remains readable via modals. Hosted MP3s were removed from the repo. Upload to DistroKid, add Apple Music song IDs to `partials/apple-music-embeds.js`, then wire embeds like Worship/Reflections.
+
+## Resting in the Father II (delayed)
+
+Sequel album hit a distribution issue — expect a fix in a few days. Do not announce on the site until DistroKid confirms the release. When ready, follow the release-day checklist above.
+
+## Salvation Message (homepage — planned)
+
+Personal spoken message for visitors. **Recommended approach:** record and upload to **YouTube** (unlisted or public), then embed on the homepage like Prayer/Bible videos — no large files in the repo, works everywhere, easy to update. Alternative: host audio on a CDN (Cloudflare R2, etc.) only if you need audio without YouTube branding. Not implementing today; add a `salvation` block to `index.html` or a dedicated section when ready.
 
 ## Formspark Contact Form
 
