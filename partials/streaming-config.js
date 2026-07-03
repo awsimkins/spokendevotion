@@ -53,6 +53,9 @@ window.SD_STREAMING = {
     instrumentalAppleAlbumId: '6785483267',
 
     spotifyArtistUrl: 'https://open.spotify.com/artist/7kY2FAPgpXG7HQwP5Bdxj1',
+    amazonArtistUrl: 'https://music.amazon.com/artists/B0H6RHQD8T/spoken-devotion',
+    iheartArtistUrl: 'https://www.iheart.com/artist/spoken-devotion-51190371',
+    anghamiArtistUrl: 'https://play.anghami.com/artist/29010192',
 
     featuredArtist: 'Ruby Rose',
 

@@ -46,6 +46,7 @@ Metadata: `partials/streaming-config.js`, `partials/releases.js`, section JSON f
 
 - [x] **Spotify** artist URL in `streaming-platforms.js`
 - [x] **Apple Music embeds** on `/worship/`, `/reflections/`, `/prayer/` (per-track Listen), `/instrumental/` (per-track Listen)
+- [x] **Amazon Music, iHeartRadio, Anghami** artist URLs in `streaming-platforms.js`
 - [ ] **Spotify embeds** — optional; Spotify does not offer per-track embeds like Apple. Use artist link + HyperFollow for Spotify listeners.
 - [ ] **album.link** smart links if DistroKid provides post-release URLs for singles
 

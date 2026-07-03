@@ -99,7 +99,7 @@ See also [`DEFERRED.md`](DEFERRED.md) for the full backlog. Priority items:
 - [x] **Homepage release digest** — data-driven via `partials/releases.js`
 - [ ] **Confessions on DistroKid** — upload three tracks; add Apple Music embeds on `/confessions/`
 - [ ] **Streaming embeds** — add Apple Music embeds on `/reflections/` and `/worship/` when single IDs are available
-- [ ] **Spotify artist link** — add to `streaming-platforms.js` when profile is live
+- [x] **Spotify, Amazon Music, iHeartRadio, Anghami** — artist links in `streaming-platforms.js`
 - [x] **Nav Soon badge** — Instrumental badge removed
 - [ ] **Banner compression** — optionally compress large PNGs for faster page loads
 
