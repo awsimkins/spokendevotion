@@ -31,15 +31,29 @@ Since most changes are made directly on GitHub:
 
 - Navigation section links are in **alphabetical order**: Bible, Confessions, Instrumental, Prayer, Reflections, Worship.
 - Nav contact button label is **Contact** (links to `/contact/`).
-- **Instrumental** — *Resting in the Father I* on DistroKid pre-save; releases June 28, 2026 at midnight Central Time; tracklist in `instrumental/instrumental.json`.
-- **Prayer** — *Prayers to the Father* album on DistroKid; pre-save live; releases July 3, 2026; DistroKid UPC and dates in `prayer/album.json`; YouTube embeds for three video prayers; full text in `prayer/prayer.json`.
-- **Reflections** — *Alone in an Empty Grave* and *Lost* on DistroKid pre-save; streaming players after July 3, 2026; lyrics in `reflections/reflections.json`.
-- **Worship** — *Have Mercy on Me* and *Here I Am, Lord* on DistroKid pre-save; streaming players after July 3, 2026; metadata in `worship/worship.json`, lyrics in `worship/lyrics.json`.
-- **Confessions** — three tracks with hosted MP3 previews until DistroKid upload; text in `confessions/confessions.json`.
-- Release URLs, UPCs, dates, record label, and credits: `partials/streaming-config.js` plus section JSON (`album.json`, `worship.json`, `reflections.json`, `instrumental.json`).
-- Homepage includes social handles, Who We Are, and no-donation guidance; footer repeats the same message.
-- Shared UI lives in `partials/` (`nav.html`, `footer.html`, `site.css`, `site.js`).
+- Shared UI lives in `partials/` (`nav.html`, `footer.html`, `site.css`, `site.js`, `streaming-config.js`, `streaming-platforms.js`, `releases.js`, `apple-music-embeds.js`).
 - Hero banners are in `/images/` at 1760×370; one PNG per section.
+- Homepage includes a data-driven release digest (`partials/releases.js`), social handles, streaming platform grid, Who We Are, and no-donation guidance; footer repeats the same message.
+
+### Section pages (all releases out now as of July 3, 2026)
+
+| Section | Content files | Playback |
+|---------|---------------|----------|
+| **Instrumental** | `instrumental/instrumental.json` | Apple Music Listen buttons per track; HyperFollow album link |
+| **Prayer** | `prayer/album.json`, `prayer/prayer.json`, `prayer/videos.json` | 7 YouTube embeds (tracks 1–5, 7–8); Apple Music Listen per track; full text modals |
+| **Reflections** | `reflections/reflections.json` | Apple Music embeds + HyperFollow listen links; lyrics modals |
+| **Worship** | `worship/worship.json`, `worship/lyrics.json` | Apple Music embeds + HyperFollow listen links; lyrics modals |
+| **Confessions** | `confessions/confessions.json` | Coming Soon cards; poetry readable in modals (no hosted MP3s) |
+| **Bible** | inline in `bible/index.html` | Book of James via YouTube embed |
+| **Contact** | `partials/contact-config.js`, `partials/contact-form.js` | Formspark + Cloudflare Turnstile |
+
+### Release metadata
+
+Central config: `partials/streaming-config.js` (UPCs, dates, listen URLs, release status). Section JSON files mirror status for each page. When a new DistroKid release goes live, follow the checklist in [`DEFERRED.md`](DEFERRED.md).
+
+### Cache versions
+
+HTML pages load shared partials with `?v=` query strings for cache busting. When you change any file in `partials/`, bump the matching `?v=` on **every** HTML page that loads it.
 
 ## Questions?
 

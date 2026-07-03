@@ -10,17 +10,19 @@ When a DistroKid release goes live, update these in one pass:
 2. `partials/releases.js` — homepage featured item, list meta, note
 3. Section JSON — `prayer/album.json`, `worship/worship.json`, `reflections/reflections.json`, `instrumental/instrumental.json`
 4. Section HTML — badge, CTA text, meta descriptions, streaming copy
-5. `streaming-platforms.js` — add live artist/store URLs as profiles appear
-6. Bump cache versions on `site.js`, `streaming-config.js`, `releases.js` (shared `?v=` on all pages)
-7. Update this file and `README.md`
+5. `partials/apple-music-embeds.js` — add song IDs for per-track Listen buttons
+6. `prayer/videos.json` — add YouTube video IDs when prayer videos publish (Prayer section only)
+7. `partials/streaming-platforms.js` — add live artist/store URLs as profiles appear
+8. Bump cache versions on all HTML pages (`site.css`, `site.js`, and any partials they load)
+9. Update this file and `README.md`
 
 ## June 28, 2026 Release (DistroKid) — Done
 
 | Release | Type | Status |
 |---------|------|--------|
-| **Resting in the Father I** | Instrumental album (20 tracks) | **Released** — Apple Music embed on `/instrumental/` |
+| **Resting in the Father I** | Instrumental album (20 tracks) | **Released** — Apple Music Listen buttons on `/instrumental/` |
 
-Central config: `partials/streaming-config.js`, `instrumental/instrumental.json`.
+Central config: `partials/streaming-config.js`, `instrumental/instrumental.json`, `partials/apple-music-embeds.js`.
 
 ### Credits
 
@@ -40,7 +42,7 @@ Record label: **Spoken Devotion Music**. Upload date: **June 26, 2026**. Release
 | **Have Mercy on Me** | Worship single | 882614534603 | **Released** |
 | **Here I Am, Lord** | Worship single | 882614532029 | **Released** |
 
-Metadata: `partials/streaming-config.js`, `partials/releases.js`, section JSON files.
+Metadata: `partials/streaming-config.js`, `partials/releases.js`, section JSON files, `partials/apple-music-embeds.js`.
 
 ### Still pending after release
 
@@ -49,6 +51,7 @@ Metadata: `partials/streaming-config.js`, `partials/releases.js`, section JSON f
 - [x] **Amazon Music, iHeartRadio, Anghami** artist URLs in `streaming-platforms.js`
 - [ ] **Spotify embeds** — optional; Spotify does not offer per-track embeds like Apple. Use artist link + HyperFollow for Spotify listeners.
 - [ ] **album.link** smart links if DistroKid provides post-release URLs for singles
+- [ ] **Prayer YouTube videos** — tracks 6 (Prayer for Today), 9 (Dedication), 10 (Protection) still need channel uploads
 
 ### Credits (site-wide)
 
@@ -61,7 +64,7 @@ Metadata: `partials/streaming-config.js`, `partials/releases.js`, section JSON f
 
 ## Confessions — DistroKid (pending)
 
-**Open Hands**, **Receipts, Not Stages**, and **Wineglass on Concrete** show as **Coming Soon** on `/confessions/`. Poetry text remains readable via modals. Hosted MP3s were removed from the repo. Upload to DistroKid, add Apple Music song IDs to `partials/apple-music-embeds.js`, then wire embeds like Worship/Reflections.
+**Open Hands**, **Receipts, Not Stages**, and **Wineglass on Concrete** show as **Coming Soon** on `/confessions/`. Poetry text remains readable via modals. Hosted MP3s were removed from the repo (`.gitignore` blocks `*.mp3`). Upload to DistroKid, add Apple Music song IDs to `partials/apple-music-embeds.js`, then wire embeds like Worship/Reflections.
 
 ## Resting in the Father II (delayed)
 
@@ -77,7 +80,9 @@ Contact form uses Formspark + Cloudflare Turnstile. Form ID and Turnstile site k
 
 ## YouTube Migration for Audio
 
-Prayer section: seven YouTube videos live (tracks 1–5, 7–8). IDs in `prayer/videos.json`. Still pending video: Prayer for Today (6), Prayer of Dedication (9), Prayer of Protection (10). Remaining album tracks stream via DistroKid and Apple Music Listen buttons. Worship and Reflections singles use HyperFollow listen links (no hosted MP3s). Confessions still use hosted MP3s until DistroKid upload. Instrumental album has no hosted MP3s on the site.
+Prayer section: **seven** YouTube videos live (tracks 1–5, 7–8). IDs in `prayer/videos.json`. Still pending video: Prayer for Today (6), Prayer of Dedication (9), Prayer of Protection (10). Remaining album tracks stream via DistroKid and Apple Music Listen buttons.
+
+Worship and Reflections singles use HyperFollow listen links plus Apple Music embeds (no hosted MP3s on the site). Confessions show Coming Soon cards — no hosted MP3s. Instrumental album has no hosted MP3s on the site.
 
 ## Banner Image Optimization
 
@@ -85,7 +90,7 @@ All section banners are in place (`main`, `bible`, `confession`, `instrumental`,
 
 ## Site Infrastructure (lower priority)
 
-- Standardize cache-bust versions across all pages
-- Add `robots.txt` and `sitemap.xml`
-- Consider `.github/` issue/PR templates
-- Review LICENSE language vs. free-sharing ethos
+- [x] Standardize cache-bust versions across all pages
+- [ ] Add `robots.txt` and `sitemap.xml`
+- [ ] Consider `.github/` issue/PR templates
+- [ ] Review LICENSE language vs. free-sharing ethos

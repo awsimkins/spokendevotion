@@ -24,27 +24,30 @@ Navigation section links are in **alphabetical order**. The nav button reads **C
 
 | Section | Description | Link |
 |---------|-------------|------|
-| **Home** | Social row with handles, Matthew 10:8, Who We Are (1 John 3:18) | [Home](https://spokendevotion.com/) |
+| **Home** | Release digest, social row, streaming platforms, Who We Are | [Home](https://spokendevotion.com/) |
 | **Bible** | Spoken Devotion Version (SDV) — book list with James via YouTube embed | [Bible](https://spokendevotion.com/bible/) |
 | **Confessions** | Three spoken-word pieces — coming soon to streaming; poetry readable on site | [Confessions](https://spokendevotion.com/confessions/) |
 | **Contact** | Contact form via Formspark + Cloudflare Turnstile | [Contact](https://spokendevotion.com/contact/) |
-| **Instrumental** | *Resting in the Father I* album — out now on major platforms | [Instrumental](https://spokendevotion.com/instrumental/) |
-| **Prayer** | *Prayers to the Father* album — out now; YouTube videos + full text modals | [Prayer](https://spokendevotion.com/prayer/) |
-| **Reflections** | *Alone in an Empty Grave* and *Lost* — out now; written by Anthony, sang by Suno | [Reflections](https://spokendevotion.com/reflections/) |
-| **Worship** | *Have Mercy on Me* and *Here I Am, Lord* — out now; lyrics by Anthony, produced and sang by Suno | [Worship](https://spokendevotion.com/worship/) |
+| **Instrumental** | *Resting in the Father I* album — out now; per-track Apple Music Listen buttons | [Instrumental](https://spokendevotion.com/instrumental/) |
+| **Prayer** | *Prayers to the Father* album — out now; 7 YouTube videos, Apple Music Listen, full text modals | [Prayer](https://spokendevotion.com/prayer/) |
+| **Reflections** | *Alone in an Empty Grave* and *Lost* — out now; Apple Music embeds + HyperFollow links | [Reflections](https://spokendevotion.com/reflections/) |
+| **Worship** | *Have Mercy on Me* and *Here I Am, Lord* — out now; Apple Music embeds + HyperFollow links | [Worship](https://spokendevotion.com/worship/) |
 
 ## Key Features
 
+- **Homepage release digest** — data-driven via `partials/releases.js`
 - **Homepage social row** — all platforms in one horizontal row with handles and amber-bordered cards
+- **Streaming platform grid** — live artist links from `partials/streaming-platforms.js` (8 stores live; others show Coming Soon)
+- **Apple Music embeds** — per-track Listen buttons via `partials/apple-music-embeds.js` on Prayer, Worship, Reflections, and Instrumental
 - **Who We Are** — clear statement that we are not an official ministry and do not accept donations
 - **Footer** — reinforces free sharing, no donations, and personal creative ministry
-- **Share buttons** — one-click copy of YouTube links (Prayer, Bible) or direct audio links (Confessions previews)
+- **Share buttons** — one-click copy of YouTube links (Prayer, Bible)
 - **Modals** for full lyrics, poetry, and prayer text (keeps pages clean)
 - **Book of James** available via YouTube video embed in the Bible section
 - Clean, responsive design built with Tailwind CSS
 - Shared navigation and footer loaded from `partials/`
-- Content managed via JSON files for easy updates (`prayer.json`, `prayer/album.json`, `reflections.json`, `worship.json`, `lyrics.json`, `confessions.json`, `instrumental.json`)
-- Release metadata centralized in `partials/streaming-config.js` and homepage digest in `partials/releases.js`
+- Content managed via JSON files for easy updates (`prayer.json`, `prayer/album.json`, `prayer/videos.json`, `reflections.json`, `worship.json`, `lyrics.json`, `confessions.json`, `instrumental.json`)
+- Release metadata centralized in `partials/streaming-config.js`
 
 ## Banner Images
 
@@ -62,14 +65,29 @@ Section hero banners live in `/images/` at **1760×370** (or same ~4.5:1 aspect)
 
 ## Platforms
 
-Active on:
+### Social
+
 - [YouTube](https://www.youtube.com/@Spoken_Devotion) — `@Spoken_Devotion`
 - [TikTok](https://www.tiktok.com/@spoken.devotion) — `@spoken.devotion`
 - [Instagram](https://www.instagram.com/spoken_devotion/) — `@spoken_devotion`
 - [Facebook](https://www.facebook.com/profile.php?id=61591326358064) — Spoken Devotion
 - [X](https://x.com/Spoken_Devotion) — `@Spoken_Devotion`
 
-Streaming — **Spoken Devotion Music** on DistroKid; all releases out now:
+### Streaming — Spoken Devotion Music (DistroKid)
+
+All releases are **out now**. Artist profiles live on **8 stores** (configured in `partials/streaming-platforms.js`):
+
+| Store | Status |
+|-------|--------|
+| Apple Music | Live |
+| Deezer | Live |
+| Tidal | Live |
+| YouTube Music | Live |
+| Spotify | Live |
+| Amazon Music | Live |
+| iHeartRadio | Live |
+| Anghami | Live |
+| Pandora, SoundCloud, Audiomack, Shazam, Boomplay | Coming soon |
 
 | Release | UPC | Date |
 |---------|-----|------|
@@ -89,19 +107,22 @@ Use the [Contact](https://spokendevotion.com/contact/) page. Form submissions go
 See also [`DEFERRED.md`](DEFERRED.md) for the full backlog. Priority items:
 
 - [x] **X link** — live at [x.com/Spoken_Devotion](https://x.com/Spoken_Devotion)
-- [x] **Reflections tracks** — *Alone in an Empty Grave* and *Lost* (both pre-save) on `/reflections/`
-- [x] **Worship singles** — *Have Mercy on Me* and *Here I Am, Lord* (pre-save) on `/worship/`
-- [x] **Resting in the Father I** — instrumental album released June 28, 2026; Apple Music embed on `/instrumental/`
+- [x] **Reflections tracks** — *Alone in an Empty Grave* and *Lost* released on `/reflections/`
+- [x] **Worship singles** — *Have Mercy on Me* and *Here I Am, Lord* released on `/worship/`
+- [x] **Resting in the Father I** — instrumental album released June 28, 2026; Apple Music embeds on `/instrumental/`
 - [x] **Reflections banner** — `reflections.png` added
 - [x] **Prayers to the Father** — album released July 3, 2026
-- [x] **July 3 singles** — Reflections and Worship singles released; listen links on section pages
-- [x] **YouTube migration (Prayer)** — seven album prayers on YouTube (`prayer/videos.json`); three videos still pending
+- [x] **July 3 singles** — Reflections and Worship singles released; listen links and Apple embeds on section pages
+- [x] **YouTube migration (Prayer)** — seven album prayers on YouTube (`prayer/videos.json`); three videos still pending (tracks 6, 9, 10)
 - [x] **Homepage release digest** — data-driven via `partials/releases.js`
-- [ ] **Confessions on DistroKid** — upload three tracks; add Apple Music embeds on `/confessions/`
-- [ ] **Streaming embeds** — add Apple Music embeds on `/reflections/` and `/worship/` when single IDs are available
+- [x] **Apple Music embeds** — live on `/prayer/`, `/worship/`, `/reflections/`, `/instrumental/`
 - [x] **Spotify, Amazon Music, iHeartRadio, Anghami** — artist links in `streaming-platforms.js`
 - [x] **Nav Soon badge** — Instrumental badge removed
+- [ ] **Confessions on DistroKid** — upload three tracks; add Apple Music embeds on `/confessions/`
+- [ ] **Prayer YouTube videos** — tracks 6, 9, 10 still need channel videos
 - [ ] **Banner compression** — optionally compress large PNGs for faster page loads
+- [x] **Cache version sync** — standardized `?v=` across all HTML pages
+- [ ] **Site infrastructure** — `robots.txt`, `sitemap.xml` (see DEFERRED.md)
 
 ## Vision
 
