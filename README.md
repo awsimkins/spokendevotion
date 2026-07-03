@@ -95,7 +95,7 @@ See also [`DEFERRED.md`](DEFERRED.md) for the full backlog. Priority items:
 - [x] **Reflections banner** — `reflections.png` added
 - [x] **Prayers to the Father** — album released July 3, 2026
 - [x] **July 3 singles** — Reflections and Worship singles released; listen links on section pages
-- [x] **YouTube migration (Prayer)** — Prayer for Family, Prayer of Repentance, and Prayer of Need use YouTube embeds
+- [x] **YouTube migration (Prayer)** — seven album prayers on YouTube (`prayer/videos.json`); three videos still pending
 - [x] **Homepage release digest** — data-driven via `partials/releases.js`
 - [ ] **Confessions on DistroKid** — upload three tracks; add Apple Music embeds on `/confessions/`
 - [ ] **Streaming embeds** — add Apple Music embeds on `/reflections/` and `/worship/` when single IDs are available

@@ -76,7 +76,7 @@ Contact form uses Formspark + Cloudflare Turnstile. Form ID and Turnstile site k
 
 ## YouTube Migration for Audio
 
-Prayer section: Prayer for Family, Prayer of Repentance, and Prayer of Need use YouTube embeds; remaining album tracks stream via DistroKid. Worship and Reflections singles use HyperFollow listen links (no hosted MP3s). Confessions still use hosted MP3s until DistroKid upload. Instrumental album has no hosted MP3s on the site.
+Prayer section: seven YouTube videos live (tracks 1–5, 7–8). IDs in `prayer/videos.json`. Still pending video: Prayer for Today (6), Prayer of Dedication (9), Prayer of Protection (10). Remaining album tracks stream via DistroKid and Apple Music Listen buttons. Worship and Reflections singles use HyperFollow listen links (no hosted MP3s). Confessions still use hosted MP3s until DistroKid upload. Instrumental album has no hosted MP3s on the site.
 
 ## Banner Image Optimization
 

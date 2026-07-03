@@ -130,96 +130,15 @@
         <section>
             <h2 class="text-2xl md:text-3xl font-semibold tracking-tight heading-font text-center mb-2">Watch on YouTube</h2>
             <p class="text-center text-white/60 text-sm md:text-base mb-8 max-w-2xl mx-auto">
-                Video prayers are on our channel now. All ten album tracks stream on major platforms — listen on your favorite store or read the full text below.
+                Seven video prayers are on our channel now. All ten album tracks stream on major platforms — watch below, listen on your favorite store, or read the full text.
             </p>
-            <div class="grid sm:grid-cols-2 gap-6" id="prayer-grid">
-                <div class="audio-card prayer-card p-5 md:p-6" id="featured-item">
-                    <div class="mb-4">
-                        <h3 class="text-xl font-semibold mb-0.5">Prayer for Family</h3>
-                        <p class="text-amber-400 text-sm">Written by Ruby Rose and recited and produced by Suno · Track 2</p>
-                    </div>
-                    <div class="aspect-video rounded-xl overflow-hidden mb-4 bg-black">
-                        <iframe width="100%"
-                                height="100%"
-                                src="https://www.youtube.com/embed/cXjYpYWQayU"
-                                title="Prayer for Family - Spoken Devotion"
-                                loading="lazy"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                allowfullscreen>
-                        </iframe>
-                    </div>
-                    <div class="flex flex-wrap gap-2">
-                        <button onclick="showPrayer('family-prayer')"
-                                class="inline-flex items-center gap-x-2 px-4 py-2 bg-amber-400 hover:bg-amber-300 text-zinc-950 font-medium rounded-xl text-sm transition-all">
-                            <i class="fa-solid fa-book-open"></i> Show Prayer
-                        </button>
-                        <button onclick="shareYouTube('https://youtu.be/cXjYpYWQayU?si=TpfaOkzCQ7q9DY2_', 'Prayer for Family')"
-                                class="inline-flex items-center gap-x-2 px-4 py-2 text-sm text-amber-400 hover:text-amber-300 border border-amber-400/40 hover:bg-amber-400/10 rounded-xl transition-all">
-                            <i class="fa-solid fa-share-alt"></i> Share
-                        </button>
-                    </div>
-                </div>
-
-                <div class="audio-card audio-card--secondary prayer-card p-5 md:p-6">
-                    <div class="mb-4">
-                        <h3 class="text-xl font-semibold mb-0.5">Prayer of Repentance</h3>
-                        <p class="text-amber-400 text-sm">Written by Ruby Rose and recited and produced by Suno · Track 1</p>
-                    </div>
-                    <div class="aspect-video rounded-xl overflow-hidden mb-4 bg-black">
-                        <iframe width="100%"
-                                height="100%"
-                                src="https://www.youtube.com/embed/zr02WBnH33c"
-                                title="Prayer of Repentance - Spoken Devotion"
-                                loading="lazy"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                allowfullscreen>
-                        </iframe>
-                    </div>
-                    <div class="flex flex-wrap gap-2">
-                        <button onclick="showPrayer('repentance-prayer')"
-                                class="inline-flex items-center gap-x-2 px-4 py-2 bg-amber-400 hover:bg-amber-300 text-zinc-950 font-medium rounded-xl text-sm transition-all">
-                            <i class="fa-solid fa-book-open"></i> Show Prayer
-                        </button>
-                        <button onclick="shareYouTube('https://youtu.be/zr02WBnH33c?si=NW3XieLmvaFBM5pQ', 'Prayer of Repentance')"
-                                class="inline-flex items-center gap-x-2 px-4 py-2 text-sm text-amber-400 hover:text-amber-300 border border-amber-400/40 hover:bg-amber-400/10 rounded-xl transition-all">
-                            <i class="fa-solid fa-share-alt"></i> Share
-                        </button>
-                    </div>
-                </div>
-
-                <div class="audio-card audio-card--secondary prayer-card p-5 md:p-6 sm:col-span-2 max-w-2xl mx-auto w-full">
-                    <div class="mb-4">
-                        <h3 class="text-xl font-semibold mb-0.5">Prayer of Need</h3>
-                        <p class="text-amber-400 text-sm">Written by Ruby Rose and recited and produced by Suno · Track 8</p>
-                    </div>
-                    <div class="aspect-video rounded-xl overflow-hidden mb-4 bg-black">
-                        <iframe width="100%"
-                                height="100%"
-                                src="https://www.youtube.com/embed/zZ0f6Ht9gmQ"
-                                title="Prayer of Need - Spoken Devotion"
-                                loading="lazy"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                allowfullscreen>
-                        </iframe>
-                    </div>
-                    <div class="flex flex-wrap gap-2">
-                        <button onclick="showPrayer('need-prayer')"
-                                class="inline-flex items-center gap-x-2 px-4 py-2 bg-amber-400 hover:bg-amber-300 text-zinc-950 font-medium rounded-xl text-sm transition-all">
-                            <i class="fa-solid fa-book-open"></i> Show Prayer
-                        </button>
-                        <button onclick="shareYouTube('https://youtu.be/zZ0f6Ht9gmQ?si=39smsnP_iyCfiumn', 'Prayer of Need')"
-                                class="inline-flex items-center gap-x-2 px-4 py-2 text-sm text-amber-400 hover:text-amber-300 border border-amber-400/40 hover:bg-amber-400/10 rounded-xl transition-all">
-                            <i class="fa-solid fa-share-alt"></i> Share
-                        </button>
-                    </div>
-                </div>
-            </div>
+            <div class="grid sm:grid-cols-2 gap-6" id="prayer-grid"></div>
         </section>
 
         <p class="text-center text-amber-300 italic text-base md:text-lg max-w-3xl mx-auto">
             <span class="font-medium not-italic text-amber-200">Prayers to the Father</span> is streaming now.
             Listen on <a id="listen-inline-prayer" href="https://distrokid.com/hyperfollow/spokendevotion/prayers-to-the-father" target="_blank" rel="noopener noreferrer" class="underline hover:text-amber-200">Spotify, Apple Music, and more</a>.
-            More video prayers are on our <a href="https://www.youtube.com/@Spoken_Devotion" target="_blank" rel="noopener noreferrer" class="underline hover:text-amber-200">YouTube channel</a>.
+            More videos arrive on our <a href="https://www.youtube.com/@Spoken_Devotion" target="_blank" rel="noopener noreferrer" class="underline hover:text-amber-200">YouTube channel</a> as they publish.
         </p>
 
         <section class="mt-16 pt-12 border-t border-amber-400/15" aria-labelledby="streaming-heading">
@@ -302,6 +221,66 @@
                 });
                 row.appendChild(listen);
             });
+        })();
+
+        (async function () {
+            var grid = document.getElementById('prayer-grid');
+            if (!grid) return;
+
+            try {
+                var videoData = await fetchJsonData('videos.json', {});
+                var prayers = await fetchJsonData('prayer.json', {});
+                var videos = videoData.videos || [];
+                grid.innerHTML = '';
+
+                videos.forEach(function (entry, index) {
+                    var prayer = prayers[entry.prayerId];
+                    if (!prayer || !entry.youtubeId) return;
+
+                    var title = prayer.title || 'Prayer';
+                    var trackLabel = entry.track ? ' · Track ' + entry.track : '';
+                    var shareUrl = 'https://youtu.be/' + entry.youtubeId;
+                    var cardClass = index === 0
+                        ? 'audio-card prayer-card p-5 md:p-6'
+                        : 'audio-card audio-card--secondary prayer-card p-5 md:p-6';
+
+                    var card = document.createElement('div');
+                    card.className = cardClass;
+                    if (index === 0) card.id = 'featured-item';
+
+                    card.innerHTML =
+                        '<div class="mb-4">' +
+                            '<h3 class="text-xl font-semibold mb-0.5">' + title + '</h3>' +
+                            '<p class="text-amber-400 text-sm">Written by Ruby Rose and recited and produced by Suno' + trackLabel + '</p>' +
+                        '</div>' +
+                        '<div class="aspect-video rounded-xl overflow-hidden mb-4 bg-black">' +
+                            '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/' + entry.youtubeId + '" ' +
+                            'title="' + title + ' - Spoken Devotion" loading="lazy" ' +
+                            'allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" ' +
+                            'referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' +
+                        '</div>' +
+                        '<div class="flex flex-wrap gap-2">' +
+                            '<button type="button" class="inline-flex items-center gap-x-2 px-4 py-2 bg-amber-400 hover:bg-amber-300 text-zinc-950 font-medium rounded-xl text-sm transition-all prayer-read-btn">' +
+                                '<i class="fa-solid fa-book-open"></i> Show Prayer' +
+                            '</button>' +
+                            '<button type="button" class="inline-flex items-center gap-x-2 px-4 py-2 text-sm text-amber-400 hover:text-amber-300 border border-amber-400/40 hover:bg-amber-400/10 rounded-xl transition-all prayer-share-btn">' +
+                                '<i class="fa-solid fa-share-alt"></i> Share' +
+                            '</button>' +
+                        '</div>';
+
+                    card.querySelector('.prayer-read-btn').addEventListener('click', function () {
+                        showPrayer(entry.prayerId);
+                    });
+                    card.querySelector('.prayer-share-btn').addEventListener('click', function () {
+                        shareYouTube(shareUrl, title);
+                    });
+
+                    grid.appendChild(card);
+                });
+            } catch (err) {
+                console.error(err);
+                grid.innerHTML = '<p class="text-center text-white/60 sm:col-span-2">Video prayers could not be loaded. Visit our <a href="https://www.youtube.com/@Spoken_Devotion" class="text-amber-400 underline">YouTube channel</a>.</p>';
+            }
         })();
 
         async function showPrayer(id) {
