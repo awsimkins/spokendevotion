@@ -23,3 +23,13 @@ node_modules/
 dist/
 build/
 tmp/
+
+# Large media — use DistroKid/streaming, not the repo
+*.mp3
+*.wav
+*.m4a
+*.flac
+*.aac
+*.ogg
+*.psd
+*.ai

@@ -28,10 +28,10 @@ Navigation section links are in **alphabetical order**. The nav button reads **C
 | **Bible** | Spoken Devotion Version (SDV) — book list with James via YouTube embed | [Bible](https://spokendevotion.com/bible/) |
 | **Confessions** | Three spoken-word pieces — hosted MP3 previews until DistroKid upload | [Confessions](https://spokendevotion.com/confessions/) |
 | **Contact** | Contact form via Formspark + Cloudflare Turnstile | [Contact](https://spokendevotion.com/contact/) |
-| **Instrumental** | *Resting in the Father I* album — pre-save now, releases June 28, 2026 at midnight Central Time | [Instrumental](https://spokendevotion.com/instrumental/) |
-| **Prayer** | *Prayers to the Father* album — pre-save now, releases July 3, 2026; YouTube videos + full text modals | [Prayer](https://spokendevotion.com/prayer/) |
-| **Reflections** | *Alone in an Empty Grave* and *Lost* — written by Anthony, sang by Suno | [Reflections](https://spokendevotion.com/reflections/) |
-| **Worship** | *Have Mercy on Me* and *Here I Am, Lord* — lyrics by Anthony, produced and sang by Suno; pre-save now | [Worship](https://spokendevotion.com/worship/) |
+| **Instrumental** | *Resting in the Father I* album — out now on major platforms | [Instrumental](https://spokendevotion.com/instrumental/) |
+| **Prayer** | *Prayers to the Father* album — out now; YouTube videos + full text modals | [Prayer](https://spokendevotion.com/prayer/) |
+| **Reflections** | *Alone in an Empty Grave* and *Lost* — out now; written by Anthony, sang by Suno | [Reflections](https://spokendevotion.com/reflections/) |
+| **Worship** | *Have Mercy on Me* and *Here I Am, Lord* — out now; lyrics by Anthony, produced and sang by Suno | [Worship](https://spokendevotion.com/worship/) |
 
 ## Key Features
 
@@ -44,7 +44,7 @@ Navigation section links are in **alphabetical order**. The nav button reads **C
 - Clean, responsive design built with Tailwind CSS
 - Shared navigation and footer loaded from `partials/`
 - Content managed via JSON files for easy updates (`prayer.json`, `prayer/album.json`, `reflections.json`, `worship.json`, `lyrics.json`, `confessions.json`, `instrumental.json`)
-- Release metadata centralized in `partials/streaming-config.js`
+- Release metadata centralized in `partials/streaming-config.js` and homepage digest in `partials/releases.js`
 
 ## Banner Images
 
@@ -69,18 +69,16 @@ Active on:
 - [Facebook](https://www.facebook.com/profile.php?id=61591326358064) — Spoken Devotion
 - [X](https://x.com/Spoken_Devotion) — `@Spoken_Devotion`
 
-Streaming — **Spoken Devotion Music** on DistroKid; pre-sales open now:
+Streaming — **Spoken Devotion Music** on DistroKid; all releases out now:
 
 | Release | UPC | Date |
 |---------|-----|------|
-| [Resting in the Father I](https://distrokid.com/hyperfollow/spokendevotion/resting-in-the-father) (Instrumental, 20 tracks) | *(pending)* | June 28, 2026, midnight Central |
+| [Resting in the Father I](https://distrokid.com/hyperfollow/spokendevotion/resting-in-the-father) (Instrumental, 20 tracks) | — | June 28, 2026 |
 | [Prayers to the Father](https://distrokid.com/hyperfollow/spokendevotion/prayers-to-the-father) (album, 10 tracks) | 882614576580 | July 3, 2026 |
 | [Alone in an Empty Grave](https://distrokid.com/hyperfollow/spokendevotion/alone-in-an-empty-grave) | 882614548242 | July 3, 2026 |
 | [Lost](https://distrokid.com/hyperfollow/spokendevotion/lost) | 882614540697 | July 3, 2026 |
 | [Have Mercy on Me](https://distrokid.com/hyperfollow/spokendevotion/have-mercy-on-me) | 882614534603 | July 3, 2026 |
 | [Here I Am, Lord](https://distrokid.com/hyperfollow/spokendevotion/here-i-am-lord) | 882614532029 | July 3, 2026 |
-
-All July 3 releases uploaded June 26, 2026. Spotify, Apple Music, and other major platforms at release.
 
 ## Contact
 
@@ -93,12 +91,15 @@ See also [`DEFERRED.md`](DEFERRED.md) for the full backlog. Priority items:
 - [x] **X link** — live at [x.com/Spoken_Devotion](https://x.com/Spoken_Devotion)
 - [x] **Reflections tracks** — *Alone in an Empty Grave* and *Lost* (both pre-save) on `/reflections/`
 - [x] **Worship singles** — *Have Mercy on Me* and *Here I Am, Lord* (pre-save) on `/worship/`
-- [x] **Resting in the Father I** — instrumental album on DistroKid; pre-sales open; releases June 28, 2026 at midnight Central Time
+- [x] **Resting in the Father I** — instrumental album released June 28, 2026; Apple Music embed on `/instrumental/`
 - [x] **Reflections banner** — `reflections.png` added
-- [x] **Prayers to the Father** — album uploaded to DistroKid; pre-sales open; releases July 3, 2026
+- [x] **Prayers to the Father** — album released July 3, 2026
+- [x] **July 3 singles** — Reflections and Worship singles released; listen links on section pages
 - [x] **YouTube migration (Prayer)** — Prayer for Family, Prayer of Repentance, and Prayer of Need use YouTube embeds
-- [ ] **Confessions on DistroKid** — upload three tracks; replace hosted MP3s with pre-save / streaming cards
-- [ ] **Streaming players** — add embed on `/instrumental/` after June 28, 2026 release; add embeds on `/reflections/` and `/worship/` after July 3, 2026 release
+- [x] **Homepage release digest** — data-driven via `partials/releases.js`
+- [ ] **Confessions on DistroKid** — upload three tracks; replace hosted MP3s with streaming cards
+- [ ] **Streaming embeds** — add Apple Music embeds on `/reflections/` and `/worship/` when single IDs are available
+- [ ] **Spotify artist link** — add to `streaming-platforms.js` when profile is live
 - [x] **Nav Soon badge** — Instrumental badge removed
 - [ ] **Banner compression** — optionally compress large PNGs for faster page loads
 

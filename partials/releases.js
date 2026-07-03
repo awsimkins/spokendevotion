@@ -1,0 +1,22 @@
+/**
+ * Homepage release digest — single source of truth.
+ * On release day: set status to "released", update featured + items here,
+ * then sync partials/streaming-config.js and section JSON files.
+ */
+window.SD_RELEASES = {
+    featured: {
+        badge: 'Out Now',
+        title: 'Prayers to the Father',
+        meta: 'Album · 10 tracks · Streaming on major platforms',
+        href: '/prayer/',
+        linkText: 'Listen →'
+    },
+    items: [
+        { title: 'Resting in the Father', meta: 'Instrumental album · Out now', href: '/instrumental/' },
+        { title: 'Alone in an Empty Grave', meta: 'Single · Out now', href: '/reflections/' },
+        { title: 'Lost', meta: 'Single · Out now', href: '/reflections/' },
+        { title: 'Have Mercy on Me', meta: 'Single · Out now', href: '/worship/' },
+        { title: 'Here I Am, Lord', meta: 'Single · Out now', href: '/worship/' }
+    ],
+    note: 'Prayers to the Father, worship singles, and Reflections are out now. Listen on each section page or on your favorite streaming platform.'
+};

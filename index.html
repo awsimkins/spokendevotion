@@ -42,55 +42,8 @@
         </div>
     </section>
 
-    <!-- Release digest -->
-    <div class="max-w-2xl mx-auto px-6 pt-10 md:pt-12">
-        <section class="release-digest" aria-labelledby="releases-heading">
-            <h2 id="releases-heading" class="release-digest__heading">New Releases</h2>
-
-            <div class="release-digest__featured">
-                <span class="release-digest__badge">Out Now</span>
-                <div class="release-digest__featured-body">
-                    <span class="release-digest__featured-title">Resting in the Father</span>
-                    <span class="release-digest__featured-meta">Instrumental album · 20 tracks · Streaming on major platforms</span>
-                </div>
-                <a href="/instrumental/" class="release-digest__featured-link">Listen →</a>
-            </div>
-
-            <ul class="release-digest__list">
-                <li>
-                    <a href="/prayer/" class="release-digest__item">
-                        <span class="release-digest__item-title">Prayers to the Father</span>
-                        <span class="release-digest__item-meta">Album · Jul 3</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="/reflections/" class="release-digest__item">
-                        <span class="release-digest__item-title">Alone in an Empty Grave</span>
-                        <span class="release-digest__item-meta">Single · Jul 3</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="/reflections/" class="release-digest__item">
-                        <span class="release-digest__item-title">Lost</span>
-                        <span class="release-digest__item-meta">Single · Jul 3</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="/worship/" class="release-digest__item">
-                        <span class="release-digest__item-title">Have Mercy on Me</span>
-                        <span class="release-digest__item-meta">Single · Jul 3</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="/worship/" class="release-digest__item">
-                        <span class="release-digest__item-title">Here I Am, Lord</span>
-                        <span class="release-digest__item-meta">Single · Jul 3</span>
-                    </a>
-                </li>
-            </ul>
-            <p class="release-digest__note"><span class="text-amber-400/90 font-medium">Resting in the Father</span> is out now. Pre-sales open for July 3 releases — details on each section page.</p>
-        </section>
-    </div>
+    <!-- Release digest (rendered from partials/releases.js) -->
+    <div class="max-w-2xl mx-auto px-6 pt-10 md:pt-12" data-release-digest></div>
 
     <!-- Social -->
     <div id="social" class="max-w-6xl mx-auto px-6 py-16 md:py-20">
@@ -171,7 +124,8 @@
 
     <div id="footer-root"></div>
 
-    <script src="/partials/streaming-platforms.js?v=5"></script>
-    <script src="/partials/site.js?v=26"></script>
+    <script src="/partials/releases.js?v=1"></script>
+    <script src="/partials/streaming-platforms.js?v=6"></script>
+    <script src="/partials/site.js?v=27"></script>
 </body>
 </html>

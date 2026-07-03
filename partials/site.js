@@ -3,8 +3,8 @@
 
     async function loadPartials() {
         await Promise.all([
-            loadPartial('nav-root', '/partials/nav.html?v=19'),
-            loadPartial('footer-root', '/partials/footer.html?v=14')
+            loadPartial('nav-root', '/partials/nav.html?v=20'),
+            loadPartial('footer-root', '/partials/footer.html?v=15')
         ]);
         initMobileNav();
         highlightCurrentNav();
@@ -210,6 +210,96 @@
         });
     }
 
+    function renderReleaseDigest() {
+        var config = window.SD_RELEASES;
+        if (!config) return;
+
+        document.querySelectorAll('[data-release-digest]').forEach(function (container) {
+            container.innerHTML = '';
+
+            var section = document.createElement('section');
+            section.className = 'release-digest';
+            section.setAttribute('aria-labelledby', 'releases-heading');
+
+            var heading = document.createElement('h2');
+            heading.id = 'releases-heading';
+            heading.className = 'release-digest__heading';
+            heading.textContent = 'New Releases';
+            section.appendChild(heading);
+
+            if (config.featured) {
+                var featured = document.createElement('div');
+                featured.className = 'release-digest__featured';
+
+                var badge = document.createElement('span');
+                badge.className = 'release-digest__badge';
+                badge.textContent = config.featured.badge || 'Out Now';
+                featured.appendChild(badge);
+
+                var body = document.createElement('div');
+                body.className = 'release-digest__featured-body';
+
+                var title = document.createElement('span');
+                title.className = 'release-digest__featured-title';
+                title.textContent = config.featured.title || '';
+                body.appendChild(title);
+
+                var meta = document.createElement('span');
+                meta.className = 'release-digest__featured-meta';
+                meta.textContent = config.featured.meta || '';
+                body.appendChild(meta);
+
+                featured.appendChild(body);
+
+                if (config.featured.href) {
+                    var link = document.createElement('a');
+                    link.className = 'release-digest__featured-link';
+                    link.href = config.featured.href;
+                    link.textContent = config.featured.linkText || 'Listen →';
+                    featured.appendChild(link);
+                }
+
+                section.appendChild(featured);
+            }
+
+            if (config.items && config.items.length) {
+                var list = document.createElement('ul');
+                list.className = 'release-digest__list';
+
+                config.items.forEach(function (item) {
+                    var li = document.createElement('li');
+                    var row = document.createElement('a');
+                    row.className = 'release-digest__item';
+                    row.href = item.href || '#';
+
+                    var rowTitle = document.createElement('span');
+                    rowTitle.className = 'release-digest__item-title';
+                    rowTitle.textContent = item.title || '';
+                    row.appendChild(rowTitle);
+
+                    var rowMeta = document.createElement('span');
+                    rowMeta.className = 'release-digest__item-meta';
+                    rowMeta.textContent = item.meta || '';
+                    row.appendChild(rowMeta);
+
+                    li.appendChild(row);
+                    list.appendChild(li);
+                });
+
+                section.appendChild(list);
+            }
+
+            if (config.note) {
+                var note = document.createElement('p');
+                note.className = 'release-digest__note';
+                note.textContent = config.note;
+                section.appendChild(note);
+            }
+
+            container.appendChild(section);
+        });
+    }
+
     function initPageBanners() {
         document.querySelectorAll('[data-banner]').forEach(function (section) {
             var url = section.getAttribute('data-banner');
@@ -238,6 +328,7 @@
     document.addEventListener('DOMContentLoaded', function () {
         loadPartials();
         initPageBanners();
+        renderReleaseDigest();
         renderStreamingPlatforms();
     });
 })();
