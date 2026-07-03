@@ -24,6 +24,11 @@ dist/
 build/
 tmp/
 
+# Private local ops — never publish
+PRIVATE_NOTES.md
+BACKUP_INFO.txt
+.local/
+
 # Large media — use DistroKid/streaming, not the repo
 *.mp3
 *.wav
