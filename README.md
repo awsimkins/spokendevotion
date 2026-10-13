@@ -38,15 +38,15 @@ Navigation section links are in **alphabetical order**. The nav button reads **C
 - **Homepage release digest** — data-driven via `partials/releases.js`
 - **Homepage social row** — all platforms in one horizontal row with handles and amber-bordered cards
 - **Streaming platform grid** — live artist links from `partials/streaming-platforms.js` (8 stores live; others show Coming Soon)
-- **Apple Music embeds** — per-track Listen buttons via `partials/apple-music-embeds.js` on Prayer, Worship, Reflections, and Instrumental
+- **Apple Music embeds** — per-track Listen buttons on Prayer (IDs from `partials/apple-music-embeds.js`) and Instrumental (`instrumental.json`); Worship and Reflections set song IDs directly in `data-apple-embed`
 - **Who We Are** — clear statement that we are not an official ministry and do not accept donations
 - **Footer** — reinforces free sharing, no donations, and personal creative ministry
 - **Share buttons** — one-click copy of YouTube links (Prayer, Bible)
 - **Modals** for full lyrics, poetry, and prayer text (keeps pages clean)
 - **Book of James** available via YouTube video embed in the Bible section
-- Clean, responsive design built with Tailwind CSS
-- Shared navigation and footer loaded from `partials/`
-- Content managed via JSON files for easy updates (`prayer.json`, `prayer/album.json`, `prayer/videos.json`, `reflections.json`, `worship.json`, `lyrics.json`, `confessions.json`, `instrumental.json`)
+- Clean, responsive design built with Tailwind CSS v3, precompiled to `css/tailwind.min.css` (see **Maintenance** below)
+- Shared navigation and footer edited once in `partials/` and copied into every page by `scripts/sync-partials.py` (works without JavaScript)
+- Content managed via JSON files for easy updates (`prayer.json`, `prayer/videos.json`, `reflections.json`, `lyrics.json`, `confessions.json`, `instrumental.json`). `prayer/album.json` and `worship/worship.json` are release-metadata records only — no page loads them.
 - Release metadata centralized in `partials/streaming-config.js`
 
 ## Banner Images
@@ -133,3 +133,24 @@ To create content that strengthens the heart, comforts the soul, and glorifies o
 © 2026 Spoken Devotion LLC • All glory to God the Father
 
 *Spoken Devotion is part of the Simkins family ministries, alongside KanoJoes — wholesome family content for all ages.*
+
+## Maintenance
+
+### Navigation and footer
+Edit `partials/nav.html` or `partials/footer.html`, then run:
+
+```bash
+python3 scripts/sync-partials.py
+```
+
+This copies them into every page between `<!-- partial:nav -->` / `<!-- partial:footer -->` markers. Commit the updated pages. Don't hand-edit inside the markers. `partials/site.js` only fetches a partial at runtime if a page's placeholder is empty.
+
+### Styles (Tailwind)
+Pages use a precompiled stylesheet, `css/tailwind.min.css`, loaded last in `<head>`. After adding or changing Tailwind classes in any page or `partials/` file, rebuild it and bump its `?v=` on every page:
+
+```bash
+npx tailwindcss@3 -c tailwind.config.js -i src/tailwind.css -o css/tailwind.min.css --minify
+```
+
+### Sitemap
+Update `lastmod` in `sitemap.xml` when pages change significantly; add new section pages to it.

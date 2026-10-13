@@ -31,7 +31,7 @@ Since most changes are made directly on GitHub:
 
 - Navigation section links are in **alphabetical order**: Bible, Confessions, Instrumental, Prayer, Reflections, Worship.
 - Nav contact button label is **Contact** (links to `/contact/`).
-- Shared UI lives in `partials/` (`nav.html`, `footer.html`, `site.css`, `site.js`, `streaming-config.js`, `streaming-platforms.js`, `releases.js`, `apple-music-embeds.js`).
+- Shared UI lives in `partials/`. The nav and footer are copied into each page by `python3 scripts/sync-partials.py` (run it after editing them). Tailwind is precompiled (see README → Maintenance). Files: (`nav.html`, `footer.html`, `site.css`, `site.js`, `streaming-config.js`, `streaming-platforms.js`, `releases.js`, `apple-music-embeds.js`).
 - Hero banners are in `/images/` at 1760×370; one PNG per section.
 - Homepage includes a data-driven release digest (`partials/releases.js`), social handles, streaming platform grid, Who We Are, and no-donation guidance; footer repeats the same message.
 
@@ -40,9 +40,9 @@ Since most changes are made directly on GitHub:
 | Section | Content files | Playback |
 |---------|---------------|----------|
 | **Instrumental** | `instrumental/instrumental.json` | Apple Music Listen buttons per track; HyperFollow album link |
-| **Prayer** | `prayer/album.json`, `prayer/prayer.json`, `prayer/videos.json` | 7 YouTube embeds (tracks 1–5, 7–8); Apple Music Listen per track; full text modals |
+| **Prayer** | `prayer/prayer.json`, `prayer/videos.json` (`prayer/album.json` = metadata only, not loaded) | 7 YouTube embeds (tracks 1–5, 7–8); Apple Music Listen per track; full text modals |
 | **Reflections** | `reflections/reflections.json` | Apple Music embeds + HyperFollow listen links; lyrics modals |
-| **Worship** | `worship/worship.json`, `worship/lyrics.json` | Apple Music embeds + HyperFollow listen links; lyrics modals |
+| **Worship** | `worship/lyrics.json` (`worship/worship.json` = metadata only, not loaded) | Apple Music embeds + HyperFollow listen links; lyrics modals |
 | **Confessions** | `confessions/confessions.json` | Coming Soon cards; poetry readable in modals (no hosted MP3s) |
 | **Bible** | inline in `bible/index.html` | Book of James via YouTube embed |
 | **Contact** | `partials/contact-config.js`, `partials/contact-form.js` | Formspark + Cloudflare Turnstile |

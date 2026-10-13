@@ -59,8 +59,8 @@ Metadata: `partials/streaming-config.js`, `partials/releases.js`, section JSON f
 |---------|--------|
 | Prayers (10) | Written by Ruby Rose and recited and produced by Suno |
 | Confessions (3) | Written by Ruby Rose and recited and produced by Suno |
-| Worship (2) | Lyrics by Anthony, produced and sang by Suno |
-| Reflections (2) | Written by Anthony and sang by Suno |
+| Worship (2) | Lyrics by Anthony, produced and sung by Suno |
+| Reflections (2) | Written by Anthony and sung by Suno |
 
 ## Confessions — DistroKid (pending)
 
