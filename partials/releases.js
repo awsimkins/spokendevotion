@@ -12,7 +12,7 @@ window.SD_RELEASES = {
         linkText: 'Listen →'
     },
     items: [
-        { title: 'Resting in the Father', meta: 'Instrumental album · Out now', href: '/instrumental/' },
+        { title: 'Resting in the Father I', meta: 'Instrumental album · Out now', href: '/instrumental/' },
         { title: 'Alone in an Empty Grave', meta: 'Single · Out now', href: '/reflections/' },
         { title: 'Lost', meta: 'Single · Out now', href: '/reflections/' },
         { title: 'Have Mercy on Me', meta: 'Single · Out now', href: '/worship/' },
