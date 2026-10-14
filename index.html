@@ -13,19 +13,61 @@
     <meta property="og:title" content="Spoken Devotion • Words that Draw Us Closer to God">
     <meta property="og:description" content="Spoken poetry, worship, prayer, and Scripture that heal, lift, and draw us closer to God.">
     <meta property="og:url" content="https://spokendevotion.com/">
+    <link rel="canonical" href="https://spokendevotion.com/">
     <meta property="og:image" content="https://spokendevotion.com/images/main.png">
     <meta name="twitter:card" content="summary_large_image">
-    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="/partials/site.css?v=23">
+    <link rel="stylesheet" href="/partials/site.css?v=24">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@400;500;600&display=swap');
         .accent-gold { color: #fbbf24; }
         .section-divider { border-top: 1px solid rgba(251, 191, 36, 0.2); }
     </style>
+    <!-- Tailwind last, matching the old Play CDN cascade order -->
+    <link rel="stylesheet" href="/css/tailwind.min.css?v=1">
 </head>
 <body class="bg-zinc-950 text-white overflow-x-hidden">
-    <div id="nav-root"></div>
+    <div id="nav-root"><!-- partial:nav (generated from partials/nav.html; run scripts/sync-partials.py) -->
+<nav id="site-nav" class="fixed top-0 left-0 right-0 z-50 bg-zinc-950/90 backdrop-blur-xl border-b border-amber-400/20">
+    <div class="max-w-7xl mx-auto px-6 h-[6.5rem] flex items-center justify-between">
+        <a href="/" class="flex items-center gap-x-3 md:gap-x-4 min-w-0">
+            <img src="/images/logo.png" alt="Spoken Devotion" class="h-16 md:h-20 w-auto flex-shrink-0">
+            <span class="font-semibold text-2xl md:text-4xl tracking-tighter heading-font truncate">Spoken Devotion</span>
+        </a>
+
+        <div class="hidden lg:flex items-center gap-x-5 text-base">
+            <a href="/bible/" data-nav-link class="hover:text-amber-400 transition-colors">Bible</a>
+            <a href="/confessions/" data-nav-link class="hover:text-amber-400 transition-colors">Confessions</a>
+            <a href="/instrumental/" data-nav-link class="hover:text-amber-400 transition-colors">Instrumental</a>
+            <a href="/prayer/" data-nav-link class="hover:text-amber-400 transition-colors">Prayer</a>
+            <a href="/reflections/" data-nav-link class="hover:text-amber-400 transition-colors">Reflections</a>
+            <a href="/worship/" data-nav-link class="hover:text-amber-400 transition-colors">Worship</a>
+        </div>
+
+        <div class="flex items-center gap-x-3">
+            <a href="/contact/" data-nav-link
+               class="hidden sm:inline-flex px-4 md:px-6 py-2 bg-amber-400 hover:bg-amber-300 text-zinc-950 rounded-full transition-all text-sm font-medium">
+                Contact
+            </a>
+            <button id="mobile-menu-btn" type="button" class="lg:hidden p-2 text-amber-400" aria-label="Open menu" aria-expanded="false">
+                <i id="mobile-menu-icon" class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-amber-400/20 bg-zinc-950/95">
+        <div class="px-6 py-4 flex flex-col gap-y-4 text-base">
+            <a href="/bible/" data-nav-link class="hover:text-amber-400 transition-colors">Bible</a>
+            <a href="/confessions/" data-nav-link class="hover:text-amber-400 transition-colors">Confessions</a>
+            <a href="/instrumental/" data-nav-link class="hover:text-amber-400 transition-colors">Instrumental</a>
+            <a href="/prayer/" data-nav-link class="hover:text-amber-400 transition-colors">Prayer</a>
+            <a href="/reflections/" data-nav-link class="hover:text-amber-400 transition-colors">Reflections</a>
+            <a href="/worship/" data-nav-link class="hover:text-amber-400 transition-colors">Worship</a>
+            <a href="/contact/" data-nav-link class="inline-flex items-center justify-center px-6 py-2 bg-amber-400 hover:bg-amber-300 text-zinc-950 rounded-full transition-all text-sm font-medium">Contact</a>
+        </div>
+    </div>
+</nav>
+<!-- /partial:nav --></div>
 
     <!-- Hero Banner -->
     <section class="page-banner page-banner--standard page-banner--light" data-banner="/images/main.png" data-fallback="devotion-bg">
@@ -103,7 +145,7 @@
         <div class="audio-card p-8 md:p-10 text-center md:text-left space-y-5 text-white/75 leading-relaxed">
             <h2 class="text-2xl md:text-3xl font-semibold tracking-tight heading-font text-white text-center">Who We Are</h2>
             <p>
-                Spoken Devotion is not a church, charity, or official ministry. We are a family of ordinary working people who love God —
+                Spoken Devotion is a personal creative ministry — not a church or charity. We are a family of ordinary working people who love God —
                 creating worship, prayer, poetry, and Scripture in the hours around our daily lives, and sharing it freely with anyone who might be encouraged.
             </p>
             <p>
@@ -122,10 +164,30 @@
         </div>
     </div>
 
-    <div id="footer-root"></div>
+    <div id="footer-root"><!-- partial:footer (generated from partials/footer.html; run scripts/sync-partials.py) -->
+<footer class="bg-zinc-950 border-t border-white/10 py-12">
+    <div class="max-w-5xl mx-auto px-6">
+        <p class="text-center text-white/60 text-xs max-w-2xl mx-auto mb-8 leading-relaxed">
+            Spoken Devotion is a personal creative ministry — not a registered church or nonprofit.
+            We do not ask for or accept donations; we share freely what God has placed on our hearts.
+        </p>
+        <div class="flex flex-col md:flex-row justify-between items-center gap-y-6 text-sm">
+            <div class="text-white/60">
+                © 2026 Spoken Devotion LLC. All glory to God the Father.
+            </div>
+            
+            <div class="text-center md:text-right text-white/50 text-xs max-w-md">
+                Audio tracks and voices are generated with Suno. 
+                Our Scripture readings come from a fresh translation developed with assistance from Grok, 
+                based on original language sources, and then carefully edited for devotional use.
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- /partial:footer --></div>
 
     <script src="/partials/releases.js?v=3"></script>
     <script src="/partials/streaming-platforms.js?v=9"></script>
-    <script src="/partials/site.js?v=29"></script>
+    <script src="/partials/site.js?v=30"></script>
 </body>
 </html>

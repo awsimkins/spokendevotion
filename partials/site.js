@@ -4,7 +4,7 @@
     async function loadPartials() {
         await Promise.all([
             loadPartial('nav-root', '/partials/nav.html?v=20'),
-            loadPartial('footer-root', '/partials/footer.html?v=15')
+            loadPartial('footer-root', '/partials/footer.html?v=16')
         ]);
         initMobileNav();
         highlightCurrentNav();
@@ -13,6 +13,9 @@
     async function loadPartial(targetId, url) {
         const target = document.getElementById(targetId);
         if (!target) return;
+        // Nav/footer are now baked into each page's HTML (see scripts/sync-partials.py).
+        // Only fetch when the placeholder is empty (fallback for older pages).
+        if (target.children.length > 0) return;
         try {
             const response = await fetch(url);
             if (!response.ok) throw new Error('Failed to load ' + url);
@@ -73,37 +76,99 @@
         return window.location.origin + '/' + cleanFile;
     };
 
+    function legacyCopy(text) {
+        try {
+            var ta = document.createElement('textarea');
+            ta.value = text;
+            ta.setAttribute('readonly', '');
+            ta.style.position = 'fixed';
+            ta.style.opacity = '0';
+            document.body.appendChild(ta);
+            ta.select();
+            var ok = document.execCommand && document.execCommand('copy');
+            document.body.removeChild(ta);
+            return !!ok;
+        } catch (e) {
+            return false;
+        }
+    }
+
+    // Copy a link, falling back gracefully when the Clipboard API is missing or blocked.
+    function copyLink(url, title) {
+        var done = function () { showToast('Link for "' + title + '" copied!'); };
+        var fallback = function () {
+            if (legacyCopy(url)) done();
+            else window.prompt('Copy this link:', url);
+        };
+        if (navigator.clipboard && typeof navigator.clipboard.writeText === 'function') {
+            navigator.clipboard.writeText(url).then(done).catch(fallback);
+        } else {
+            fallback();
+        }
+    }
+
     window.shareAudio = function (filename, title, section) {
         const url = /^https?:\/\//i.test(filename) ? filename : getAudioUrl(filename, section);
-        navigator.clipboard.writeText(url).then(function () {
-            showToast('Link for "' + title + '" copied!');
-        }).catch(function () {
-            prompt('Copy this link:', url);
-        });
+        copyLink(url, title);
     };
 
     window.shareYouTube = function (url, title) {
-        navigator.clipboard.writeText(url).then(function () {
-            showToast('Link for "' + title + '" copied!');
-        }).catch(function () {
-            prompt('Copy this link:', url);
-        });
+        copyLink(url, title);
     };
 
+    var toastTimer = null;
     window.showToast = function (message) {
         const toast = document.getElementById('toast');
         const text = document.getElementById('toast-text');
         if (!toast || !text) return;
         text.textContent = message;
         toast.style.display = 'flex';
-        setTimeout(function () { toast.style.display = 'none'; }, 2500);
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(function () { toast.style.display = 'none'; }, 2500);
     };
+
+    // Escape text for safe use inside HTML strings / attributes.
+    window.escapeHtml = function (value) {
+        return String(value == null ? '' : value)
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&#39;');
+    };
+
+    var modalReturnFocus = null;
+    var FOCUSABLE = 'a[href], button:not([disabled]), input:not([disabled]), select, textarea, iframe, [tabindex]:not([tabindex="-1"])';
+
+    function trapFocus(e) {
+        var modal = document.querySelector('.modal[aria-hidden="false"]');
+        if (!modal || e.key !== 'Tab') return;
+        var items = Array.prototype.filter.call(modal.querySelectorAll(FOCUSABLE), function (el) {
+            return el.offsetParent !== null;
+        });
+        if (!items.length) return;
+        var first = items[0];
+        var last = items[items.length - 1];
+        if (e.shiftKey && document.activeElement === first) {
+            e.preventDefault();
+            last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+            e.preventDefault();
+            first.focus();
+        }
+    }
+    document.addEventListener('keydown', trapFocus);
 
     window.openContentModal = function (modal) {
         if (!modal) return;
+        if (modal.style.display !== 'flex') {
+            modalReturnFocus = document.activeElement;
+        }
         modal.style.display = 'flex';
         modal.setAttribute('aria-hidden', 'false');
         document.body.style.overflow = 'hidden';
+        var closeBtn = modal.querySelector('[aria-label="Close"]') || modal.querySelector(FOCUSABLE);
+        if (closeBtn) closeBtn.focus();
     };
 
     window.closeContentModal = function (modal) {
@@ -111,6 +176,10 @@
         modal.style.display = 'none';
         modal.setAttribute('aria-hidden', 'true');
         document.body.style.overflow = '';
+        if (modalReturnFocus && typeof modalReturnFocus.focus === 'function') {
+            modalReturnFocus.focus();
+        }
+        modalReturnFocus = null;
     };
 
     window.createAppleMusicIframe = function (songId, title) {
@@ -193,14 +262,15 @@
             card.className = 'platform-card';
             card.setAttribute('aria-label', platform.name + ' — Spoken Devotion Music');
         } else {
+            // Not a link: its visible text ("<name> Coming soon") is its accessible name.
             card = document.createElement('div');
             card.className = 'platform-card platform-card--soon';
-            card.setAttribute('aria-label', platform.name + ' — coming soon');
         }
 
         if (!platform.url) {
             var badge = document.createElement('span');
             badge.className = 'platform-card__badge';
+            badge.setAttribute('aria-hidden', 'true');
             badge.textContent = 'Soon';
             card.appendChild(badge);
         }

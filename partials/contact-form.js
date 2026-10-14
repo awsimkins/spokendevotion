@@ -51,12 +51,17 @@
             : '<i class="fa-solid fa-paper-plane"></i> Send Message';
     }
 
+    var thankYouReturnFocus = null;
+
     function showThankYouModal() {
         var modal = document.getElementById('thank-you-modal');
         if (!modal) return;
         modal.classList.remove('hidden');
         modal.classList.add('is-open');
         document.body.style.overflow = 'hidden';
+        thankYouReturnFocus = document.activeElement;
+        var closeBtn = modal.querySelector('button');
+        if (closeBtn) closeBtn.focus();
     }
 
     window.closeThankYouModal = function () {
@@ -65,6 +70,10 @@
         modal.classList.remove('is-open');
         modal.classList.add('hidden');
         document.body.style.overflow = '';
+        var form = document.getElementById('contact-form');
+        var target = (thankYouReturnFocus && document.body.contains(thankYouReturnFocus)) ? thankYouReturnFocus : (form && form.querySelector('input:not([type="hidden"]):not([name="_gotcha"])'));
+        if (target && typeof target.focus === 'function') target.focus();
+        thankYouReturnFocus = null;
     };
 
     function initThankYouModal() {

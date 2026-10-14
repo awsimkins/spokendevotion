@@ -552,7 +552,7 @@ a.platform-card:hover {
 }
 .platform-card__status {
     font-size: 0.5625rem;
-    color: rgba(255, 255, 255, 0.45);
+    color: rgba(255, 255, 255, 0.6);
     margin-top: 0.2rem;
     max-width: 100%;
     overflow: hidden;
