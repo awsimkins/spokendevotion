@@ -4,7 +4,7 @@ Thank you for your interest in Spoken Devotion!
 
 ## What This Project Is
 
-Spoken Devotion is a **personal creative project** — not a church, charity, or official ministry. We are a family of ordinary working people sharing worship, prayer, poetry, Scripture, and music freely. We do **not** accept donations or solicit support through this site.
+Spoken Devotion is a **personal creative ministry** — not a church or charity. We are a family of ordinary working people sharing worship, prayer, poetry, Scripture, and music freely. We do **not** accept donations or solicit support through this site.
 
 If you have feedback, bug reports, or content suggestions, we welcome them.
 

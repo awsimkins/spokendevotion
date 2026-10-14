@@ -6,7 +6,7 @@ A family creative project sharing spoken poetry, worship, prayer, and Scripture 
 
 ## Who We Are
 
-Spoken Devotion is **not** a church, charity, or official ministry. We are ordinary working people who love God, creating and sharing personal devotion in our spare time. We do **not** ask for donations and are not seeking support, recognition, or reward — we simply want to share God's love freely.
+Spoken Devotion is a **personal creative ministry** — not a church or charity. We are ordinary working people who love God, creating and sharing personal devotion in our spare time. We do **not** ask for donations and are not seeking support, recognition, or reward — we simply want to share God's love freely.
 
 If something here moves you and you feel stirred to give, we gently invite you to turn that generosity toward someone near you: a neighbor in need, a friend carrying a burden, or a stranger who could use practical kindness. Let your gift become God's love made visible right where you live.
 
@@ -39,7 +39,7 @@ Navigation section links are in **alphabetical order**. The nav button reads **C
 - **Homepage social row** — all platforms in one horizontal row with handles and amber-bordered cards
 - **Streaming platform grid** — live artist links from `partials/streaming-platforms.js` (8 stores live; others show Coming Soon)
 - **Apple Music embeds** — per-track Listen buttons on Prayer (IDs from `partials/apple-music-embeds.js`) and Instrumental (`instrumental.json`); Worship and Reflections set song IDs directly in `data-apple-embed`
-- **Who We Are** — clear statement that we are not an official ministry and do not accept donations
+- **Who We Are** — clear statement that we are a personal creative ministry (not a church or charity) and do not accept donations
 - **Footer** — reinforces free sharing, no donations, and personal creative ministry
 - **Share buttons** — one-click copy of YouTube links (Prayer, Bible)
 - **Modals** for full lyrics, poetry, and prayer text (keeps pages clean)
