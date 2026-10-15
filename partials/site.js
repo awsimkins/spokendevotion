@@ -63,7 +63,7 @@
 
     function getCurrentSection() {
         const path = window.location.pathname.replace(/\/index\.html$/, '').replace(/^\//, '').replace(/\/$/, '');
-        const sections = ['bible', 'confessions', 'instrumental', 'prayer', 'reflections', 'worship'];
+        const sections = ['bible', 'instrumental', 'prayer', 'reflections', 'worship'];
         return sections.find(function (s) { return path === s; }) || null;
     }
 

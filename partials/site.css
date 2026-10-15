@@ -16,9 +16,6 @@ body {
 .prayer-bg {
     background: linear-gradient(135deg, #1e3a8a 0%, #312e81 100%);
 }
-.confession-bg {
-    background: linear-gradient(135deg, #1e2937 0%, #334155 100%);
-}
 .bible-bg {
     background: linear-gradient(135deg, #0f172a 0%, #1e2937 40%, #1e3a8a 100%);
 }

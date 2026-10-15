@@ -35,8 +35,6 @@ window.SD_STREAMING = {
     hereListenUrl: 'https://distrokid.com/hyperfollow/spokendevotion/here-i-am-lord',
     hereUpc: '882614532029',
 
-    confessionsCredit: 'Written by Ruby Rose and recited and produced by Suno',
-
     instrumentalAlbumTitle: 'Resting in the Father I',
     instrumentalAlbumSubtitle: 'Twenty quiet instrumental tracks for prayer and reflection',
     instrumentalCredit: 'Produced by Suno',
