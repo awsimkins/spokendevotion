@@ -3,21 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spoken Devotion • Prayer</title>
-    <meta name="description" content="Prayers to the Father — ten spoken prayers written by Ruby Rose. Out now on all major platforms. Watch, read, and share.">
+    <title>Prayer | Spoken Devotion</title>
+    <meta name="description" content="Daily Christian prayer videos — morning, night, and scripture — plus Prayers to the Father. Watch, read, and share.">
     <meta name="theme-color" content="#0f172a">
     <link rel="icon" href="/images/logo.png" type="image/png">
     <link rel="apple-touch-icon" href="/images/logo.png">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Spoken Devotion">
-    <meta property="og:title" content="Spoken Devotion • Prayers to the Father">
-    <meta property="og:description" content="Ten spoken prayers to the Father written by Ruby Rose and recited and produced by Suno. Out now on all major platforms.">
+    <meta property="og:title" content="Prayer | Spoken Devotion">
+    <meta property="og:description" content="Daily Christian prayer videos — morning, night, and scripture — plus Prayers to the Father. Watch, read, and share.">
     <meta property="og:url" content="https://spokendevotion.com/prayer/">
     <link rel="canonical" href="https://spokendevotion.com/prayer/">
-    <meta property="og:image" content="https://spokendevotion.com/images/prayer.png">
+    <meta property="og:image" content="https://spokendevotion.com/images/og-share.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Spoken Devotion — daily Christian prayers, scripture, and worship music">
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Prayer | Spoken Devotion">
+    <meta name="twitter:description" content="Daily Christian prayer videos — morning, night, and scripture — plus Prayers to the Father. Watch, read, and share.">
+    <meta name="twitter:image" content="https://spokendevotion.com/images/og-share.png">
+    <meta name="twitter:image:alt" content="Spoken Devotion — daily Christian prayers, scripture, and worship music">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="/partials/site.css?v=24">
+    <link rel="stylesheet" href="/partials/site.css?v=25">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@400;500;600&display=swap');
     </style>
@@ -30,15 +38,16 @@
     <div class="max-w-7xl mx-auto px-6 h-[6.5rem] flex items-center justify-between">
         <a href="/" class="flex items-center gap-x-3 md:gap-x-4 min-w-0">
             <img src="/images/logo.png" alt="Spoken Devotion" class="h-16 md:h-20 w-auto flex-shrink-0">
-            <span class="font-semibold text-2xl md:text-4xl tracking-tighter heading-font truncate">Spoken Devotion</span>
+            <span class="brand-name font-semibold text-2xl md:text-4xl tracking-tighter heading-font truncate">Spoken Devotion</span>
         </a>
 
-        <div class="hidden lg:flex items-center gap-x-5 text-base">
+        <div class="nav-links hidden lg:flex items-center gap-x-5 text-base">
             <a href="/bible/" data-nav-link class="hover:text-amber-400 transition-colors">Bible</a>
             <a href="/instrumental/" data-nav-link class="hover:text-amber-400 transition-colors">Instrumental</a>
             <a href="/prayer/" data-nav-link class="hover:text-amber-400 transition-colors">Prayer</a>
             <a href="/reflections/" data-nav-link class="hover:text-amber-400 transition-colors">Reflections</a>
             <a href="/worship/" data-nav-link class="hover:text-amber-400 transition-colors">Worship</a>
+            <a href="https://www.youtube.com/@Spoken_Devotion/videos" target="_blank" rel="noopener noreferrer" class="hover:text-amber-400 transition-colors">YouTube</a>
         </div>
 
         <div class="flex items-center gap-x-3">
@@ -59,6 +68,7 @@
             <a href="/prayer/" data-nav-link class="hover:text-amber-400 transition-colors">Prayer</a>
             <a href="/reflections/" data-nav-link class="hover:text-amber-400 transition-colors">Reflections</a>
             <a href="/worship/" data-nav-link class="hover:text-amber-400 transition-colors">Worship</a>
+            <a href="https://www.youtube.com/@Spoken_Devotion/videos" target="_blank" rel="noopener noreferrer" class="hover:text-amber-400 transition-colors">YouTube</a>
             <a href="/contact/" data-nav-link class="inline-flex items-center justify-center px-6 py-2 bg-amber-400 hover:bg-amber-300 text-zinc-950 rounded-full transition-all text-sm font-medium">Contact</a>
         </div>
     </div>
@@ -80,6 +90,14 @@
     </section>
 
     <div class="max-w-6xl mx-auto px-6 py-12 space-y-12">
+        <section aria-labelledby="daily-prayers-heading">
+            <h2 id="daily-prayers-heading" class="text-3xl md:text-4xl font-semibold tracking-tight heading-font text-center mb-3">Daily Prayers</h2>
+            <p class="text-center text-white/70 mb-8 max-w-2xl mx-auto">Morning and night prayers, scripture, and a Sunday prayer for your family. Tap a picture to play.</p>
+            <div class="daily-grid" data-daily-prayers>
+                <p class="daily-grid__loading text-center text-white/50">Loading prayers…</p>
+            </div>
+        </section>
+
         <section class="album-announce p-6 md:p-10" aria-labelledby="album-heading">
             <div class="text-center mb-8">
                 <p class="album-announce__badge mb-4">
@@ -89,7 +107,7 @@
                 <h2 id="album-heading" class="text-3xl md:text-4xl font-semibold tracking-tight heading-font text-amber-300 mb-2">
                     Prayers to the Father
                 </h2>
-                <p class="text-white/75 text-base md:text-lg">Written by Ruby Rose and recited and produced by Suno</p>
+                <p class="text-white/75 text-base md:text-lg">Written by Spoken Devotion and recited and produced by Suno</p>
                 <p class="text-white/60 text-sm md:text-base mt-2">
                     Streaming now on <span class="text-amber-400/90 font-medium">Spotify, Apple Music, YouTube Music</span>, and more.
                     Released <span class="text-amber-400/90 font-medium">July 3, 2026</span>.
@@ -170,7 +188,7 @@
         <section>
             <h2 class="text-2xl md:text-3xl font-semibold tracking-tight heading-font text-center mb-2">Watch on YouTube</h2>
             <p class="text-center text-white/60 text-sm md:text-base mb-8 max-w-2xl mx-auto">
-                Seven video prayers are on our channel now. All ten album tracks stream on major platforms — watch below, listen on your favorite store, or read the full text.
+                Nine of the ten album prayers are on our channel. Prayer of Dedication is still on the way. All ten tracks stream on major platforms — watch below, listen on your favorite store, or read the full text.
             </p>
             <div class="grid sm:grid-cols-2 gap-6" id="prayer-grid"></div>
         </section>
@@ -213,12 +231,12 @@
     <div class="max-w-5xl mx-auto px-6">
         <p class="text-center text-white/60 text-xs max-w-2xl mx-auto mb-8 leading-relaxed">
             Spoken Devotion is a personal creative ministry — not a registered church or nonprofit.
-            Spoken Devotion is free to enjoy. If our music blesses you, optional tips are welcome.
+            Spoken Devotion is free to enjoy.
         </p>
         <div class="flex flex-col md:flex-row justify-between items-center gap-y-6 text-sm">
             <div class="text-white/60">
                 © 2026 Spoken Devotion LLC. All glory to God the Father.
-                <a href="https://ko-fi.com/spokendevotion" target="_blank" rel="noopener" class="block mt-2 text-center md:text-left hover:text-amber-400 transition-colors">Support Spoken Devotion</a>
+                <a href="https://ko-fi.com/spokendevotion" target="_blank" rel="noopener noreferrer" class="block mt-2 text-center md:text-left hover:text-amber-400 transition-colors">If you’d like to support the ministry, you can on Ko-fi</a>
             </div>
             
             <div class="text-center md:text-right text-white/50 text-xs max-w-md">
@@ -232,9 +250,9 @@
 <!-- /partial:footer --></div>
 
     <script src="/partials/apple-music-embeds.js?v=2"></script>
-    <script src="/partials/streaming-config.js?v=13"></script>
+    <script src="/partials/streaming-config.js?v=14"></script>
     <script src="/partials/streaming-platforms.js?v=9"></script>
-    <script src="/partials/site.js?v=30"></script>
+    <script src="/partials/site.js?v=31"></script>
     <script>
         let prayersCache = {};
 
@@ -281,6 +299,7 @@
                 var videoData = await fetchJsonData('videos.json', {});
                 var prayers = await fetchJsonData('prayer.json', {});
                 var videos = videoData.videos || [];
+                var schemaEntries = [];
                 grid.innerHTML = '';
 
                 videos.forEach(function (entry, index) {
@@ -303,14 +322,12 @@
                     card.innerHTML =
                         '<div class="mb-4">' +
                             '<h3 class="text-xl font-semibold mb-0.5">' + safeTitle + '</h3>' +
-                            '<p class="text-amber-400 text-sm">Written by Ruby Rose and recited and produced by Suno' + escapeHtml(trackLabel) + '</p>' +
+                            '<p class="text-amber-400 text-sm">Written by Spoken Devotion and recited and produced by Suno' + escapeHtml(trackLabel) + '</p>' +
                         '</div>' +
-                        '<div class="aspect-video rounded-xl overflow-hidden mb-4 bg-black">' +
-                            '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/' + safeId + '" ' +
-                            'title="' + safeTitle + ' - Spoken Devotion" loading="lazy" ' +
-                            'allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" ' +
-                            'referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>' +
-                        '</div>' +
+                        '<a class="yt-facade mb-4" href="https://www.youtube.com/watch?v=' + safeId + '" data-youtube-id="' + safeId + '" aria-label="Play ' + safeTitle + '">' +
+                            '<img class="yt-facade__img" src="https://i.ytimg.com/vi/' + safeId + '/hqdefault.jpg" alt="" loading="lazy" decoding="async">' +
+                            '<span class="yt-facade__play" aria-hidden="true"></span>' +
+                        '</a>' +
                         '<div class="flex flex-wrap gap-2">' +
                             '<button type="button" class="inline-flex items-center gap-x-2 px-4 py-2 bg-amber-400 hover:bg-amber-300 text-zinc-950 font-medium rounded-xl text-sm transition-all prayer-read-btn">' +
                                 '<i class="fa-solid fa-book-open"></i> Show Prayer' +
@@ -328,7 +345,14 @@
                     });
 
                     grid.appendChild(card);
+                    schemaEntries.push({
+                        youtubeId: entry.youtubeId,
+                        title: title,
+                        description: title + ' — a spoken prayer from Spoken Devotion.',
+                        uploadDate: entry.uploadDate
+                    });
                 });
+                if (window.sdAddVideoSchema) window.sdAddVideoSchema('album-prayers-ld', schemaEntries);
             } catch (err) {
                 console.error(err);
                 grid.innerHTML = '<p class="text-center text-white/60 sm:col-span-2">Video prayers could not be loaded. Visit our <a href="https://www.youtube.com/@Spoken_Devotion" class="text-amber-400 underline">YouTube channel</a>.</p>';
