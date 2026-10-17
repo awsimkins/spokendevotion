@@ -9,13 +9,13 @@ window.SD_STREAMING = {
 
     albumTitle: 'Prayers to the Father',
     albumSubtitle: 'Ten spoken prayers to the Father',
-    albumCredit: 'Written by Ruby Rose and recited and produced by Suno',
-    prayerCredit: 'Written by Ruby Rose and recited and produced by Suno',
+    albumCredit: 'Written by Spoken Devotion and recited and produced by Suno',
+    prayerCredit: 'Written by Spoken Devotion and recited and produced by Suno',
     presaveUrl: 'https://distrokid.com/hyperfollow/spokendevotion/prayers-to-the-father',
     prayerListenUrl: 'https://distrokid.com/hyperfollow/spokendevotion/prayers-to-the-father',
     prayerAlbumUpc: '882614576580',
 
-    reflectionsCredit: 'Written by Anthony and sung by Suno',
+    reflectionsCredit: 'Written by Spoken Devotion and sung by Suno',
     singleTitle: 'Alone in an Empty Grave',
     secondSingleTitle: 'Lost',
     singlePresaveUrl: 'https://distrokid.com/hyperfollow/spokendevotion/alone-in-an-empty-grave',
@@ -25,7 +25,7 @@ window.SD_STREAMING = {
     lostListenUrl: 'https://distrokid.com/hyperfollow/spokendevotion/lost',
     lostUpc: '882614540697',
 
-    worshipCredit: 'Lyrics by Anthony, produced and sung by Suno',
+    worshipCredit: 'Written by Spoken Devotion, produced and sung by Suno',
     mercyTitle: 'Have Mercy on Me',
     hereTitle: 'Here I Am, Lord',
     mercyPresaveUrl: 'https://distrokid.com/hyperfollow/spokendevotion/have-mercy-on-me',
@@ -55,8 +55,8 @@ window.SD_STREAMING = {
     iheartArtistUrl: 'https://www.iheart.com/artist/spoken-devotion-51190371',
     anghamiArtistUrl: 'https://play.anghami.com/artist/29010192',
 
-    featuredArtist: 'Ruby Rose',
+    featuredArtist: 'Spoken Devotion',
 
     // Back-compat aliases used on the homepage script
-    singleSubtitle: 'Written by Anthony and sung by Suno'
+    singleSubtitle: 'Written by Spoken Devotion and sung by Suno'
 };

@@ -5,18 +5,18 @@
  */
 window.SD_RELEASES = {
     featured: {
-        badge: 'Out Now',
-        title: 'Prayers to the Father',
-        meta: 'Album · 10 tracks · Streaming on major platforms',
-        href: '/prayer/',
-        linkText: 'Listen →'
+        badge: 'New music video',
+        title: 'Lost',
+        meta: 'Single · July 3, 2026 · Streaming now',
+        href: '/reflections/',
+        linkText: 'Watch →'
     },
     items: [
+        { title: 'Prayers to the Father', meta: 'Album · Out now', href: '/prayer/' },
         { title: 'Resting in the Father I', meta: 'Instrumental album · Out now', href: '/instrumental/' },
         { title: 'Alone in an Empty Grave', meta: 'Single · Out now', href: '/reflections/' },
-        { title: 'Lost', meta: 'Single · Out now', href: '/reflections/' },
         { title: 'Have Mercy on Me', meta: 'Single · Out now', href: '/worship/' },
         { title: 'Here I Am, Lord', meta: 'Single · Out now', href: '/worship/' }
     ],
-    note: 'Prayers to the Father, worship singles, and Reflections are out now. Listen on each section page or on your favorite streaming platform.'
+    note: 'Our music is on all major platforms.'
 };

@@ -51,20 +51,20 @@ Metadata: `partials/streaming-config.js`, `partials/releases.js`, section JSON f
 - [x] **Amazon Music, iHeartRadio, Anghami** artist URLs in `streaming-platforms.js`
 - [ ] **Spotify embeds** — optional; Spotify does not offer per-track embeds like Apple. Use artist link + HyperFollow for Spotify listeners.
 - [ ] **album.link** smart links if DistroKid provides post-release URLs for singles
-- [ ] **Prayer YouTube videos** — tracks 6 (Prayer for Today), 9 (Dedication), 10 (Protection) still need channel uploads
+- [ ] **Prayer YouTube videos** — track 9 (Prayer of Dedication) still needs a channel upload. Tracks 6 and 10 are live (`sarmi_h13ok`, `kUtMjpcKZZo`).
 
 ### Credits (site-wide)
 
 | Section | Credit |
 |---------|--------|
-| Prayers (10) | Written by Ruby Rose and recited and produced by Suno |
-| Confessions (3) | Written by Ruby Rose and recited and produced by Suno |
-| Worship (2) | Lyrics by Anthony, produced and sung by Suno |
-| Reflections (2) | Written by Anthony and sung by Suno |
+| Prayers (10) | Written by Spoken Devotion and recited and produced by Suno |
+| Confessions (3) | Written by Spoken Devotion and recited and produced by Suno |
+| Worship (2) | Written by Spoken Devotion, produced and sung by Suno |
+| Reflections (2) | Written by Spoken Devotion and sung by Suno |
 
-## Confessions — DistroKid (pending)
+## Confessions — not on the site
 
-**Open Hands**, **Receipts, Not Stages**, and **Wineglass on Concrete** show as **Coming Soon** on `/confessions/`. Poetry text remains readable via modals. Hosted MP3s were removed from the repo (`.gitignore` blocks `*.mp3`). Upload to DistroKid, add Apple Music song IDs to `partials/apple-music-embeds.js`, then wire embeds like Worship/Reflections.
+The Confessions page was removed. **Open Hands**, **Receipts, Not Stages**, and **Wineglass on Concrete** are not linked publicly. Hosted MP3s were removed from the repo (`.gitignore` blocks `*.mp3`). If they are released later, add a section back and wire Apple Music embeds like Worship and Reflections.
 
 ## Resting in the Father II (delayed)
 
@@ -80,13 +80,13 @@ Contact form uses Formspark + Cloudflare Turnstile. Form ID and Turnstile site k
 
 ## YouTube Migration for Audio
 
-Prayer section: **seven** YouTube videos live (tracks 1–5, 7–8). IDs in `prayer/videos.json`. Still pending video: Prayer for Today (6), Prayer of Dedication (9), Prayer of Protection (10). Remaining album tracks stream via DistroKid and Apple Music Listen buttons.
+Prayer section: **nine** YouTube videos live (tracks 1–8 and 10). IDs in `prayer/videos.json`. Still pending video: Prayer of Dedication (9). Daily prayers (separate from the album) live in `prayer/daily.json`. Remaining album tracks stream via DistroKid and Apple Music Listen buttons.
 
-Worship and Reflections singles use HyperFollow listen links plus Apple Music embeds (no hosted MP3s on the site). Confessions show Coming Soon cards — no hosted MP3s. Instrumental album has no hosted MP3s on the site.
+Worship and Reflections singles use HyperFollow listen links plus Apple Music embeds (no hosted MP3s on the site). Instrumental album has no hosted MP3s on the site.
 
 ## Banner Image Optimization
 
-All section banners are in place (`main`, `bible`, `confession`, `instrumental`, `prayer`, `reflections`, `worship`). Optional: compress large PNGs (e.g. `instrumental.png`, `worship.png`) for faster loads.
+Section banners are in place (`main`, `bible`, `instrumental`, `prayer`, `reflections`, `worship`). `images/confession.png` is unused. Optional: compress large PNGs (e.g. `instrumental.png`, `worship.png`) for faster loads. Share images for social cards use `images/og-share.png` (1200×630).
 
 ## Site Infrastructure (lower priority)
 

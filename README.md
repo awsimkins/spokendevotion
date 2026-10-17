@@ -6,7 +6,9 @@ A family creative project sharing spoken poetry, worship, prayer, and Scripture 
 
 ## Who We Are
 
-Spoken Devotion is a **personal creative ministry** — not a church or charity. We are ordinary working people who love God, creating and sharing personal devotion in our spare time. We do **not** ask for donations and are not seeking support, recognition, or reward — we simply want to share God's love freely.
+Spoken Devotion is a **personal creative ministry** — not a church or charity. We are ordinary working people who love God, creating and sharing personal devotion in our spare time. Our mission: to save one soul at a time.
+
+If you'd like to support the ministry, you can on [Ko-fi](https://ko-fi.com/spokendevotion).
 
 If something here moves you and you feel stirred to give, we gently invite you to turn that generosity toward someone near you: a neighbor in need, a friend carrying a burden, or a stranger who could use practical kindness. Let your gift become God's love made visible right where you live.
 
@@ -16,21 +18,20 @@ If something here moves you and you feel stirred to give, we gently invite you t
 
 → [spokendevotion.com](https://spokendevotion.com/)
 
-**DNS note:** For `www.spokendevotion.com` to work, add a CNAME record at your domain registrar pointing `www` to `awsimkins.github.io`. The apex domain (`spokendevotion.com`) is configured via the repo `CNAME` file.
+**DNS note:** For `www.spokendevotion.com` to work, add a CNAME record at the domain registrar pointing `www` to this repository's GitHub Pages host. The apex domain (`spokendevotion.com`) is configured via the repo `CNAME` file.
 
 ## Current Site Sections
 
-Navigation section links are in **alphabetical order**. The nav button reads **Contact** (the page title remains Contact Us).
+Navigation section links are in **alphabetical order**, followed by a YouTube link to the channel’s videos. The nav button reads **Contact** (the page title remains Contact Us).
 
 | Section | Description | Link |
 |---------|-------------|------|
-| **Home** | Release digest, social row, streaming platforms, Who We Are | [Home](https://spokendevotion.com/) |
+| **Home** | Latest YouTube upload, daily prayers, Lost music video, release digest, social row, streaming platforms, Who We Are | [Home](https://spokendevotion.com/) |
 | **Bible** | Spoken Devotion Version (SDV) — book list with James via YouTube embed | [Bible](https://spokendevotion.com/bible/) |
-| **Confessions** | Three spoken-word pieces — coming soon to streaming; poetry readable on site | [Confessions](https://spokendevotion.com/confessions/) |
 | **Contact** | Contact form via Formspark + Cloudflare Turnstile | [Contact](https://spokendevotion.com/contact/) |
 | **Instrumental** | *Resting in the Father I* album — out now; per-track Apple Music Listen buttons | [Instrumental](https://spokendevotion.com/instrumental/) |
-| **Prayer** | *Prayers to the Father* album — out now; 7 YouTube videos, Apple Music Listen, full text modals | [Prayer](https://spokendevotion.com/prayer/) |
-| **Reflections** | *Alone in an Empty Grave* and *Lost* — out now; Apple Music embeds + HyperFollow links | [Reflections](https://spokendevotion.com/reflections/) |
+| **Prayer** | Daily prayer videos, plus *Prayers to the Father* — 9 YouTube videos, Apple Music Listen, full text modals | [Prayer](https://spokendevotion.com/prayer/) |
+| **Reflections** | *Lost* (new music video) and *Alone in an Empty Grave* — Apple Music embeds + streaming links | [Reflections](https://spokendevotion.com/reflections/) |
 | **Worship** | *Have Mercy on Me* and *Here I Am, Lord* — out now; Apple Music embeds + HyperFollow links | [Worship](https://spokendevotion.com/worship/) |
 
 ## Key Features
@@ -39,14 +40,14 @@ Navigation section links are in **alphabetical order**. The nav button reads **C
 - **Homepage social row** — all platforms in one horizontal row with handles and amber-bordered cards
 - **Streaming platform grid** — live artist links from `partials/streaming-platforms.js` (8 stores live; others show Coming Soon)
 - **Apple Music embeds** — per-track Listen buttons on Prayer (IDs from `partials/apple-music-embeds.js`) and Instrumental (`instrumental.json`); Worship and Reflections set song IDs directly in `data-apple-embed`
-- **Who We Are** — clear statement that we are a personal creative ministry (not a church or charity) and do not accept donations
-- **Footer** — reinforces free sharing, no donations, and personal creative ministry
+- **Who We Are** — personal creative ministry (not a church or charity), with the mission line “to save one soul at a time”
+- **Footer** — free to enjoy, with a gentle Ko-fi link if someone wants to support the ministry
 - **Share buttons** — one-click copy of YouTube links (Prayer, Bible)
 - **Modals** for full lyrics, poetry, and prayer text (keeps pages clean)
 - **Book of James** available via YouTube video embed in the Bible section
 - Clean, responsive design built with Tailwind CSS v3, precompiled to `css/tailwind.min.css` (see **Maintenance** below)
 - Shared navigation and footer edited once in `partials/` and copied into every page by `scripts/sync-partials.py` (works without JavaScript)
-- Content managed via JSON files for easy updates (`prayer.json`, `prayer/videos.json`, `reflections.json`, `lyrics.json`, `confessions.json`, `instrumental.json`). `prayer/album.json` and `worship/worship.json` are release-metadata records only — no page loads them.
+- Content managed via JSON files for easy updates (`prayer.json`, `prayer/videos.json`, `prayer/daily.json`, `reflections.json`, `lyrics.json`, `instrumental.json`). `prayer/album.json` and `worship/worship.json` are release-metadata records only — no page loads them.
 - Release metadata centralized in `partials/streaming-config.js`
 
 ## Banner Images
@@ -57,7 +58,6 @@ Section hero banners live in `/images/` at **1760×370** (or same ~4.5:1 aspect)
 |------|------|
 | `main.png` | Home, Contact |
 | `bible.png` | Bible |
-| `confession.png` | Confessions |
 | `instrumental.png` | Instrumental |
 | `prayer.png` | Prayer |
 | `reflections.png` | Reflections |
@@ -113,26 +113,23 @@ See also [`DEFERRED.md`](DEFERRED.md) for the full backlog. Priority items:
 - [x] **Reflections banner** — `reflections.png` added
 - [x] **Prayers to the Father** — album released July 3, 2026
 - [x] **July 3 singles** — Reflections and Worship singles released; listen links and Apple embeds on section pages
-- [x] **YouTube migration (Prayer)** — seven album prayers on YouTube (`prayer/videos.json`); three videos still pending (tracks 6, 9, 10)
+- [x] **YouTube migration (Prayer)** — nine album prayers on YouTube (`prayer/videos.json`); track 9 (Dedication) still pending
 - [x] **Homepage release digest** — data-driven via `partials/releases.js`
 - [x] **Apple Music embeds** — live on `/prayer/`, `/worship/`, `/reflections/`, `/instrumental/`
 - [x] **Spotify, Amazon Music, iHeartRadio, Anghami** — artist links in `streaming-platforms.js`
 - [x] **Nav Soon badge** — Instrumental badge removed
-- [ ] **Confessions on DistroKid** — upload three tracks; add Apple Music embeds on `/confessions/`
-- [ ] **Prayer YouTube videos** — tracks 6, 9, 10 still need channel videos
+- [ ] **Prayer YouTube videos** — track 9 (Prayer of Dedication) still needs a channel video
 - [ ] **Banner compression** — optionally compress large PNGs for faster page loads
 - [x] **Cache version sync** — standardized `?v=` across all HTML pages
 - [ ] **Site infrastructure** — `robots.txt`, `sitemap.xml` (see DEFERRED.md)
 
 ## Vision
 
-To create content that strengthens the heart, comforts the soul, and glorifies our Lord Jesus Christ through the power of spoken words — shared freely, with no ask in return.
+To create content that strengthens the heart, comforts the soul, and glorifies our Lord Jesus Christ through the power of spoken words — on a mission to save one soul at a time.
 
 ---
 
 © 2026 Spoken Devotion LLC • All glory to God the Father
-
-*Spoken Devotion is part of the Simkins family ministries, alongside KanoJoes — wholesome family content for all ages.*
 
 ## Maintenance
 

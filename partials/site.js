@@ -3,8 +3,8 @@
 
     async function loadPartials() {
         await Promise.all([
-            loadPartial('nav-root', '/partials/nav.html?v=20'),
-            loadPartial('footer-root', '/partials/footer.html?v=16')
+            loadPartial('nav-root', '/partials/nav.html?v=21'),
+            loadPartial('footer-root', '/partials/footer.html?v=17')
         ]);
         initMobileNav();
         highlightCurrentNav();
@@ -425,6 +425,146 @@
         });
     }
 
+    function isYouTubeId(id) {
+        return /^[A-Za-z0-9_-]{11}$/.test(id || '');
+    }
+
+    function youtubeThumb(id) {
+        return 'https://i.ytimg.com/vi/' + id + '/hqdefault.jpg';
+    }
+
+    function videoObject(entry) {
+        var id = entry.youtubeId;
+        var obj = {
+            '@type': 'VideoObject',
+            name: entry.title,
+            description: entry.description || entry.title,
+            embedUrl: 'https://www.youtube.com/embed/' + id,
+            contentUrl: 'https://www.youtube.com/watch?v=' + id,
+            thumbnailUrl: entry.thumbnail === false
+                ? 'https://spokendevotion.com/images/og-share.png'
+                : youtubeThumb(id),
+            publisher: {
+                '@type': 'Organization',
+                name: 'Spoken Devotion',
+                url: 'https://spokendevotion.com/'
+            }
+        };
+        if (entry.uploadDate) obj.uploadDate = entry.uploadDate;
+        return obj;
+    }
+
+    function upsertJsonLd(id, data) {
+        var el = document.getElementById(id);
+        if (!el) {
+            el = document.createElement('script');
+            el.type = 'application/ld+json';
+            el.id = id;
+            document.head.appendChild(el);
+        }
+        el.textContent = JSON.stringify(data);
+    }
+
+    window.sdAddVideoSchema = function (id, entries) {
+        var videos = (entries || []).filter(function (entry) {
+            return entry && isYouTubeId(entry.youtubeId) && entry.title;
+        });
+        if (!videos.length) return;
+        upsertJsonLd(id, {
+            '@context': 'https://schema.org',
+            '@graph': videos.map(videoObject)
+        });
+    };
+
+    function facadeLink(id, title, useThumb) {
+        var link = document.createElement('a');
+        link.className = 'yt-facade';
+        link.href = 'https://www.youtube.com/watch?v=' + id;
+        link.setAttribute('data-youtube-id', id);
+        link.setAttribute('aria-label', 'Play ' + title);
+        if (useThumb !== false) {
+            var img = document.createElement('img');
+            img.className = 'yt-facade__img';
+            img.alt = '';
+            img.loading = 'lazy';
+            img.decoding = 'async';
+            img.src = youtubeThumb(id);
+            img.addEventListener('error', function () {
+                img.classList.add('is-missing');
+            });
+            link.appendChild(img);
+        }
+        var play = document.createElement('span');
+        play.className = 'yt-facade__play';
+        play.setAttribute('aria-hidden', 'true');
+        link.appendChild(play);
+        return link;
+    }
+
+    document.addEventListener('click', function (e) {
+        var btn = e.target.closest && e.target.closest('.yt-facade');
+        if (!btn || e.defaultPrevented) return;
+        if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+        var id = btn.getAttribute('data-youtube-id');
+        if (!isYouTubeId(id)) return;
+        e.preventDefault();
+        var label = btn.getAttribute('aria-label') || 'Video';
+        var frame = document.createElement('div');
+        frame.className = 'yt-frame';
+        var iframe = document.createElement('iframe');
+        iframe.src = 'https://www.youtube.com/embed/' + id + '?autoplay=1';
+        iframe.title = label.replace(/^Play\s+/, '');
+        iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+        iframe.setAttribute('allowfullscreen', '');
+        iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+        frame.appendChild(iframe);
+        btn.replaceWith(frame);
+    });
+
+    function renderDailyPrayers() {
+        var hosts = document.querySelectorAll('[data-daily-prayers]');
+        if (!hosts.length) return;
+        fetch('/prayer/daily.json')
+            .then(function (response) {
+                if (!response.ok) throw new Error('Daily prayers HTTP ' + response.status);
+                return response.json();
+            })
+            .then(function (data) {
+                var prayers = (data && data.prayers) || [];
+                var videos = [];
+                hosts.forEach(function (host) {
+                    host.textContent = '';
+                    prayers.forEach(function (entry) {
+                        if (!entry || !isYouTubeId(entry.youtubeId) || !entry.title) return;
+                        var card = document.createElement('article');
+                        card.className = 'yt-card';
+                        card.appendChild(facadeLink(entry.youtubeId, entry.title, entry.thumbnail !== false));
+                        var title = document.createElement('h3');
+                        title.className = 'yt-card__title';
+                        title.textContent = entry.title;
+                        card.appendChild(title);
+                        if (entry.note) {
+                            var note = document.createElement('p');
+                            note.className = 'yt-card__note';
+                            note.textContent = entry.note;
+                            card.appendChild(note);
+                        }
+                        host.appendChild(card);
+                    });
+                });
+                prayers.forEach(function (entry) {
+                    if (entry && isYouTubeId(entry.youtubeId) && entry.title) videos.push(entry);
+                });
+                if (videos.length) window.sdAddVideoSchema('daily-prayers-ld', videos);
+            })
+            .catch(function (err) {
+                console.error(err);
+                hosts.forEach(function (host) {
+                    host.innerHTML = '<p class="daily-grid__loading text-center text-white/60">Daily prayers could not be loaded. Visit our <a class="text-amber-400 underline" href="https://www.youtube.com/@Spoken_Devotion/videos">YouTube channel</a>.</p>';
+                });
+            });
+    }
+
     function initPageBanners() {
         document.querySelectorAll('[data-banner]').forEach(function (section) {
             var url = section.getAttribute('data-banner');
@@ -456,5 +596,6 @@
         renderReleaseDigest();
         renderStreamingPlatforms();
         initAppleMusicEmbeds();
+        renderDailyPrayers();
     });
 })();
