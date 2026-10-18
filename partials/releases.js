@@ -5,7 +5,7 @@
  */
 window.SD_RELEASES = {
     featured: {
-        badge: 'New music video',
+        badge: 'Official music video',
         title: 'Lost',
         meta: 'Single · July 3, 2026 · Streaming now',
         href: '/reflections/',
