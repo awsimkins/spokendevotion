@@ -260,7 +260,7 @@
             card.target = '_blank';
             card.rel = 'noopener noreferrer';
             card.className = 'platform-card';
-            card.setAttribute('aria-label', platform.name + ' — Spoken Devotion Music');
+            card.setAttribute('aria-label', platform.name + ' — ' + (config.artistName || 'Spoken Devotion'));
         } else {
             // Not a link: its visible text ("<name> Coming soon") is its accessible name.
             card = document.createElement('div');

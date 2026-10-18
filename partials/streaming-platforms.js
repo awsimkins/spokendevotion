@@ -1,10 +1,10 @@
 /**
- * Spoken Devotion Music — artist profile URLs on streaming stores.
+ * Spoken Devotion — artist profile URLs on streaming stores.
  * Set `url` when a profile goes live; leave null for "Coming soon" cards.
- * DistroKid distributes to 23+ stores — these are the most popular.
+ * DistroKid distributes to 20+ platforms — these are the most popular.
  */
 window.SD_STREAMING_PLATFORMS = {
-    artistName: 'Spoken Devotion Music',
+    artistName: 'Spoken Devotion',
     platforms: [
         { id: 'apple',        name: 'Apple Music',    icon: 'fa-brands fa-apple',        url: 'https://music.apple.com/us/artist/spoken-devotion/6784853329' },
         { id: 'deezer',       name: 'Deezer',         icon: 'fa-solid fa-wave-square',   url: 'https://www.deezer.com/us/artist/399844621' },
