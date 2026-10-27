@@ -4,7 +4,7 @@ Thank you for your interest in Spoken Devotion!
 
 ## What This Project Is
 
-Spoken Devotion is a **personal creative ministry** — not a church or charity. We are a family of ordinary working people sharing worship, prayer, poetry, Scripture, and music freely. If you'd like to support the ministry, you can on [Ko-fi](https://ko-fi.com/spokendevotion).
+Here you'll find morning and night prayers, Scripture, and honest sermons every Tuesday, Thursday and Saturday at 8 PM Central, all pointing to Jesus Christ. Our goal is simple: save one soul at a time.
 
 If you have feedback, bug reports, or content suggestions, we welcome them.
 
@@ -33,7 +33,7 @@ Since most changes are made directly on GitHub:
 - Nav contact button label is **Contact** (links to `/contact/`).
 - Shared UI lives in `partials/`. The nav and footer are copied into each page by `python3 scripts/sync-partials.py` (run it after editing them). Tailwind is precompiled (see README → Maintenance). Files: (`nav.html`, `footer.html`, `site.css`, `site.js`, `streaming-config.js`, `streaming-platforms.js`, `releases.js`, `apple-music-embeds.js`).
 - Hero banners are in `/images/` at 1760×370; one PNG per section.
-- Homepage includes the latest YouTube upload, a daily-prayers grid (`prayer/daily.json`), the Lost music video, a release digest (`partials/releases.js`), social handles, a streaming platform grid, and Who We Are. The footer includes a Ko-fi link.
+- Homepage includes the latest YouTube upload, a daily-prayers grid (`prayer/daily.json`), the Lost music video, a release digest (`partials/releases.js`), social handles, a streaming platform grid, and Who We Are.
 
 ### Section pages (all releases out now as of July 3, 2026)
 
