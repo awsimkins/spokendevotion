@@ -47,7 +47,7 @@ Navigation section links are in **alphabetical order**, followed by a YouTube li
 - **Streaming platform grid** — live artist links from `partials/streaming-platforms.js` (8 stores live; others show Coming Soon)
 - **Apple Music embeds** — per-track Listen buttons on Prayer (IDs from `partials/apple-music-embeds.js`) and Instrumental (`instrumental.json`); Worship and Reflections set song IDs directly in `data-apple-embed`
 - **Who We Are** — the approved bio (John 3:16, Mark 1:15, John 14:6), morning and night prayers, Scripture, and sermons every Tuesday, Thursday and Saturday at 8 PM Central. Our goal is simple: save one soul at a time.
-- **Footer** — personal creative ministry note. A Ko-fi link remains on every page for the owner to decide about.
+- **Footer** — personal creative ministry note, free to watch, listen to and share
 - **Share buttons** — one-click copy of YouTube links (Prayer, Bible)
 - **Modals** for full lyrics, poetry, and prayer text (keeps pages clean)
 - **Book of James** available via YouTube video embed in the Bible section
