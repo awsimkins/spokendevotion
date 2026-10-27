@@ -4,7 +4,7 @@ Thank you for your interest in Spoken Devotion!
 
 ## What This Project Is
 
-Spoken Devotion is a **personal creative ministry** — not a church or charity. We are a family of ordinary working people sharing worship, prayer, poetry, Scripture, and music freely. If you'd like to support the ministry, you can on [Ko-fi](https://ko-fi.com/spokendevotion).
+Here you'll find morning and night prayers, Scripture, and honest sermons every Tuesday, Thursday and Saturday at 8 PM Central, all pointing to Jesus Christ. Our goal is simple: save one soul at a time.
 
 If you have feedback, bug reports, or content suggestions, we welcome them.
 

@@ -6,11 +6,17 @@ A family creative project sharing spoken poetry, worship, prayer, and Scripture 
 
 ## Who We Are
 
-Spoken Devotion is a **personal creative ministry** — not a church or charity. We are ordinary working people who love God, creating and sharing personal devotion in our spare time. Our mission: to save one soul at a time.
+Welcome to Spoken Devotion.
 
-If you'd like to support the ministry, you can on [Ko-fi](https://ko-fi.com/spokendevotion).
+Jesus said, "For God so loved the world, that he gave his one and only Son, that whoever believes in him should not perish, but have eternal life." (John 3:16)
 
-If something here moves you and you feel stirred to give, we gently invite you to turn that generosity toward someone near you: a neighbor in need, a friend carrying a burden, or a stranger who could use practical kindness. Let your gift become God's love made visible right where you live.
+"The time is fulfilled, and God's Kingdom is at hand! Repent, and believe in the Good News." (Mark 1:15)
+
+"I am the way, the truth, and the life. No one comes to the Father, except through me." (John 14:6)
+
+Here you'll find morning and night prayers, Scripture, and honest sermons every Tuesday, Thursday and Saturday at 8 PM Central, all pointing to Jesus Christ. Wherever you are and whatever you've done, He is calling you home. Come as you are.
+
+Our goal is simple: save one soul at a time. ✝️
 
 *Spoken Devotion LLC* holds copyright on our original content. The LLC is our legal entity for publishing; it does not change that this is a personal, freely shared creative work.
 
@@ -40,8 +46,8 @@ Navigation section links are in **alphabetical order**, followed by a YouTube li
 - **Homepage social row** — all platforms in one horizontal row with handles and amber-bordered cards
 - **Streaming platform grid** — live artist links from `partials/streaming-platforms.js` (8 stores live; others show Coming Soon)
 - **Apple Music embeds** — per-track Listen buttons on Prayer (IDs from `partials/apple-music-embeds.js`) and Instrumental (`instrumental.json`); Worship and Reflections set song IDs directly in `data-apple-embed`
-- **Who We Are** — personal creative ministry (not a church or charity), with the mission line “to save one soul at a time”
-- **Footer** — free to enjoy, with a gentle Ko-fi link if someone wants to support the ministry
+- **Who We Are** — the approved bio (John 3:16, Mark 1:15, John 14:6), morning and night prayers, Scripture, and sermons every Tuesday, Thursday and Saturday at 8 PM Central. Our goal is simple: save one soul at a time.
+- **Footer** — personal creative ministry note. A Ko-fi link remains on every page for the owner to decide about.
 - **Share buttons** — one-click copy of YouTube links (Prayer, Bible)
 - **Modals** for full lyrics, poetry, and prayer text (keeps pages clean)
 - **Book of James** available via YouTube video embed in the Bible section
@@ -125,7 +131,7 @@ See also [`DEFERRED.md`](DEFERRED.md) for the full backlog. Priority items:
 
 ## Vision
 
-To create content that strengthens the heart, comforts the soul, and glorifies our Lord Jesus Christ through the power of spoken words — on a mission to save one soul at a time.
+To create content that strengthens the heart, comforts the soul, and glorifies our Lord Jesus Christ through the power of spoken words. Our goal is simple: save one soul at a time.
 
 ---
 
