@@ -534,7 +534,10 @@
                 var videos = [];
                 hosts.forEach(function (host) {
                     host.textContent = '';
+                    var limit = parseInt(host.getAttribute('data-daily-limit'), 10) || 0;
+                    var shown = 0;
                     prayers.forEach(function (entry) {
+                        if (limit && shown >= limit) return;
                         if (!entry || !isYouTubeId(entry.youtubeId) || !entry.title) return;
                         var card = document.createElement('article');
                         card.className = 'yt-card';
@@ -550,6 +553,7 @@
                             card.appendChild(note);
                         }
                         host.appendChild(card);
+                        shown++;
                     });
                 });
                 prayers.forEach(function (entry) {
