@@ -1,0 +1,124 @@
+/* Spoken Devotion — "YouTube look" theme (mockup).
+   Warm fall imagery under a dark vignette, cream Cormorant Garamond text,
+   gold accents for verse references. Loaded after tailwind/site.css. */
+:root{
+  --sd-ink:#0d0b09; --sd-ink-2:#17130f; --sd-cream:#f6eedd; --sd-cream-dim:#e4d8c0;
+  --sd-gold:#d9b46a; --sd-gold-bright:#ecc97f; --sd-line:rgba(217,180,106,.28);
+}
+html{font-size:112.5%}               /* 18px base for easier reading */
+body{background:radial-gradient(ellipse at top,#1d1710 0%,var(--sd-ink) 60%) fixed;
+  color:var(--sd-cream);font-family:'Lora',Georgia,serif;line-height:1.7}
+.heading-font,h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif!important;
+  font-weight:600!important;letter-spacing:0!important;color:var(--sd-cream)}
+h2{font-size:clamp(2.2rem,4.5vw,3.2rem)!important;line-height:1.15}
+.text-white\/70,.text-white\/60,.text-white\/80,.text-white\/50{color:var(--sd-cream-dim)!important}
+.text-amber-400,.hover\:text-amber-400:hover{color:var(--sd-gold)!important}
+.bg-amber-400{background:var(--sd-gold)!important;color:#1a140c!important}
+.bg-amber-400:hover{background:var(--sd-gold-bright)!important}
+.border-amber-400\/40,.border-amber-400\/20{border-color:var(--sd-line)!important}
+a:focus-visible,button:focus-visible{outline:3px solid var(--sd-gold-bright);outline-offset:3px}
+
+/* Nav */
+#site-nav{background:rgba(13,11,9,.88)!important;border-bottom:1px solid var(--sd-line)!important}
+#site-nav .brand-name{font-family:'Cormorant Garamond',serif;font-weight:500!important;letter-spacing:.01em}
+#site-nav .nav-links a{font-size:1.05rem}
+
+/* Banners: fall still + dark vignette like the videos */
+.page-banner__overlay{background:
+  radial-gradient(ellipse at center,rgba(13,11,9,.25) 0%,rgba(13,11,9,.6) 60%,rgba(13,11,9,.92) 100%),
+  linear-gradient(to bottom,rgba(13,11,9,.35),rgba(13,11,9,.75))!important}
+.page-banner__content{text-align:center;padding:4rem 1.5rem;position:relative;z-index:1}
+.page-banner__content h1{font-size:clamp(2.6rem,6vw,4.6rem)!important;line-height:1.1;
+  text-shadow:0 2px 18px rgba(0,0,0,.7)}
+.page-banner__content p{font-size:1.15rem;text-shadow:0 1px 10px rgba(0,0,0,.8)}
+.page-banner--hero{min-height:calc(100vh - 6.5rem);display:flex;align-items:center;justify-content:center}
+
+/* Scripture — EXTRA big, cream, gold reference */
+.sd-verse{font-family:'Cormorant Garamond',serif;font-weight:600;color:var(--sd-cream);
+  font-size:clamp(2.1rem,4.6vw,3.6rem);line-height:1.2;max-width:22ch;margin:0 auto;
+  text-shadow:0 2px 20px rgba(0,0,0,.75)}
+.sd-ref{display:block;margin-top:1rem;font-family:'Cormorant Garamond',serif;font-weight:500;
+  color:var(--sd-gold);font-size:clamp(1.4rem,2.6vw,1.9rem)}
+.sd-verse-band{position:relative;overflow:hidden;padding:7rem 1.5rem;text-align:center;margin-top:4rem;
+  background:url('/images/fall-misty-bench.jpg?v=2') center/cover}
+.sd-verse-band::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(ellipse at center,rgba(13,11,9,.45) 0%,rgba(13,11,9,.88) 100%)}
+.sd-verse-band>*{position:relative}
+.sd-watermark{position:absolute;right:1.25rem;bottom:1rem;display:flex;align-items:center;gap:.5rem;
+  font-family:'Cormorant Garamond',serif;color:var(--sd-cream-dim);font-size:1.05rem;opacity:.85}
+.sd-watermark img{width:28px;height:28px;border-radius:50%}
+
+.mission-line{font-family:'Cormorant Garamond',serif!important;color:var(--sd-gold)!important;
+  font-size:clamp(1.5rem,3vw,2rem)!important;font-style:italic;margin-top:1.5rem}
+
+/* Cards & frames */
+.audio-card,.yt-frame,.yt-facade,.daily-grid>*{border-radius:14px!important}
+.audio-card{background:linear-gradient(180deg,rgba(40,31,20,.7),rgba(20,16,11,.85))!important;
+  border:1px solid var(--sd-line)!important;box-shadow:0 20px 50px rgba(0,0,0,.45)}
+.yt-frame{box-shadow:0 0 0 1px var(--sd-line),0 20px 50px rgba(0,0,0,.5)}
+.btn-subscribe{background:var(--sd-gold)!important;color:#1a140c!important;border-radius:999px}
+
+/* Who We Are verses get the scripture treatment */
+.who-we-are p{font-size:1.2rem}
+.who-we-are .sd-quote{font-family:'Cormorant Garamond',serif;font-size:clamp(1.7rem,3.2vw,2.3rem);
+  line-height:1.3;text-align:center;color:var(--sd-cream);margin:2rem 0}
+.who-we-are .sd-quote .sd-ref{font-size:1.35rem}
+
+footer{background:var(--sd-ink)!important;border-top:1px solid var(--sd-line)!important}
+@media (max-width:640px){html{font-size:106%}.sd-verse-band{padding:5rem 1.25rem}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+
+/* ---- v2 polish: warmth, home feeling ---- */
+body{background:
+  radial-gradient(ellipse 70% 40% at 50% 0%,rgba(217,150,70,.10),transparent 70%),
+  radial-gradient(ellipse at top,#1f1810 0%,var(--sd-ink) 65%) fixed}
+/* candle-glow / golden-hour tint over every banner (each page keeps its own art) */
+.page-banner__overlay{background:
+  radial-gradient(ellipse at 50% 70%,rgba(255,170,80,.16) 0%,transparent 55%),
+  radial-gradient(ellipse at center,rgba(13,11,9,.2) 0%,rgba(13,11,9,.6) 62%,rgba(13,11,9,.93) 100%),
+  linear-gradient(to bottom,rgba(30,18,6,.35),rgba(13,11,9,.78))!important}
+.page-banner__image{filter:sepia(.18) saturate(1.05)}
+.sd-verse-band::before{background:
+  radial-gradient(ellipse at 50% 60%,rgba(255,170,80,.14),transparent 60%),
+  radial-gradient(ellipse at center,rgba(13,11,9,.4) 0%,rgba(13,11,9,.88) 100%)}
+.sd-eyebrow{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--sd-gold);
+  font-size:1.5rem;letter-spacing:.04em;margin-bottom:.5rem}
+.sd-divider{border:0;height:1px;width:min(260px,60%);margin:2.5rem auto 0;
+  background:linear-gradient(90deg,transparent,var(--sd-gold),transparent);position:relative;overflow:visible}
+.sd-divider::after{content:"✦";position:absolute;left:50%;top:50%;transform:translate(-50%,-55%);
+  color:var(--sd-gold);background:var(--sd-ink);padding:0 .6rem;font-size:.9rem}
+.sd-welcome,.sd-pray{max-width:52rem;margin:0 auto;padding:6rem 1.5rem 2rem;text-align:center}
+.sd-welcome h2{font-size:clamp(2.3rem,5vw,3.6rem)!important;line-height:1.15;margin-bottom:1.25rem}
+.sd-welcome p:not(.sd-eyebrow),.sd-pray__intro{font-size:1.25rem;color:var(--sd-cream-dim);max-width:40rem;margin:0 auto}
+.sd-schedule{list-style:none;padding:0;margin:2.5rem auto;display:grid;gap:1rem;max-width:40rem}
+.sd-schedule li{display:grid;grid-template-columns:2.5rem 1fr auto;align-items:center;gap:1rem;text-align:left;
+  padding:1.25rem 1.5rem;border-radius:22px;border:1px solid var(--sd-line);
+  background:linear-gradient(180deg,rgba(52,38,22,.55),rgba(24,18,12,.75));box-shadow:0 0 40px rgba(255,170,80,.06) inset}
+.sd-schedule i{color:var(--sd-gold);font-size:1.4rem;text-align:center}
+.sd-schedule__what{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:600}
+.sd-schedule__when{color:var(--sd-cream-dim);font-size:1.1rem;text-align:right}
+.sd-btn{display:inline-flex;align-items:center;gap:.6rem;min-height:56px;padding:0 2rem;border-radius:999px;
+  background:var(--sd-gold);color:#1a140c;font-weight:600;font-size:1.1rem;
+  box-shadow:0 8px 30px rgba(217,180,106,.25);transition:background .3s}
+.sd-btn:hover{background:var(--sd-gold-bright)}
+.sd-pray__verse{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3.4vw,2.5rem);line-height:1.3;
+  margin:3.5rem auto 0;max-width:34rem}
+/* softer cards, more room */
+.audio-card,.yt-frame,.yt-facade,.daily-grid>*{border-radius:24px!important}
+.audio-card{box-shadow:0 0 60px rgba(255,170,80,.05) inset,0 24px 60px rgba(0,0,0,.45)}
+section[aria-labelledby]{scroll-margin-top:7rem}
+main > section + section{margin-top:1.5rem}
+/* fade-in */
+.sd-reveal{opacity:0;transform:translateY(18px);transition:opacity 1.2s ease,transform 1.2s ease}
+.sd-reveal.sd-in{opacity:1;transform:none}
+/* mobile comfort */
+@media (max-width:640px){
+  .sd-welcome,.sd-pray{padding-top:4.5rem}
+  .sd-schedule li{grid-template-columns:2rem 1fr;row-gap:.2rem}
+  .sd-schedule__when{grid-column:2;text-align:left}
+  .sd-btn{width:100%;justify-content:center}
+  #site-nav a,#mobile-menu a{min-height:44px;display:inline-flex;align-items:center}
+  #mobile-menu a{font-size:1.2rem}
+  .daily-grid a, .yt-facade{min-height:44px}
+}
+@media (prefers-reduced-motion:reduce){.sd-reveal{opacity:1;transform:none}}

@@ -4,7 +4,7 @@ Thank you for your interest in Spoken Devotion!
 
 ## What This Project Is
 
-Here you'll find morning and night prayers, Scripture, and honest sermons every Tuesday, Thursday and Saturday at 8 PM Central, all pointing to Jesus Christ. Our goal is simple: save one soul at a time.
+Here you'll find morning and night prayers, Scripture, and honest sermons every Thursday and Saturday at 8 PM Central, all pointing to Jesus Christ. Our goal is simple: save one soul at a time.
 
 If you have feedback, bug reports, or content suggestions, we welcome them.
 
